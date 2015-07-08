@@ -1,0 +1,9 @@
+---
+layout:     post
+title:      Hello, Internet
+date:       2015-07-08 11:53:19
+summary:    Proving to myself that I can have this jekyll thing running
+categories: post
+---
+
+Finally had the guts to create a website for me, even though I don't have much to feed it so far. Better days ahead (I hope)!
