@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Gustavo Burin Ferreira
+# Gustavo Burin Ferreira
 ------------------------------
 [Laboratory of Macroecology and Macroevolution - LabMeMe](http://ecologia.ib.usp.br/labmeme)
 
@@ -13,9 +13,9 @@ São Paulo, SP, Brazil
 email: gustavoburin *[at]* usp *[dot]* br
 
 
-### Education
+## Education
 
-#### Formal Education/Degree
+### Formal Education/Degree
 
 > **2013**      Ph.D. in progress in Ecology  
 >               Departamento de Ecologia, Universidade de São Paulo  
@@ -37,7 +37,7 @@ email: gustavoburin *[at]* usp *[dot]* br
 
 -----------------
 
-### Complementary formation
+## Complementary formation
 
 > **2012**      Southern-Summer School on Mathematical Biology  
 > 	        Fundação Instituto de Física Teórica
