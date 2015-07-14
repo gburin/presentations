@@ -1,10 +1,51 @@
 ---
 layout: default
 ---
-<p>
-  <a href="https://www.flickr.com/photos/gustavoburin/6467227895/in/datetaken/"><img src="images/cover.jpg"
-  alt="Drosera-like plant with poor victim.jpg"></a><br>
-</p>
+<head>
+    <title>Random Image</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+    (function($){
+        $.randomImage = {
+            defaults: {
+                //you can change these defaults to your own preferences.
+                path: '/images/', //change this to the path of your images
+                myImages: ['cover.jpg', 'cover2.jpg', 'cover3.jpg', 'cover4.jpg', 'cover5.jpg', 'cover6.jpg', 'cover7.jpg' ] //put image names in this bracket. ex: 'harold.jpg', 'maude.jpg', 'etc'
+            }
+        };
+        
+        $.fn.extend({
+            randomImage:function(config) {
+                var config = $.extend({}, $.randomImage.defaults, config);
+                
+                return this.each(function() {
+                    var imageNames = config.myImages,
+                    //get size of array, randomize a number from this
+                    // use this number as the array index
+                    imageNamesSize = imageNames.length,
+                    lotteryNumber = Math.floor(Math.random()*imageNamesSize),
+                    winnerImage = imageNames[lotteryNumber],
+                    fullPath = config.path + winnerImage;
+                    
+                    //put this image into DOM at class of randomImage
+                    // alt tag will be image filename.
+                    $(this).attr({
+                        src: fullPath,
+                        alt: winnerImage
+                    });
+                });
+            }
+        });
+    }(jQuery));
+    
+    $(document).ready(function(){
+        $('img:first').randomImage();
+    });
+    </script>
+</head>
+<body>
+    <img>
+</body>
 <ul>
   <li><a href="./cv/">CV</a></li>
   <li><a href="./pubs/">Publications</a></li>
