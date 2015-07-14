@@ -8,4 +8,4 @@ categories: post
 
 I just found out (almost by accident) that the filming of my talk at the Macroevolution II session during the Evolution meeting last month in Guarujá, Brazil, is online. Please, feel free to leave any feedback! Any suggestion will be greatly appreciated!
 
-<a href="https://www.youtube.com/embed/RSZuK7Tu53E" target="_blank"><img src="https://img.youtube.com/embed/RSZuK7Tu53E/0.jpg" alt="Presentation by Gustavo Burin @ Evolution 2015" width="240" height="180" border="10" /></a>
+<a href="https://www.youtube.com/embed/RSZuK7Tu53E" target="_blank"><img src="https://img.youtube.com/embed/RSZuK7Tu53E/0.jpg" alt="Presentation by Gustavo Burin @ Evolution 2015" width="480" height="360" border="10" /></a>
