@@ -12,7 +12,7 @@ permalink: pretty
 paginate: 3
 
 # Google analytics
-google_analytics:
+google_analytics: UA-53548208-1
 
 # Optional features
 animated:           true
