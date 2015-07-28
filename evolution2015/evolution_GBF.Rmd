@@ -1,0 +1,155 @@
+---
+title: "Omnivory as a macroevolutionary sink"
+subtitle: "Lower diversification of and higher transition rates into omnivorous birds"
+author:
+  "Gustavo **BURIN**;
+  Daniel **KISSLING**;
+  Paulo **GUIMARÃES**;
+  Cagan **SEKERCIOGLU**;
+  Tiago **QUENTAL**"
+logo: logo.png
+date: "July 27th, 2015"
+output:
+ioslides_presentation:
+    toc: true
+    fig_caption: false
+    incremental: true
+    self_contained: true
+    widescreen: true
+  md_document:
+    variant: markdown_github
+---
+<style>
+h2 {
+ color: #FF7F50;
+}
+h3 {
+ color: #1E90FF;
+}
+</style>
+
+# Motivation and Aim
+
+----
+
+<center><img src="darwin.png" height="540px" /></center>
+
+----
+
+<div class="columns-2">
+<img src="jetz2012.png" height="480px" />
+
+</div>
+
+----
+
+<div class="columns-2">
+<img src="jetz2012.png" height="480px" />
+
+<img src="beak_morph.png" height="400px" />
+</div>
+
+<div class='notes'>
+<div class='centered'>
+<p style="font-size:40px">
+<b>Is there any relationship between diet and diversification rates in
+birds?</b>
+</p>
+</div>
+</div>
+
+# Material and Methods
+
+## Phylogeny
+
+<div class="centered">
+```{r fig.width=7,fig.heigh=5,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("./jetz2012.png")
+grid.raster(img)
+```
+</div>
+
+<div style="float:right; font-size:20px">
+Jetz *et al.* 2012, Nature
+</div>
+
+<div class="centered">
+## Trait-dependent diversification model
+</div>
+
+<center><img src="diversitree.png" height="300px" /></center>
+
+<div class="centered">
+<p><h3> MuSSE - Multiple-State Speciation and Extinction </h3></p>
+</div>
+
+## Analysis
+
+- 200 trees (100 from each backbone)
+- Comprehensive dietary database (Sekercioglu *et al.* 2004, updated with del
+  Hoyo *et al.*, 2013)
+- Bayesian implementation
+(https://github.com/dsilvestro/mcmc-diversitree/)
+- 9 states: *Carnivores, Frugivores, Granivores, Herbivores,
+Insectivores, Nectarivores, Omnivores, Piscivores, Scavengers*
+- Total of **93** parameters
+
+<div class="notes">
+![](waiting.png)
+</div>
+
+# Results
+
+## Net Diversification rates
+
+<center><img src="netdiv.png" height="480px" /></center>
+
+## Speciation/Extinction rates
+
+<div class="centered">
+![](result1.png)
+</div>
+
+## Transition rates
+
+<center><img src="transitions.png" height="540px" /></center>
+
+# Ecological scenario for macroevolutionary patterns
+
+## Omnivore niche
+
+<center><img src="omniv.png" height="500px" /></center>
+
+## Non-omnivore niche
+
+<center><img src="specialized.png" height="500px" /></center>
+
+## Inter-guild competition
+
+<center><img src="competition.png" height="500px" /></center>
+
+## Stable and/or predictable resources {.build}
+
+<center><img src="competition.png" height="500px" /></center>
+
+## Stable and/or predictable resources
+
+<center><img src="specialized.png" height="500px" /></center>
+
+<div class="notes">
+<center><img src="result1.png" height="400px" /></center>
+</div>
+
+## Unstable and/or unpredictable resources {.build}
+
+<center><img src="competition.png" height="500px" /></center>
+
+## Unstable and/or unpredictable resources
+
+<center><img src="comp_trans.png" height="500px" /></center>
+
+<div class="notes">
+<center><img src="transitions.png" height="450px" /></center>
+</div>

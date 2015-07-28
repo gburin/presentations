@@ -1,0 +1,22 @@
+<slide class="{{ slide.class }}" id="{{ slide.id }}">
+<hgroup>
+  {{{ slide.header}}}
+</hgroup>
+{{{ slide.content }}}
+<div class='flexbox vcenter'>
+  <div style='float:left;width:48%;'>
+  {{{ slide.left.html }}}
+  </div>
+  <div style='float:right;width:48%;'>
+  {{{ slide.right.html }}}
+  </div>
+  </div>
+<!-- Presenter Notes -->
+{{# slide.pnotes}}
+<aside class="note">
+  <section>
+    {{{ html }}}
+  </section>
+</aside>
+{{/ slide.pnotes}}
+</slide>

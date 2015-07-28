@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Omnivory as a macroevolutionary sink</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Omnivory as a macroevolutionary sink">
+  <meta name="author" content="Gustavo BURIN Daniel KISSLING Paulo GUIMARAES Cagan SEKERCIOGLU Tiago QUENTAL">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/logo-small.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Omnivory as a macroevolutionary sink</h1>
+    <h2>Lower diversification of and higher transition rates into omnivorous birds</h2>
+    <p>Gustavo BURIN Daniel KISSLING Paulo GUIMARAES Cagan SEKERCIOGLU Tiago QUENTAL<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Motivation and Aim</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-2" style="background:;">
+  <article data-timings="">
+    <p><center><img src="darwin.png" height="540px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3">
+<hgroup>
+  
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="price.png",height="100px" /></p>
+
+<p><img src="silvestro.png", height="150px" /></p>
+
+<p><img src="rolland.png", height="200px" /></p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Trait-dependent diversification</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="diversitree.png" height="400px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Birds</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="jetz2012.png" height="480px" /></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="beak_morph.png" height="400px" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Is there any relationship between diet and diversification rates in birds?</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-7">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Data - Phylogeny</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-8" style="background:;">
+  <article data-timings="">
+    <p><center><img src="jetz2012.png" height="600px"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Methods - Diversification model</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Trait-dependent diversification</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>MuSSE - Multiple-State Speciation and Extinction </h3></p></h3>
+
+<p><center><img src="diversitree.png" height="300px" /></center></p>
+
+<ul class = "build incremental">
+<li>Bayesian implementation</li>
+<li>(<a href="https://github.com/dsilvestro/mcmc-diversitree/">https://github.com/dsilvestro/mcmc-diversitree/</a>)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Comprehensive dietary database (Sekercioglu <em>et al.</em> 2004, updated with del
+Hoyo <em>et al.</em>, 2013)</li>
+<li>9 states: <em>Carnivores, Frugivores, Granivores, Herbivores,
+Insectivores, Nectarivores, Omnivores, Piscivores, Scavengers</em></li>
+<li>200 trees (100 from each backbone)</li>
+<li>Total of <strong>93</strong> parameters</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <article data-timings="">
+    <p><center><img src="waiting.png"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Results - Diversification rates</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h3>Net Diversification rates</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="netdiv.png" height="480px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Speciation/Extinction rates</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="result1.png" height="500px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h3>Rate differences</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="differences.png" height="550px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Transition rates</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="transitions.png" height="540px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Ecological scenario for macroevolutionary patterns</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Omnivore niche</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="omniv.png" height="500px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Non-omnivore niche</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="specialized.png" height="500px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Inter-guild competition</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="competition.png" height="500px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Times of stable and/or predictable resources</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h3>Times of stable and/or predictable resources</h3>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="competition.png" height="480px" /></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="black.png" height="480px" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h3>Times of stable and/or predictable resources</h3>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="competition.png" height="480px" /></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="specialized.png" height="480px" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <article data-timings="">
+    <p><img src="result1.png" height="550px" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Times of unstable and/or unpredictable resources</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h3>Times of unstable and/or unpredictable resources</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="competition.png" height="480px  align="left" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  <hgroup>
+    <h3>Times of unstable and/or unpredictable resources</h3>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="competition.png" height="480px" /></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="comp_trans.png" height="480px" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <article data-timings="">
+    <p><center><img src="transitions.png" height="600px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <article data-timings="">
+    <p><center><img src="phylos.png" height="650px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <article data-timings="">
+    <p><center><img src="omniv_arch.png" height="650px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>Take home messages</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Omnivores: lower net diversification</li>
+<li>Higher extinction</li>
+<li>Lower speciation</li>
+<li>High transition into omnivores</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <article data-timings="">
+    <p><center><img src="drain.png" height="680px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34">
+<hgroup>
+  <h2>Acknowledgements</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="capes.png", width="300px" align="left" /></p>
+
+<p><img src="eco.png", width="600px" align="right" /></p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>Acknowledgements</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="daniele.png", height="400px" /></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="taran_fernando.png", height="300px" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Acknowledgements</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="lab.png", height="525px" /></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37">
+<div style="position: absolute; bottom: 150px;">
+<hgroup>
+  <h2>Thank you very much!</h2>
+</hgroup>
+</div>
+<article class = 'flexbox bottom'>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation and Aim'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NA'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='NA'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Trait-dependent diversification'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Birds'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Is there any relationship between diet and diversification rates in birds?'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Data - Phylogeny'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='NA'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Methods - Diversification model'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Trait-dependent diversification'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Analysis'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='NA'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Results - Diversification rates'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Net Diversification rates'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Speciation/Extinction rates'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Rate differences'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Transition rates'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Ecological scenario for macroevolutionary patterns'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Omnivore niche'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Non-omnivore niche'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Inter-guild competition'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Times of stable and/or predictable resources'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Times of stable and/or predictable resources'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Times of stable and/or predictable resources'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='NA'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Times of unstable and/or unpredictable resources'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Times of unstable and/or unpredictable resources'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Times of unstable and/or unpredictable resources'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='NA'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='NA'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='NA'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Take home messages'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='NA'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Acknowledgements'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Acknowledgements'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Acknowledgements'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Thank you very much!'>
+         37
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

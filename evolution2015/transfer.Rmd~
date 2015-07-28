@@ -1,0 +1,34 @@
+<div class="centered">
+```{r fig.width=5,fig.height=5,echo=FALSE}
+img <- readPNG("./jetz2012.png")
+grid.raster(img)
+```
+</div>
+
+```{r fig.width=6,fig.height=6,echo=FALSE}
+img <- readPNG("./jetz2012.png")
+grid.raster(img)
+```
+```{r fig.width=7,fig.heigh=5,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("./jetz2012.png")
+grid.raster(img)
+```
+
+
+Jetz *et al.* 2012, Nature
+</div>
+<div class="centered">
+```{r fig.width=8,echo=FALSE}
+img <- readPNG("./beak_morph.png")
+grid.raster(img)
+```
+</div>
+
+<div class="centered">
+```{r fig.width=7,fig.heigh=5,echo=FALSE}
+img <- readPNG("./diversitree.png")
+grid.raster(img)
+```
+</div>
