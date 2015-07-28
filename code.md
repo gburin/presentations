@@ -6,7 +6,7 @@ layout: default
 
 - [Tutorial de SSH](../tutorial-ssh.html)
 
-- [Tutorial de SSH](../tutorial-ggplot2.html)
+- [Tutorial de ggplot2](../tutorial-ggplot2.html)
 
 I don't have many of my codes organized, so I'll upload them as soon as I start tidying them up.
 
