@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="defesa_gbf_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="defesa_gbf_files/reveal.js-3.3.0.1/css/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="custom_css.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level1" data-background="img/title_background.png" data-background-size="100%">
+<h1></h1>
+<h2>
+Os papéis da dieta, especiação e extinção na diversificação de aves e na montagem de redes de frugivoria
+</h2>
+<p><br></br></p>
+<div align="right">
+<p>
+Gustavo Burin <strong>FERREIRA</strong>
+</p>
+<p>
+Orientador: Tiago Bosisio <strong>QUENTAL</strong>
+</p>
+<p>
+Co-orientador: Paulo R. <strong>GUIMARÃES</strong> Jr
+</p>
+<p><br></br></p>
+</div>
+<p>02 de Outubro de 2017</p>
+</section>
+<section id="estrutura" class="slide level1 center">
+<h1>Estrutura</h1>
+<ul>
+<li>Introdução</li>
+<li>Capítulo 1: Dieta + Diversificação</li>
+<li>Capítulo 2: Performance de Métodos</li>
+<li>Capítulo 3: Diversificação + Redes</li>
+<li>Conclusões</li>
+</ul>
+</section>
+<section id="section-1" class="slide level1" data-notes="Estima-se que 99% de todas as espécies que já passaram pelo planeta foram extintas." data-background="img/diversity_color.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="section-2" class="slide level1" data-notes="Além disso, o planeta passou por fases de aumento e diminuição do número de espécies, como por exemplo as conhecidas 5 (ou 6) extinções em massa" data-background="img/mass_extinctions.jpg" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="macroevolucao" class="slide level1 center">
+<h1>Macroevolução</h1>
+</section>
+<section id="section-3" class="slide level1" data-notes="Macroevolução é a área que estuda a evolução acima do nível da espécie. Mudança no número e/ou forma das espécies em escalas de tempo bastante longas. Focarei só na diversificação. O que procuramos entender é como acontece e o que afeta a formação e o desaparecimento de novas espécies, através dos processos de especiação e extinção." data-background="img/deeptime_evolution.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="especiacao" class="slide level1" data-notes="Especiação é o processo de surgimento de novas espécies, quando há isolamento reprodutivo">
+<h1>Especiação</h1>
+<p><img src="img/speciation.gif" width="500" /></p>
+</section>
+<section id="extincao" class="slide level1 center" data-notes="Extinção por outro lado é o processo de desaparecimento de uma espécie/linhagem, quando a última população desaparece seja por eventos catastróficos como no caso dos dinossauros, seja por outros motivos">
+<h1>Extinção</h1>
+<p><img src="img/smbc.jpg" width="600" /></p>
+</section>
+<section id="section-4" class="slide level1" data-notes="Esses processos acontecem ao longo de milhares ou milhões de anos. Basicamente o balanço entre esses dois processos, modulados por diferentes mecanismos como por exemplo eventos geológicos, que determina a diversidade em um momento no tempo." data-background-video="img/marine_fossil_history.mp4" data-background-size="75%">
+<h1></h1>
+</section>
+<section id="section-5" class="slide level1" data-notes="Como podemos estudar isso então? Precisamos de uma máquina do tempo" data-background="img/time_machine.png">
+<h1></h1>
+</section>
+<section id="section-6" class="slide level1" data-notes="Existem basicamente dois tipos de dados que podemos usar como máquinas do tempo. Uma das formas é através do registro fóssil" data-background="img/canid_fossil.jpg">
+<h1></h1>
+</section>
+<section id="section-7" class="slide level1 center" data-notes="Nesse exemplo, os autores mostraram que gatos são melhores que cachorros. Foi possível analisar a dinâmica da diversificação das 3 subfamílias de canidae, e também sugerir as causas do declínio das 2 subfamílias extintas" data-background="img/canid_fossil.jpg">
+<h1></h1>
+<p><img src="img/silvestro_et_al_2015.png" width="800" /></p>
+</section>
+<section id="section-8" class="slide level1" data-notes="No entanto, apesar de ao pensarmos em evolução geralmente associarmos a fósseis, eles representam um dos extremos de um espectro de disponibilidade de dados. No outro lado do espectro estão grupos com registro fóssil ruim e apenas espécies vivas." data-background="img/data_types.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-9" class="slide level1" data-notes="Para os grupos dos quais não dispomos de dados fósseis, a forma que temos de viajar no tempo é usando filogenias moleculares." data-background="img/tree_bamm.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-10" class="slide level1" data-notes="Mas o que são as filogenias moleculares? Com o advento da biologia molecular, cada dia mais está mais fácil sequenciar genes." data-background="img/alignment.png" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="section-11" class="slide level1" data-notes="Usamos esses dados de sequências de DNA e aplicamos modelos de evolução molecular para estimar quanto tempo levou para duas sequências (ou duas espécies) se separarem no tempo" data-background="img/molclock.jpg" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-12" class="slide level1" data-notes="Com isso, foi por exemplo possível construir a árvore da vida, que contém quase toda a informação molecular disponível hoje e ajudou a elucidar um pouco melhor a relação entre os grandes grupos" data-background="img/treeoflife.jpg" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-13" class="slide level1" data-notes="Para dar um exemplo, no trabalho da Laura eles construíram uma filogenia para Viperidae, e observaram uma mudança nos padrões de diversificação para o grupo neotropical. Uma exigência em estudos de macroevolução (bem como todo estudo decente) é a quantidade de dados" data-background="img/alencar_et_al_2016.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-14" class="slide level1 center" data-notes="Uma das razões é que é muito legal falar que vc trabalha com os únicos dinossauros vivos" data-background="img/dinosaur_blood.jpg" data-background-size="45%">
+<h1></h1>
+<h1 style="background:rgba(0,0,0,0.75);">
+Por que aves?
+</h1>
+</section>
+<section id="section-15" class="slide level1" data-notes="Aves são parentes próximos dos grupos de dinossauros extintos" data-background="img/theropoda_phylo.png" data-background-size="45%">
+<h1></h1>
+</section>
+<section id="section-16" class="slide level1" data-notes="É um grupo com uma quantidade imensa de dados" data-background="img/historical_data.png" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-17" class="slide level1 center" data-notes="É um grupo com uma quantidade imensa de dados" data-background="img/markmybird.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="section-18" class="slide level1" data-notes="A imensa quantidade de dados permite com que a ecologia desse grupo seja intensamente estudada." data-background="img/migrating_birds.gif" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-19" class="slide level1" data-notes="É possível ver por exemplo que as migrações estão mudando tanto no tempo quanto no espaço. Hurlbert &amp; Liang 2012 PLoS ONE" data-background="img/citizen_science_change_phenology.png" data-background-size="55%">
+<h1></h1>
+</section>
+<section id="section-20" class="slide level1" data-notes="Ocupam todos os continentes. Estamos acostumados com o estudo da evolução de uma ou poucas linhagens ao longo de algumas gerações. É portanto um grupo de grande interesse para a macroevolução" data-background="img/kissling_et_al_2012.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="section-21" class="slide level1" data-notes="Infelizmente aves não possuem um registro fóssil muito rico, devido a características como os ossos pneumáticos que resistem menos aos processos de fossilização" data-background="img/archaeopteryx.jpg" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-22" class="slide level1" data-notes="No entanto, é um grupo para o qual dados moleculares são abundantes e permitiram estabelecer razoavelmente bem suas relações de parentesco" data-background="img/jetz2012.png" data-background-size="70%">
+<h1></h1>
+</section>
+<section id="section-23" class="slide level1" data-notes="As aves se originaram a cerca de 120MY, então não é de se estranhar que sejam um grupo extremamente rico em morfologias" data-background="img/Bird_Diversity2.png" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="section-24" class="slide level1" data-notes="Essas diferentes morfologias podem representar diferentes ecologias, como por exemplo os bicos que são mais adaptados a diferentes dietas">
+<h1></h1>
+<p><img src="img/BirdBeaks.gif" /></p>
+</section>
+<section id="section-25" class="slide level1" data-notes="As diferenças nas ecologias também se refletem nos diferentes serviços ecoloógicos que as aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização. Nesses serviços (que muitas vezes tem relação com a ecologia trófica das espécies) as espécies de ave interagem com diversas outras espécies de diferentes grupos, podendo essas interações serem antagonísticas ou mutualistas" data-background="img/bird_services.png" data-background-size="77%">
+<h1></h1>
+</section>
+<section id="items" class="slide level1 center emphasized">
+<h1>Objetivos</h1>
+<ul>
+<li class="fragment">Entender os efeitos de diferentes dietas na diversificação do grupo</li>
+<li class="fragment">Testar a performance de métodos amplamente utilizados</li>
+<li class="fragment">Analisar a relação entre a diversificação e o papel ecológico</li>
+</ul>
+</section>
+<section id="capitulo-1" class="slide level1 center">
+<h1>Capítulo 1</h1>
+<p><img src="img/natcomms.png" /></p>
+</section>
+<section id="section-26" class="slide level1" data-notes="Price et al. 2012 analisaram o efeito da dieta na diversificação de mamíferos, e encontraram resultados interessantes. Ficamos curiosos sobre o quão amplo é esse padrão, então testamos em aves. " data-background="img/price_results.png" data-background-size="70%">
+<h1></h1>
+</section>
+<section id="section-27" class="slide level1" data-notes="É um grupo bastante rico em espécies com suas relações de parentesco razoavelmente bem conhecidas" data-background="img/jetz2012.png" data-background-size="70%">
+<h1></h1>
+</section>
+<section id="section-28" class="slide level1" data-notes="Cientistas compilam dados também" data-background="img/kissling_data.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="como" class="slide level1" data-notes="Usando um pacote que contém modelos que estimam as taxas de diversificação associadas a diferentes estados de um caráter" data-background="img/r_diversitree.png" data-background-size="70%">
+<h1>Como?</h1>
+<p><img class="fragment" src="img/bisse_example.png" width="600px"/></p>
+</section>
+<section id="como-1" class="slide level1" data-notes="Taxas de especiação, extinção e transição pra cada estado. Transições são mudanças anagenéticas, ou seja, sem especiação">
+<h1>Como?</h1>
+<ul>
+<li>Incorporar incerteza filogenética (200 árvores)</li>
+<li>Especiação, extinção e transições para 9 dietas (93 parâmetros)</li>
+<li>Abordagem Bayesiana: 1500000 iterações</li>
+<li>2 meses de processamento</li>
+</ul>
+<p><img src="img/waiting.png" width="300" /></p>
+</section>
+<section id="section-29" class="slide level1" data-notes="Resultados para net diversification" data-background="img/cap1fig1_black.png" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="section-30" class="slide level1" data-notes="Resultados para net diversification" data-background="img/result1_omniv.png" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="section-31" class="slide level1" data-notes="Essa net diversification menor para onívoros vem vem de terem menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black.png" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="section-32" class="slide level1" data-notes="Essa net diversification menor para onívoros vem vem de terem menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black_highlight.png" data-background-size="90%" data-transition="none">
+<h1></h1>
+</section>
+<section id="section-33" class="slide level1 center" data-notes="Como então que a riqueza tão alta - 1150 espécies - pode ser mantida se em teoria essa guilda está em declínio?" data-background="img/omniv_phylo.png" data-background-size="60%">
+<h1></h1>
+<h1 class="fragment" style="background:rgba(0,0,0,0.5);">
+1150 espécies de onívoros
+</h1>
+</section>
+<section id="section-34" class="slide level1" data-notes="O que mantém a diversidade são as transições preferenciais para onivoria" data-background="img/transitions_white.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="resumo---resultados" class="slide level1" data-notes="Mensagens para levar pra casa">
+<h1>Resumo - Resultados</h1>
+<p><br></br></p>
+<ul>
+<li class="fragment"><em>Net diversification</em> menor em onívoros</li>
+<li class="fragment">Menor especiação e/ou maior extinção</li>
+<li class="fragment">Transições preferenciais para onivoria</li>
+</ul>
+</section>
+<section id="section-35" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
+<h1></h1>
+<h2>
+Recursos abundantes/previsíveis
+</h2>
+<p><img class="fragment" style="background:black; border:0px;" src="img/competition.png" width=65%/></p>
+</section>
+<section id="section-36" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
+<h1></h1>
+<h2>
+Recursos abundantes/previsíveis
+</h2>
+<p><img style="background:black; border:0px;" src="img/specialized.png" width=65%/></p>
+</section>
+<section id="section-37" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
+<h1></h1>
+<h2>
+Recursos escassos/imprevisíveis
+</h2>
+<p><img class="fragment" style="background:black; border:0px;" src="img/competition.png" width=65%/></p>
+</section>
+<section id="section-38" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
+<h1></h1>
+<h2>
+Recursos escassos/imprevisíveis
+</h2>
+<p><img style="background:black; border:0px;" src="img/comp_trans_arrows.png" width=65%/></p>
+</section>
+<section id="capitulo-2" class="slide level1 center">
+<h1>Capítulo 2</h1>
+<p style="font-size:2em;color:white;">
+How well can we estimate diversity dynamics for clades in diversity decline?
+</p>
+<p><br></br></p>
+<p>Gustavo <strong>BURIN</strong>; Laura <strong>ALENCAR</strong>; Jonathan <strong>CHANG</strong>; Michael <strong>ALFARO</strong>; Tiago <strong>QUENTAL</strong></p>
+<p><br></br></p>
+<p style="font-size:0.7em;">
+Segunda revisão na revista <b><i>Systematic Biology</i></b>
+</p>
+</section>
+<section id="section-39" class="slide level1" data-notes="Estima-se que 99% de todas as espécies que já passaram pelo planeta foram extintas" data-background="img/diversity_color.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="section-40" class="slide level1" data-notes="Como comentei anteriormente, existem duas formas de estimar as taxas, e diferentes grupos ocupam diferentes posições no espectro da disponibilidade de dados fósseis e moleculares" data-background="img/data_types.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-41" class="slide level1">
+<h1></h1>
+<p><img style="width:650px;" src="img/rabosky2010.png"/> <img style="width:650px;" src="img/beaulieu2016.png"/> <img style="width:650px;" src="img/rabosky2016.png"/></p>
+</section>
+<section id="section-42" class="slide level1" data-notes="Porém, existe o problema de se detectar extinção através de filogenias moleculares" data-background="img/phylo_ltt.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-43" class="slide level1" data-notes="Grupos viventes podem estar em expansão, saturação ou declínio, e normalmente o último caso imagina-se ser comum e é pouco estudado" data-background="img/growth_scenarios.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="section-44" class="slide level1 center" data-notes="Recentemente dois métodos foram desenvolvidos e são amplamente utilizados. RPANDA: seleção de modelos; BAMM: rjMCMC. Em ambos em teoria seria capaz de detectarmos declínio de diversidade">
+<h1></h1>
+<p><img src="img/morlon.png" width="1400" /></p>
+<p><img src="img/bamm.png" width="1400" /></p>
+</section>
+<section id="section-45" class="slide level1" data-notes="O objetivo desse capítulo é avaliar a capacidade desses dois métodos de detectar declínio de diversidade a partir de filogenias em cenários onde especiação ou extinção variam, usando simulações e árvores empíricas. Além disso avaliar intensidade do declínio." data-background="img/diversity_timetravel.png" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-46" class="slide level1" data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-47" class="slide level1 center" data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size="80%">
+<h1></h1>
+<p><img src="img/sim_scenarios.png" width="2000" /></p>
+</section>
+<section id="section-48" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/workflow.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-49" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/simtree_full.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-50" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/simtree_mol.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-51" class="slide level1 center" data-notes="Na última etapa, utilizamos os dois métodos para estimar as taxas. Como o RPANDA usa seleção de modelos, testamos esses 4 cenários de variação nas taxas" data-background="img/workflow.png" data-background-size="80%">
+<h1></h1>
+<p><img class="fragment" style="background:black; border:0px;" src="img/tested_models.png"/></p>
+</section>
+<section id="section-52" class="slide level1" data-notes="O espaço de parâmetros foi explorado dessa forma, muito mais abrangente que o estudo da Helene (pontos pretos)" data-background="img/parspace.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-53" class="slide level1 center" data-notes="Interessante é que fomos capazes de gerar árvores de tamanhos bastante similares, mas com assinaturas bastante diferentes" data-background="img/tree_features.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-54" class="slide level1 center" data-notes="No primeiro cenário (SPVAR), ambas as taxas são bem estimadas no presente, e o modelo real (verde nesse caso) também é selecionado" data-background="img/spvar_lambda_full.png" data-background-size="52%">
+<h1></h1>
+</section>
+<section id="section-55" class="slide level1 center" data-notes="No primeiro cenário (SPVAR), ambas as taxas são bem estimadas no presente, e o modelo real (verde nesse caso) também é selecionado" data-background="img/spvar_mu_full.png" data-background-size="52%">
+<h1></h1>
+</section>
+<section id="section-56" class="slide level1 center" data-notes="No segundo cenário (EXVAR), ambas as taxas são bem estimadas no presente, porém o modelo real (amarelo nesse caso) não é selecionado" data-background="img/exvar_lambda_full.png" data-background-size="52%">
+<h1></h1>
+</section>
+<section id="section-57" class="slide level1 center" data-notes="No segundo cenário (EXVAR), ambas as taxas são bem estimadas no presente, porém o modelo real (amarelo nesse caso) não é selecionado" data-background="img/exvar_mu_full.png" data-background-size="52%">
+<h1></h1>
+</section>
+<section id="section-58" class="slide level1" data-notes="Os valores na raiz são ruins tanto para o BAMM" data-background="img/bcdv_bamm_panel.png" data-background-size="42%">
+<h1></h1>
+</section>
+<section id="section-59" class="slide level1" data-notes="Os valores na raiz são ruins tanto para o RPANDA" data-background="img/bcdv_rpanda_panel.png" data-background-size="42%">
+<h1></h1>
+</section>
+<section id="arvores-empiricas" class="slide level1 center">
+<h1>Árvores empíricas</h1>
+<ul>
+<li class="fragment">214 filogenias</li>
+<li class="fragment">4 grandes grupos de vertebrados</li>
+<li class="fragment">Representam cenários mais complexos</li>
+<li class="fragment">Um modelo a mais: BOTHexp</li>
+</ul>
+</section>
+<section id="section-60" class="slide level1 center" data-notes="No caso das empíricas, não sabemos o modelo correto, mas os modelos não concordam nas estimativas, em especial na base das árvores" data-background="img/cap2_empirical.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="mensagens" class="slide level1 center">
+<h1>Mensagens</h1>
+<ul>
+<li class="fragment">Expandimos o espaço de parâmetros estudado</li>
+<li class="fragment">Ambos os modelos estimam as taxas bem no presente</li>
+<li class="fragment">Baixas taxas de falso positivo</li>
+<li class="fragment">Momento do declínio tem pouca influência</li>
+</ul>
+</section>
+<section id="implicacoes-praticas" class="slide level1 center">
+<h1>Implicações práticas</h1>
+<ul>
+<li class="fragment">Dificuldade em detectar variação na extinção</li>
+<li class="fragment">Estimativas ruins na raiz: reconstrução da história é falha</li>
+<li class="fragment">Discordam nas empíricas</li>
+<li class="fragment">Queda na especiação não parece ser tão comum</li>
+<li class="fragment"><span class="math inline">\(\gamma\)</span> pode auxiliar</li>
+</ul>
+</section>
+<section id="capitulo-3" class="slide level1 center">
+<h1>Capítulo 3</h1>
+<p><br></br></p>
+<p style="font-size:2em;color:white;">
+The role of diversification rates on the assembly of frugivory networks
+</p>
+<p><br></br></p>
+<p>Gustavo <strong>BURIN</strong>; Paulo <strong>GUIMARÃES</strong>; Tiago <strong>QUENTAL</strong></p>
+</section>
+<section id="section-61" class="slide level1" data-notes="As diferenças nas ecologias também se refletem nos diferentes serviços ecoloógicos que as aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização. Nesses serviços (que muitas vezes tem relação com a ecologia trófica das espécies) as espécies de ave interagem com diversas outras espécies de diferentes grupos, podendo essas interações serem antagonísticas ou mutualistas" data-background="img/bird_services.png" data-background-size="77%">
+<h1></h1>
+</section>
+<section id="section-62" class="slide level1" data-notes="As aves são o principal grupo que atua na dispersão de sementes" data-background="img/donatti_et_al.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-63" class="slide level1" data-notes="Para representar o papel dessas espécies em uma rede, usamos diferentes métricas. Nesse exemplo de uma rede de relacionamentos, vemos que dependendo da métrica o nó mais central muda" data-background="img/network_metrics.png" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-64" class="slide level1 center" data-notes="No terceiro capítulo testamos a relação entre taxas de diversificação e o papel ecológico desempenhado pelas espécies de aves em redes de frugivoria" data-background="img/cap3fig1.png" data-background-size="80%">
+<h1></h1>
+<h1 class="fragment" style="background:rgba(0,0,0,0.75);">
+Espécies mais centrais pertencem a linhagens mais estáveis/confiáveis
+</h1>
+</section>
+<section id="section-65" class="slide level1 center" data-notes="Usamos os dados de 34 redes de frugivoria (23 quantitativas e 11 binárias" data-background="img/bipartite.jpg" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-66" class="slide level1" data-notes="Essas redes estão distribuídas em diferentes biomas" data-background="img/cap3fig2.png" data-background-size="75%">
+<h1></h1>
+</section>
+<section id="section-67" class="slide level1" data-notes="Além disso, as 546 espécies únicas estão relativamente bem distribuídas ao longo da filogenia" data-background="img/phylonet.png" data-background-size="70%">
+<h1></h1>
+</section>
+<section id="section-68" class="slide level1" data-notes="Utilizamos também as taxas de diversificação estimadas usando o BAMM" data-background="img/cap3fig4.png" data-background-size="90%">
+<h1></h1>
+<h2>
+<div style="float: left; width=50%;">
+Especiação
+</div>
+<div style="float: right; width=50%;">
+Extinção
+</div>
+</h2>
+</section>
+<section id="testes" class="slide level1 center">
+<h1>Testes</h1>
+<ul>
+<li class="fragment">Epsilon (extinção/especiação)</li>
+<li class="fragment">“Pura” e z-score (pool global vs. pool local)</li>
+<li class="fragment">6 co-fatores: Prec. Anual, Saz. Prec., Temp. Média Anual, Saz. Temp., Mod., Aninh.</li>
+<li class="fragment">PGLS</li>
+</ul>
+</section>
+<section id="section-69" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size="90%">
+<h1></h1>
+<h3 class="fragment" style="background:rgba(0,0,0,0.75);">
+Closeness ~ Epsilon * Prec.An./Saz.Prec.
+</h3>
+</section>
+<section id="section-70" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size="90%">
+<h1></h1>
+<h2 style="background:rgba(0,0,0,0.75);">
+Espécies mais centrais pertencem a linhagens mais estáveis/confiáveis
+</h2>
+<h2 style="background:rgba(0,0,0,0.75);">
+Interação positiva com prec: “tropicalização”
+</h2>
+</section>
+<section id="section-71" class="slide level1" data-notes="Disponibilidade de água pode estar relacionado com a fenologia. Diferentes espécies tem relações diferentes com o clima, mas essa relação é geralmente mantida ano após ano." data-background="img/tree_phenology.png" data-background-size="22%">
+<h1></h1>
+<p><img class="fragment" src="img/tree_phenology_climate.png"/></p>
+</section>
+<section id="discussao" class="slide level1 center" data-notes="Tradeoff: redes quantitativas mostraram mais relações do que redes binárias">
+<h1>Discussão</h1>
+<ul>
+<li class="fragment">Relação negativa: espécies mais centrais vem de linhagens mais estáveis/“confiáveis” (<em>species sorting</em>)</li>
+<li class="fragment">Disponibilidade de água (total e sazonal): Fenologia</li>
+<li class="fragment">Pool global vs. pool local</li>
+<li class="fragment">Trópicos: <em>Tradeoff</em> entre número de interações e número de espécies (maior riqueza)</li>
+</ul>
+</section>
+<section id="section-72" class="slide level1 center">
+<h1></h1>
+<h2>
+Mensagens finais - cap 1
+</h2>
+<ul>
+<li class="fragment">Onívoros parecem ser um ralo macroevolutivo</li>
+<li class="fragment">Diversidade de onívoros mantida por transições</li>
+<li class="fragment">Diversidade regulada por mosaico espaço-temporal de seleção</li>
+</ul>
+</section>
+<section id="section-73" class="slide level1 center">
+<h1></h1>
+<h2>
+Mensagens finais - cap 2
+</h2>
+<ul>
+<li class="fragment">BAMM e RPANDA estimam bem no presente</li>
+<li class="fragment">Variação na extinção: reconstrução errada</li>
+<li class="fragment">Cenários complexos: métodos discordam</li>
+</ul>
+</section>
+<section id="section-74" class="slide level1 center">
+<h1></h1>
+<h2>
+Mensagens finais - cap 3
+</h2>
+<ul>
+<li class="fragment">Espécies centrais vem de linhagens mais estáveis em regiões temperadas</li>
+<li class="fragment">Montagem influenciada pela disponibilidade de água (“tropicalização”)</li>
+<li class="fragment">Trópicos: compensação de intimidade por quantidade</li>
+</ul>
+</section>
+<section id="obrigado" class="slide level1 center">
+<h1>Obrigado!</h1>
+</section>
+    </div>
+  </div>
+
+  <script src="defesa_gbf_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="defesa_gbf_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'defesa_gbf_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
