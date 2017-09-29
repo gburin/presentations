@@ -505,7 +505,7 @@ Co-orientador: Paulo R. <strong>GUIMARÃES</strong> Jr
 <h1>Extinção</h1>
 <p><img src="img/smbc.jpg" width="600" /></p>
 </section>
-<section id="section-4" class="slide level1" data-notes="O balanço entre esses dois processos durante milhões de anos, modulados por diferentes mecanismos como por exemplo eventos geológicos, que determina a diversidade em um momento no tempo." data-background-video="img/marine_fossil_history.mp4" data-background-size="75%">
+<section id="section-4" class="slide level1" data-notes="O balanço entre esses dois processos durante milhões de anos, modulados por diferentes mecanismos como por exemplo eventos geológicos, que determina a diversidade em um momento no tempo." data-background="img/marine_fossil_history.gif" data-background-size="75%">
 <h1></h1>
 </section>
 <section id="section-5" class="slide level1" data-notes="Essas escalas de tempo são difíceis de imaginar. Como podemos estudar isso então? Precisamos de uma máquina do tempo" data-background="img/time_machine.png">
@@ -518,7 +518,7 @@ Co-orientador: Paulo R. <strong>GUIMARÃES</strong> Jr
 <h1></h1>
 <p><img src="img/silvestro_et_al_2015.png" width="800" /></p>
 </section>
-<section id="section-8" class="slide level1" data-notes="No entanto, apesar de ao pensarmos em evolução geralmente associarmos a fósseis, eles representam um dos extremos de um espectro de disponibilidade de dados. No outro lado do espectro estão grupos com registro fóssil ruim e apenas espécies vivas." data-background="img/data_types.png" data-background-size="60%">
+<section id="section-8" class="slide level1" data-notes="No entanto, apesar de ao pensarmos em evolução geralmente associarmos a fósseis, eles representam um dos extremos de um espectro de disponibilidade de dados, como um dos grupos extintos de dinosauros. No outro lado do espectro estão grupos com registro fóssil ruim e apenas espécies vivas." data-background="img/data_types.png" data-background-size="60%">
 <h1></h1>
 </section>
 <section id="section-9" class="slide level1" data-notes="Para os grupos dos quais não dispomos de dados fósseis, a forma que temos de viajar no tempo é usando filogenias moleculares." data-background="img/tree_bamm.png" data-background-size="60%">
@@ -568,9 +568,6 @@ Co-orientador: Paulo R. <strong>GUIMARÃES</strong> Jr
 <section id="section-22" class="slide level1" data-notes="As diferenças nas ecologias também se refletem nas diferentes interações ecológicas aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização." data-background="img/bird_services.png" data-background-size="77%">
 <h1></h1>
 </section>
-<section id="seed-dispersal" class="slide level1" data-notes="Grupo mais importante pra dispersão de sementes, interagindo com muitas espécies de plantas ao mesmo tempo, formando redes de interação. Mas essas redes são formadas ao acaso ou existe um padrão evolutivo por trás?">
-<h1>SEED DISPERSAL</h1>
-</section>
 <section id="items" class="slide level1 center emphasized">
 <h1>Objetivos</h1>
 <ul>
@@ -589,10 +586,10 @@ Co-orientador: Paulo R. <strong>GUIMARÃES</strong> Jr
 <section id="section-24" class="slide level1" data-notes="É um grupo bastante rico em espécies com suas relações de parentesco razoavelmente bem conhecidas" data-background="img/jetz2012.png" data-background-size="70%">
 <h1></h1>
 </section>
-<section id="section-25" class="slide level1" data-notes="Cientistas compilam dados também" data-background="img/kissling_data.png" data-background-size="80%">
-<h1></h1>
+<section id="dados-de-dieta" class="slide level1" data-notes="Cientistas compilam dados também" data-background="img/kissling_data.png" data-background-size="80%">
+<h1>Dados de dieta</h1>
 </section>
-<section id="section-26" class="slide level1" data-notes="R+diversitree. Taxas de especiação, extinção e transição pra cada estado. Transições são mudanças anagenéticas, ou seja, sem especiação" data-background="img/r_diversitree.png" data-background-size="70%">
+<section id="section-25" class="slide level1" data-notes="R+diversitree. Abordagem implementada no pacote. Taxas de especiação, extinção e transição pra cada estado. Transições são mudanças anagenéticas, ou seja, sem especiação" data-background="img/r_diversitree.png" data-background-size="70%">
 <h1></h1>
 <h2>
 Como?
@@ -602,32 +599,32 @@ Como?
 <section id="como" class="slide level1" data-notes="Estimamos as taxas pra cada guilda de dieta">
 <h1>Como?</h1>
 <ul>
-<li>Incorporar incerteza filogenética (200 árvores)</li>
-<li>Especiação, extinção e transições para 9 dietas (93 parâmetros)</li>
+<li>Incorporar incerteza filogenética (200 árvores - 9871 espécies)</li>
+<li>Especiação, extinção e transições para 9 dietas - Carnívoros, Frugívoros, Granívoros, Herbívoros, Insetívoros, Nectarívoros, Onívoros, Piscívoros e Carniceiros (93 parâmetros)</li>
 <li>Abordagem Bayesiana: 1500000 iterações</li>
 <li>2 meses de processamento</li>
 </ul>
 <p><img src="img/waiting.png" width="300" /></p>
 </section>
-<section id="section-27" class="slide level1" data-notes="Resultados para net diversification" data-background="img/cap1fig1_black.png" data-background-size="90%">
+<section id="section-26" class="slide level1" data-notes="Resultados para net diversification" data-background="img/cap1fig1_black.png" data-background-size="90%">
 <h1></h1>
 </section>
-<section id="section-28" class="slide level1" data-notes="Menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black.png" data-background-size="90%">
+<section id="section-27" class="slide level1" data-notes="Menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black.png" data-background-size="90%">
 <h1></h1>
 </section>
-<section id="section-29" class="slide level1" data-notes="Menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black_highlight.png" data-background-size="90%" data-transition="none">
+<section id="section-28" class="slide level1" data-notes="Menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black_highlight.png" data-background-size="90%" data-transition="none">
 <h1></h1>
 </section>
-<section id="section-30" class="slide level1" data-notes="Além da netdiv ser menor, ela é inclusive negativa" data-background="img/cap1fig1_black.png" data-background-size="90%">
+<section id="section-29" class="slide level1" data-notes="Além da netdiv ser menor, ela é inclusive negativa" data-background="img/cap1fig1_black.png" data-background-size="90%">
 <h1></h1>
 </section>
-<section id="section-31" class="slide level1 center" data-notes="Como então que a riqueza tão alta - 1150 espécies - pode ser mantida se em teoria essa guilda está em declínio?" data-background="img/omniv_phylo.png" data-background-size="60%">
+<section id="section-30" class="slide level1 center" data-notes="Como então que a riqueza tão alta - 1150 espécies - pode ser mantida se em teoria essa guilda está em declínio?" data-background="img/omniv_phylo.png" data-background-size="60%">
 <h1></h1>
 <h1 class="fragment" style="background:rgba(0,0,0,0.5);">
 1150 espécies de onívoros
 </h1>
 </section>
-<section id="section-32" class="slide level1" data-notes="O que mantém a diversidade são as transições preferenciais para onivoria" data-background="img/transitions_white.png" data-background-size="60%">
+<section id="section-31" class="slide level1" data-notes="O que mantém a diversidade são as transições preferenciais para onivoria" data-background="img/transitions_white.png" data-background-size="60%">
 <h1></h1>
 </section>
 <section id="resumo---resultados" class="slide level1" data-notes="Mensagens para levar pra casa">
@@ -639,28 +636,28 @@ Como?
 <li class="fragment">Transições preferenciais para onivoria</li>
 </ul>
 </section>
-<section id="section-33" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
+<section id="section-32" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
 <h1></h1>
 <h2>
 Recursos abundantes/previsíveis
 </h2>
 <p><img style="background:black; border:0px;" src="img/competition.png" width=65%/></p>
 </section>
-<section id="section-34" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
+<section id="section-33" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
 <h1></h1>
 <h2>
 Recursos abundantes/previsíveis
 </h2>
 <p><img style="background:black; border:0px;" src="img/specialized.png" width=65%/></p>
 </section>
-<section id="section-35" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
+<section id="section-34" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
 <h1></h1>
 <h2>
 Recursos escassos/imprevisíveis
 </h2>
 <p><img style="background:black; border:0px;" src="img/competition.png" width=65%/></p>
 </section>
-<section id="section-36" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
+<section id="section-35" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
 <h1></h1>
 <h2>
 Recursos escassos/imprevisíveis
@@ -679,72 +676,69 @@ How well can we estimate diversity dynamics for clades in diversity decline?
 Segunda revisão na revista <b><i>Systematic Biology</i></b>
 </p>
 </section>
-<section id="section-37" class="slide level1" data-notes="Como vimos no capítulo anterior, é possível usar molphylo para estimar lambda/mu" data-background="img/tree_bamm.png" data-background-size="60%">
+<section id="section-36" class="slide level1" data-notes="Como vimos no capítulo anterior, é possível usar molphylo para estimar lambda/mu" data-background="img/tree_bamm.png" data-background-size="60%">
 <h1></h1>
 </section>
-<section id="section-38" class="slide level1" data-notes="Porém nem tudo são flores. Existe um debate rolando sobre até que ponto podemos estimar as taxas de extinção em molphylo.">
+<section id="section-37" class="slide level1" data-notes="Porém nem tudo são flores. Existe um debate rolando sobre até que ponto podemos estimar as taxas de extinção em molphylo.">
 <h1></h1>
 <p><img style="width:650px;" src="img/rabosky2010.png"/> <img style="width:650px;" src="img/beaulieu2016.png"/> <img style="width:650px;" src="img/rabosky2016.png"/></p>
 </section>
-<section id="section-39" class="slide level1" data-notes="Isso porque filogenias moleculares não possuem informação direta sobre extinção." data-background="img/phylo_ltt.png" data-background-size="60%">
+<section id="section-38" class="slide level1" data-notes="Isso porque filogenias moleculares não possuem informação direta sobre extinção." data-background="img/phylo_ltt.png" data-background-size="60%">
 <h1></h1>
 </section>
-<section id="section-40" class="slide level1" data-notes="Olhando para toda a diversidade que existe e já existiu, sabemos que extinção é um fator extremamente importante." data-background="img/diversity_color.png" data-background-size="100%">
+<section id="section-39" class="slide level1" data-notes="Olhando para toda a diversidade que existe e já existiu, sabemos que extinção é um fator extremamente importante." data-background="img/diversity_color.png" data-background-size="100%">
 <h1></h1>
 </section>
-<section id="section-41" class="slide level1" data-notes="Podemos então esperar que os grupos viventes podem estar em expansão, saturação ou declínio, no entanto o último caso imagina-se ser comum e é pouco estudado, e um dos motivos são limitações metodológicas" data-background="img/growth_scenarios.png" data-background-size="100%">
+<section id="section-40" class="slide level1" data-notes="Podemos então esperar que os grupos viventes podem estar em expansão, saturação ou declínio, no entanto o último caso imagina-se ser comum e é pouco estudado, e um dos motivos são limitações metodológicas" data-background="img/growth_scenarios.png" data-background-size="100%">
 <h1></h1>
 </section>
-<section id="section-42" class="slide level1 center" data-notes="Recentemente dois métodos foram desenvolvidos e são amplamente utilizados. RPANDA: seleção de modelos; BAMM: rjMCMC. Em ambos em teoria seria capaz de detectarmos declínio de diversidade">
+<section id="section-41" class="slide level1 center" data-notes="Recentemente dois métodos foram desenvolvidos e são amplamente utilizados. RPANDA: seleção de modelos; BAMM: rjMCMC. Em ambos em teoria seria capaz de detectarmos declínio de diversidade">
 <h1></h1>
 <p><img src="img/morlon.png" width="1400" /></p>
 <p><img src="img/bamm.png" width="1400" /></p>
 </section>
-<section id="section-43" class="slide level1" data-notes="O objetivo desse capítulo é avaliar a capacidade desses dois métodos de detectar declínio de diversidade a partir de filogenias em cenários onde especiação ou extinção variam, usando simulações e árvores empíricas. Além disso avaliar intensidade do declínio." data-background="img/diversity_timetravel.png" data-background-size="50%">
+<section id="section-42" class="slide level1" data-notes="O objetivo desse capítulo é avaliar a capacidade desses dois métodos de detectar declínio de diversidade a partir de filogenias em cenários onde especiação ou extinção variam, usando simulações e árvores empíricas. Além disso avaliar intensidade do declínio." data-background="img/diversity_timetravel.png" data-background-size="50%">
 <h1></h1>
 </section>
-<section id="section-44" class="slide level1" data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size="80%">
-<h1></h1>
-</section>
-<section id="section-45" class="slide level1 center" data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size="80%">
+<section id="section-43" class="slide level1" data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size="80%">
 <h1></h1>
 <p><img class="fragment" src="img/sim_scenarios.png" width=200%/></p>
 </section>
-<section id="section-46" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/workflow.png" data-background-size="80%">
+<section id="section-44" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/workflow.png" data-background-size="80%">
 <h1></h1>
 </section>
-<section id="section-47" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/simtree_full.png" data-background-size="60%">
+<section id="section-45" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/simtree_full.png" data-background-size="60%">
 <h1></h1>
 </section>
-<section id="section-48" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/simtree_mol.png" data-background-size="60%">
+<section id="section-46" class="slide level1 center" data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/simtree_mol.png" data-background-size="60%">
 <h1></h1>
 </section>
-<section id="section-49" class="slide level1 center" data-notes="Na última etapa, utilizamos os dois métodos para estimar as taxas. Como o RPANDA usa seleção de modelos, testamos esses 4 cenários de variação nas taxas" data-background="img/workflow.png" data-background-size="80%">
+<section id="section-47" class="slide level1 center" data-notes="Na última etapa, utilizamos os dois métodos para estimar as taxas. Como o RPANDA usa seleção de modelos, testamos esses 4 cenários de variação nas taxas" data-background="img/workflow.png" data-background-size="80%">
 <h1></h1>
 <p><img class="fragment" style="background:black; border:0px;" src="img/tested_models.png"/></p>
 </section>
-<section id="section-50" class="slide level1" data-notes="O espaço de parâmetros foi explorado dessa forma, muito mais abrangente que o estudo da Helene (pontos pretos)" data-background="img/parspace.png" data-background-size="80%">
+<section id="section-48" class="slide level1" data-notes="O espaço de parâmetros foi explorado dessa forma, muito mais abrangente que o estudo da Helene (pontos pretos)" data-background="img/parspace.png" data-background-size="80%">
 <h1></h1>
 </section>
-<section id="section-51" class="slide level1 center" data-notes="Interessante é que fomos capazes de gerar árvores de tamanhos bastante similares, mas com assinaturas bastante diferentes" data-background="img/tree_features.png" data-background-size="80%">
+<section id="section-49" class="slide level1 center" data-notes="Interessante é que fomos capazes de gerar árvores de tamanhos bastante similares, mas com assinaturas bastante diferentes" data-background="img/tree_features.png" data-background-size="80%">
 <h1></h1>
 </section>
-<section id="section-52" class="slide level1 center" data-notes="No primeiro cenário (SPVAR), ambas as taxas são bem estimadas no presente, e o modelo real (verde nesse caso) também é selecionado" data-background="img/spvar_lambda_full.png" data-background-size="52%">
+<section id="section-50" class="slide level1 center" data-notes="No primeiro cenário (SPVAR), ambas as taxas são bem estimadas no presente, e o modelo real (verde nesse caso) também é selecionado" data-background="img/spvar_lambda_full.png" data-background-size="52%">
 <h1></h1>
 </section>
-<section id="section-53" class="slide level1 center" data-notes="No primeiro cenário (SPVAR), ambas as taxas são bem estimadas no presente, e o modelo real (verde nesse caso) também é selecionado" data-background="img/spvar_mu_full.png" data-background-size="52%">
+<section id="section-51" class="slide level1 center" data-notes="No primeiro cenário (SPVAR), ambas as taxas são bem estimadas no presente, e o modelo real (verde nesse caso) também é selecionado" data-background="img/spvar_mu_full.png" data-background-size="52%">
 <h1></h1>
 </section>
-<section id="section-54" class="slide level1 center" data-notes="No segundo cenário (EXVAR), ambas as taxas são bem estimadas no presente, porém o modelo real (amarelo nesse caso) não é selecionado" data-background="img/exvar_lambda_full.png" data-background-size="52%">
+<section id="section-52" class="slide level1 center" data-notes="No segundo cenário (EXVAR), ambas as taxas são bem estimadas no presente, porém o modelo real (amarelo nesse caso) não é selecionado" data-background="img/exvar_lambda_full.png" data-background-size="52%">
 <h1></h1>
 </section>
-<section id="section-55" class="slide level1 center" data-notes="No segundo cenário (EXVAR), ambas as taxas são bem estimadas no presente, porém o modelo real (amarelo nesse caso) não é selecionado" data-background="img/exvar_mu_full.png" data-background-size="52%">
+<section id="section-53" class="slide level1 center" data-notes="No segundo cenário (EXVAR), ambas as taxas são bem estimadas no presente, porém o modelo real (amarelo nesse caso) não é selecionado" data-background="img/exvar_mu_full.png" data-background-size="52%">
 <h1></h1>
 </section>
-<section id="section-56" class="slide level1" data-notes="Os valores na raiz são ruins tanto para o BAMM" data-background="img/bcdv_bamm_panel.png" data-background-size="42%">
+<section id="section-54" class="slide level1" data-notes="Os valores na raiz são ruins tanto para o BAMM" data-background="img/bcdv_bamm_panel.png" data-background-size="42%">
 <h1></h1>
 </section>
-<section id="section-57" class="slide level1" data-notes="Os valores na raiz são ruins tanto para o RPANDA" data-background="img/bcdv_rpanda_panel.png" data-background-size="42%">
+<section id="section-55" class="slide level1" data-notes="Os valores na raiz são ruins tanto para o RPANDA, e a especiação inicial é superestimada, indicando que os modelos estão atribuindo a variação na diversificação à especiação" data-background="img/bcdv_rpanda_panel.png" data-background-size="42%">
 <h1></h1>
 </section>
 <section id="arvores-empiricas" class="slide level1 center">
@@ -754,17 +748,18 @@ Segunda revisão na revista <b><i>Systematic Biology</i></b>
 <li class="fragment">5 grandes grupos de vertebrados</li>
 <li class="fragment">Representam cenários mais complexos</li>
 <li class="fragment">Um modelo a mais: BOTHexp</li>
+<li class="fragment">Verificar convergência das estimativas</li>
 </ul>
 </section>
-<section id="section-58" class="slide level1 center" data-notes="No caso das empíricas, não sabemos o modelo correto, mas os modelos não concordam nas estimativas, em especial na base das árvores" data-background="img/cap2_empirical.png" data-background-size="60%">
+<section id="section-56" class="slide level1 center" data-notes="No caso das empíricas, não sabemos o modelo correto, mas os modelos não concordam nas estimativas, em especial na base das árvores" data-background="img/cap2_empirical.png" data-background-size="60%">
 <h1></h1>
 </section>
 <section id="mensagens" class="slide level1 center">
 <h1>Mensagens</h1>
 <ul>
-<li class="fragment">Expandimos o espaço de parâmetros estudado</li>
+<li class="fragment">Primeiro teste mais abrangente (espaço de parâmetros e <em>time-travel</em>)</li>
 <li class="fragment">Ambos os modelos estimam as taxas bem no presente</li>
-<li class="fragment">Momento do declínio tem pouca influência</li>
+<li class="fragment">Atribui variação na diversificação à especiação (força queda)</li>
 </ul>
 </section>
 <section id="implicacoes-praticas" class="slide level1 center">
@@ -774,7 +769,6 @@ Segunda revisão na revista <b><i>Systematic Biology</i></b>
 <li class="fragment">Estimativas ruins na raiz: reconstrução da história é falha</li>
 <li class="fragment">Discordam nas empíricas</li>
 <li class="fragment">Queda na especiação não parece ser tão comum</li>
-<li class="fragment"><span class="math inline">\(\gamma\)</span> pode auxiliar</li>
 </ul>
 </section>
 <section id="capitulo-3" class="slide level1 center">
@@ -786,31 +780,31 @@ The role of diversification rates on the assembly of frugivory networks
 <p><br></br></p>
 <p>Gustavo <strong>BURIN</strong>; Paulo <strong>GUIMARÃES</strong>; Tiago <strong>QUENTAL</strong></p>
 </section>
-<section id="section-59" class="slide level1" data-notes="Na introdução falamos sobre as interações que as aves fazem parte. Falamos também que são um dos principais grupos de dispersores" data-background="img/bird_services.png" data-background-size="77%">
+<section id="section-57" class="slide level1" data-notes="Na introdução falamos sobre as interações que as aves fazem parte. Falamos também que são um dos principais grupos de dispersores" data-background="img/bird_services.png" data-background-size="77%">
 <h1></h1>
 </section>
-<section id="section-60" class="slide level1" data-notes="As aves são o principal grupo que atua na dispersão de sementes" data-background="img/donatti_et_al.png" data-background-size="80%">
+<section id="section-58" class="slide level1" data-notes="As aves são o principal grupo que atua na dispersão de sementes" data-background="img/donatti_et_al.png" data-background-size="80%">
 <h1></h1>
 </section>
-<section id="section-61" class="slide level1" data-notes="Para representar o papel dessas espécies em uma rede, usamos diferentes métricas. Nesse exemplo de uma rede de relacionamentos, vemos que dependendo da métrica o nó mais central muda" data-background="img/network_metrics.png" data-background-size="50%">
+<section id="section-59" class="slide level1" data-notes="Para representar o papel dessas espécies em uma rede, usamos diferentes métricas. Nesse exemplo de uma rede de relacionamentos, vemos que dependendo da métrica o nó mais central muda, então elas podem ser usadas para representar diferentes papéis ecológicos em redes de interação" data-background="img/network_metrics.png" data-background-size="50%">
 <h1></h1>
 </section>
-<section id="section-62" class="slide level1 center" data-notes="Mas as espécies centrais tem uma história evolutiva similar? No terceiro capítulo testamos a relação entre taxas de diversificação e o papel ecológico desempenhado pelas espécies de aves em redes de frugivoria" data-background="img/cap3fig1.png" data-background-size="80%">
+<section id="section-60" class="slide level1 center" data-notes="Mas as espécies centrais tem uma história evolutiva similar? No terceiro capítulo testamos a relação entre taxas de diversificação e o papel ecológico desempenhado pelas espécies de aves em redes de frugivoria" data-background="img/cap3fig1.png" data-background-size="80%">
 <h1></h1>
 <h1 class="fragment" style="background:rgba(0,0,0,0.75);">
 Espécies mais centrais pertencem a linhagens mais estáveis/confiáveis
 </h1>
 </section>
-<section id="section-63" class="slide level1 center" data-notes="Usamos os dados de 34 redes de frugivoria (23 quantitativas e 11 binárias" data-background="img/bipartite.jpg" data-background-size="80%">
+<section id="section-61" class="slide level1 center" data-notes="Usamos os dados de 34 redes de frugivoria (23 quantitativas e 11 binárias" data-background="img/bipartite.jpg" data-background-size="80%">
 <h1></h1>
 </section>
-<section id="section-64" class="slide level1" data-notes="Essas redes estão distribuídas em diferentes biomas" data-background="img/cap3fig2.png" data-background-size="75%">
+<section id="section-62" class="slide level1" data-notes="Essas redes estão distribuídas em diferentes biomas" data-background="img/cap3fig2.png" data-background-size="75%">
 <h1></h1>
 </section>
-<section id="section-65" class="slide level1" data-notes="Além disso, as 546 espécies únicas estão relativamente bem distribuídas ao longo da filogenia" data-background="img/phylonet.png" data-background-size="70%">
+<section id="section-63" class="slide level1" data-notes="Além disso, as 546 espécies únicas estão relativamente bem distribuídas ao longo da filogenia" data-background="img/phylonet.png" data-background-size="70%">
 <h1></h1>
 </section>
-<section id="section-66" class="slide level1" data-notes="Utilizamos também as taxas de diversificação estimadas usando o BAMM" data-background="img/cap3fig4.png" data-background-size="90%">
+<section id="section-64" class="slide level1" data-notes="Utilizamos também as taxas de diversificação estimadas usando o BAMM" data-background="img/cap3fig4.png" data-background-size="90%">
 <h1></h1>
 <h2>
 <div style="float: left; width=50%;">
@@ -826,20 +820,20 @@ Extinção
 <ul>
 <li class="fragment">Epsilon (extinção/especiação)</li>
 <li class="fragment">“Pura” e z-score (pool global vs. pool local)</li>
-<li class="fragment">6 co-fatores: Prec. Anual, Saz. Prec., Temp. Média Anual, Saz. Temp., Mod., Aninh.</li>
+<li class="fragment">6 co-fatores: <em>Precip. Anual, Saz. Precip., Temp. Média Anual, Saz. Temp., Modularidade, Aninhamento</em></li>
 <li class="fragment">PGLS</li>
 </ul>
 </section>
-<section id="section-67" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size="90%">
+<section id="section-65" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size="90%">
 <h1></h1>
 <h3 class="fragment" style="background:rgba(0,0,0,0.75);">
 Closeness ~ Epsilon * Prec.An./Saz.Prec.
 </h3>
 </section>
-<section id="section-68" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size="90%">
+<section id="section-66" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size="90%">
 <h1></h1>
 <h2 style="background:rgba(0,0,0,0.75);">
-Espécies mais menos estáveis não são centrais
+Espécies de linhagens menos estáveis não são centrais em regiões temperadas
 </h2>
 <h2 style="background:rgba(0,0,0,0.75);">
 Interação positiva com precipitação total e negativa com sazonalidade de precipitação
@@ -848,24 +842,21 @@ Interação positiva com precipitação total e negativa com sazonalidade de pre
 <section id="resultados" class="slide level1 center" data-notes="Tradeoff: redes quantitativas mostraram mais relações do que redes binárias">
 <h1>Resultados</h1>
 <ul>
-<li class="fragment">Relação negativa: espécies menos estáveis/“confiáveis” não são centrais (<em>species sorting</em>)</li>
+<li class="fragment">Relação negativa: espécies menos estáveis/“confiáveis” não são centrais em redes temperadas (<em>species sorting</em>)</li>
 <li class="fragment">Relação modulada por disponibilidade hídrica (total e sazonal)</li>
 <li class="fragment">Pool global vs. pool local</li>
 <li class="fragment">Redes quantitativas vs. redes binárias</li>
 </ul>
 </section>
-<section id="discussao" class="slide level1 center" data-notes="Pool global: pace absoluto importa; Trópicos: maior riqueza pode suprir intimidade">
+<section id="discussao" class="slide level1 center" data-notes="Fenologia: janela temporal mais restrita em regiões temperadas, match tem que ser preciso; nos trópicos é menos restrito. Trópicos: maior riqueza pode suprir intimidade">
 <h1>Discussão</h1>
 <ul>
-<li class="fragment">Disponibilidade hídrica: fenologia</li>
+<li class="fragment">Disponibilidade hídrica: fenologia (acoplamento temporal de fases)</li>
 <li class="fragment"><em>Species sorting</em>: filtro global (“tempo absoluto”)</li>
 <li class="fragment">Trópicos: <em>Tradeoff</em> entre número de interações e número de espécies (maior riqueza)</li>
 </ul>
 </section>
-<section id="fenologia" class="slide level1" data-notes="Disponibilidade de água pode estar relacionado com a fenologia. Diferentes espécies tem relações diferentes com o clima, mas essa relação é geralmente mantida ano após ano.">
-<h1>FENOLOGIA</h1>
-</section>
-<section id="section-69" class="slide level1 center">
+<section id="section-67" class="slide level1 center">
 <h1></h1>
 <h2>
 Mensagens finais - cap 1
@@ -876,18 +867,18 @@ Mensagens finais - cap 1
 <li class="fragment">Diversidade regulada por mosaico espaço-temporal de seleção</li>
 </ul>
 </section>
-<section id="section-70" class="slide level1 center">
+<section id="section-68" class="slide level1 center">
 <h1></h1>
 <h2>
 Mensagens finais - cap 2
 </h2>
 <ul>
-<li class="fragment">BAMM e RPANDA estimam bem no presente</li>
-<li class="fragment">Variação na extinção: reconstrução errada</li>
-<li class="fragment">Cenários complexos: métodos discordam</li>
+<li class="fragment">Métodos filogenéticos estimam bem no presente</li>
+<li class="fragment">Falha em detectar variação na extinção: reconstrução errada</li>
+<li class="fragment">Questiona prevalência de queda na especiação</li>
 </ul>
 </section>
-<section id="section-71" class="slide level1 center">
+<section id="section-69" class="slide level1 center">
 <h1></h1>
 <h2>
 Mensagens finais - cap 3

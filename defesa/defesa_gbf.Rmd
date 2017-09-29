@@ -61,7 +61,7 @@ knitr::include_graphics('./img/speciation.gif')
 knitr::include_graphics('./img/smbc.jpg')
 ```
 
-# {data-notes="O balanço entre esses dois processos durante milhões de anos, modulados por diferentes mecanismos como por exemplo eventos geológicos, que determina a diversidade em um momento no tempo." data-background-video="img/marine_fossil_history.mp4" data-background-size=75%}
+# {data-notes="O balanço entre esses dois processos durante milhões de anos, modulados por diferentes mecanismos como por exemplo eventos geológicos, que determina a diversidade em um momento no tempo." data-background="img/marine_fossil_history.gif" data-background-size=75%}
 
 # {data-notes="Essas escalas de tempo são difíceis de imaginar. Como podemos estudar isso então? Precisamos de uma máquina do tempo" data-background="img/time_machine.png"}
 
@@ -73,7 +73,7 @@ knitr::include_graphics('./img/smbc.jpg')
 knitr::include_graphics('./img/silvestro_et_al_2015.png')
 ```
 
-# {data-notes="No entanto, apesar de ao pensarmos em evolução geralmente associarmos a fósseis, eles representam um dos extremos de um espectro de disponibilidade de dados. No outro lado do espectro estão grupos com registro fóssil ruim e apenas espécies vivas." data-background="img/data_types.png" data-background-size=60%}
+# {data-notes="No entanto, apesar de ao pensarmos em evolução geralmente associarmos a fósseis, eles representam um dos extremos de um espectro de disponibilidade de dados, como um dos grupos extintos de dinosauros. No outro lado do espectro estão grupos com registro fóssil ruim e apenas espécies vivas." data-background="img/data_types.png" data-background-size=60%}
 
 # {data-notes="Para os grupos dos quais não dispomos de dados fósseis, a forma que temos de viajar no tempo é usando filogenias moleculares." data-background="img/tree_bamm.png" data-background-size=60%}
 
@@ -111,8 +111,6 @@ knitr::include_graphics('./img/BirdBeaks.gif')
 
 # {data-notes="As diferenças nas ecologias também se refletem nas diferentes interações ecológicas aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização." data-background="img/bird_services.png" data-background-size=77%}
 
-# SEED DISPERSAL {data-notes="Grupo mais importante pra dispersão de sementes, interagindo com muitas espécies de plantas ao mesmo tempo, formando redes de interação. Mas essas redes são formadas ao acaso ou existe um padrão evolutivo por trás?"}
-
 # Objetivos {#items .center .emphasized}
 
 > - Entender os efeitos de diferentes dietas na diversificação do grupo
@@ -129,9 +127,9 @@ knitr::include_graphics('./img/natcomms.png')
 
 # {data-notes="É um grupo bastante rico em espécies com suas relações de parentesco razoavelmente bem conhecidas" data-background="img/jetz2012.png" data-background-size=70%}
 
-# {data-notes="Cientistas compilam dados também" data-background="img/kissling_data.png" data-background-size=80%}
+# Dados de dieta {data-notes="Cientistas compilam dados também" data-background="img/kissling_data.png" data-background-size=80%}
 
-# {data-notes="R+diversitree. Taxas de especiação, extinção e transição pra cada estado. Transições são mudanças anagenéticas, ou seja, sem especiação" data-background="img/r_diversitree.png" data-background-size=70%}
+# {data-notes="R+diversitree. Abordagem implementada no pacote. Taxas de especiação, extinção e transição pra cada estado. Transições são mudanças anagenéticas, ou seja, sem especiação" data-background="img/r_diversitree.png" data-background-size=70%}
 
 <h2>Como?</h2>
 
@@ -139,8 +137,8 @@ knitr::include_graphics('./img/natcomms.png')
 
 # Como? {data-notes="Estimamos as taxas pra cada guilda de dieta"}
 
-- Incorporar incerteza filogenética (200 árvores)
-- Especiação, extinção e transições para 9 dietas (93 parâmetros)
+- Incorporar incerteza filogenética (200 árvores - 9871 espécies)
+- Especiação, extinção e transições para 9 dietas - Carnívoros, Frugívoros, Granívoros, Herbívoros, Insetívoros, Nectarívoros, Onívoros, Piscívoros e Carniceiros (93 parâmetros)
 - Abordagem Bayesiana: 1500000 iterações
 - 2 meses de processamento
 
@@ -240,8 +238,6 @@ knitr::include_graphics('./img/bamm.png')
 
 # {data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size=80%}
 
-# {data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size=80% .center}
-
 <img class="fragment" src="img/sim_scenarios.png" width=200%/>
 
 # {data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/workflow.png" data-background-size=80% .center}
@@ -268,7 +264,7 @@ knitr::include_graphics('./img/bamm.png')
 
 # {data-notes="Os valores na raiz são ruins tanto para o BAMM" data-background="img/bcdv_bamm_panel.png" data-background-size=42%}
 
-# {data-notes="Os valores na raiz são ruins tanto para o RPANDA" data-background="img/bcdv_rpanda_panel.png" data-background-size=42%}
+# {data-notes="Os valores na raiz são ruins tanto para o RPANDA, e a especiação inicial é superestimada, indicando que os modelos estão atribuindo a variação na diversificação à especiação" data-background="img/bcdv_rpanda_panel.png" data-background-size=42%}
 
 # Árvores empíricas {.center}
 
@@ -276,14 +272,15 @@ knitr::include_graphics('./img/bamm.png')
 > - 5 grandes grupos de vertebrados
 > - Representam cenários mais complexos
 > - Um modelo a mais: BOTHexp
+> - Verificar convergência das estimativas
 
 # {data-notes="No caso das empíricas, não sabemos o modelo correto, mas os modelos não concordam nas estimativas, em especial na base das árvores" data-background="img/cap2_empirical.png" data-background-size=60% .center}
 
 # Mensagens {.center}
 
-> - Expandimos o espaço de parâmetros estudado
+> - Primeiro teste mais abrangente (espaço de parâmetros e *time-travel*)
 > - Ambos os modelos estimam as taxas bem no presente
-> - Momento do declínio tem pouca influência
+> - Atribui variação na diversificação à especiação (força queda)
 
 # Implicações práticas {.center}
 
@@ -291,7 +288,6 @@ knitr::include_graphics('./img/bamm.png')
 > - Estimativas ruins na raiz: reconstrução da história é falha
 > - Discordam nas empíricas
 > - Queda na especiação não parece ser tão comum
-> - $\gamma$ pode auxiliar
 
 
 
@@ -312,7 +308,7 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 # {data-notes="As aves são o principal grupo que atua na dispersão de sementes" data-background="img/donatti_et_al.png" data-background-size=80%}
 
-# {data-notes="Para representar o papel dessas espécies em uma rede, usamos diferentes métricas. Nesse exemplo de uma rede de relacionamentos, vemos que dependendo da métrica o nó mais central muda" data-background="img/network_metrics.png" data-background-size=50%}
+# {data-notes="Para representar o papel dessas espécies em uma rede, usamos diferentes métricas. Nesse exemplo de uma rede de relacionamentos, vemos que dependendo da métrica o nó mais central muda, então elas podem ser usadas para representar diferentes papéis ecológicos em redes de interação" data-background="img/network_metrics.png" data-background-size=50%}
 
 # {data-notes="Mas as espécies centrais tem uma história evolutiva similar? No terceiro capítulo testamos a relação entre taxas de diversificação e o papel ecológico desempenhado pelas espécies de aves em redes de frugivoria" data-background="img/cap3fig1.png" data-background-size=80% .center}
 
@@ -332,7 +328,7 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 > - Epsilon (extinção/especiação)
 > - "Pura" e z-score (pool global vs. pool local)
-> - 6 co-fatores: Prec. Anual, Saz. Prec., Temp. Média Anual, Saz. Temp., Mod., Aninh.
+> - 6 co-fatores: *Precip. Anual, Saz. Precip., Temp. Média Anual, Saz. Temp., Modularidade, Aninhamento*
 > - PGLS
 
 # {data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size=90% .center}
@@ -341,24 +337,22 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 # {data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size=90% .center}
 
-<h2 style="background:rgba(0,0,0,0.75);">Espécies mais menos estáveis não são centrais</h2>
+<h2 style="background:rgba(0,0,0,0.75);">Espécies de linhagens menos estáveis não são centrais em regiões temperadas</h2>
 
 <h2 style="background:rgba(0,0,0,0.75);">Interação positiva com precipitação total e negativa com sazonalidade de precipitação</h2>
 
 # Resultados {data-notes="Tradeoff: redes quantitativas mostraram mais relações do que redes binárias" .center}
 
-> - Relação negativa: espécies menos estáveis/"confiáveis" não são centrais (*species sorting*)
+> - Relação negativa: espécies menos estáveis/"confiáveis" não são centrais em redes temperadas (*species sorting*)
 > - Relação modulada por disponibilidade hídrica (total e sazonal)
 > - Pool global vs. pool local
 > - Redes quantitativas vs. redes binárias
 
-# Discussão {data-notes="Pool global: pace absoluto importa; Trópicos: maior riqueza pode suprir intimidade" .center}
+# Discussão {data-notes="Fenologia: janela temporal mais restrita em regiões temperadas, match tem que ser preciso; nos trópicos é menos restrito. Trópicos: maior riqueza pode suprir intimidade" .center}
 
-> - Disponibilidade hídrica: fenologia
+> - Disponibilidade hídrica: fenologia (acoplamento temporal de fases)
 > - *Species sorting*: filtro global ("tempo absoluto")
 > - Trópicos: *Tradeoff* entre número de interações e número de espécies (maior riqueza)
-
-# FENOLOGIA {data-notes="Disponibilidade de água pode estar relacionado com a fenologia. Diferentes espécies tem relações diferentes com o clima, mas essa relação é geralmente mantida ano após ano."}
 
 # {.center}
 <h2>Mensagens finais - cap 1</h2>
@@ -370,9 +364,9 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 # {.center}
 <h2>Mensagens finais - cap 2</h2>
 
-> - BAMM e RPANDA estimam bem no presente
-> - Variação na extinção: reconstrução errada
-> - Cenários complexos: métodos discordam
+> - Métodos filogenéticos estimam bem no presente
+> - Falha em detectar variação na extinção: reconstrução errada
+> - Questiona prevalência de queda na especiação
 
 # {.center}
 
