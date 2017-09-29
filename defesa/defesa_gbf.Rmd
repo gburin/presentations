@@ -43,15 +43,15 @@ output:
 
 # {data-notes="Estima-se que 99% de todas as espécies que já passaram pelo planeta foram extintas." data-background="img/diversity_color.png" data-background-size=100%}
 
-# {data-notes="Além disso, o planeta passou por fases de aumento e diminuição do número de espécies, como por exemplo as conhecidas 5 (ou 6) extinções em massa" data-background="img/mass_extinctions.jpg" data-background-size=90%}
+# {data-notes="Além disso, até chegar na diversidade atual, o planeta passou por fases de aumento e diminuição do número de espécies, como por exemplo as conhecidas 5 (ou 6) extinções em massa. Essas variações em larga escala (espacial, temporal e biológica) é o que a macroevolução busca estudar." data-background="img/mass_extinctions.jpg" data-background-size=90%}
 
 # Macroevolução {.center}
 
-# {data-notes="Macroevolução é a área que estuda a evolução acima do nível da espécie. Mudança no número e/ou forma das espécies em escalas de tempo bastante longas. Focarei só na diversificação. O que procuramos entender é como acontece e o que afeta a formação e o desaparecimento de novas espécies, através dos processos de especiação e extinção." data-background="img/deeptime_evolution.png" data-background-size=60%}
+# {data-notes="O que procuramos entender é como acontece e o que afeta a formação e o desaparecimento de novas espécies, em escalas de tempo bastante amplas. Macroevolução é a área que estuda a evolução acima do nível da espécie." data-background="img/deeptime_evolution.png" data-background-size=60%}
 
 # Especiação {data-notes="Especiação é o processo de surgimento de novas espécies, quando há isolamento reprodutivo"}
 
-```{r echo = FALSE, out.width = 500}
+```{r echo = FALSE, out.width = 300}
 knitr::include_graphics('./img/speciation.gif')
 ```
 
@@ -61,9 +61,9 @@ knitr::include_graphics('./img/speciation.gif')
 knitr::include_graphics('./img/smbc.jpg')
 ```
 
-# {data-notes="Esses processos acontecem ao longo de milhares ou milhões de anos. Basicamente o balanço entre esses dois processos, modulados por diferentes mecanismos como por exemplo eventos geológicos, que determina a diversidade em um momento no tempo." data-background-video="img/marine_fossil_history.mp4" data-background-size=75%}
+# {data-notes="O balanço entre esses dois processos durante milhões de anos, modulados por diferentes mecanismos como por exemplo eventos geológicos, que determina a diversidade em um momento no tempo." data-background-video="img/marine_fossil_history.mp4" data-background-size=75%}
 
-# {data-notes="Como podemos estudar isso então? Precisamos de uma máquina do tempo" data-background="img/time_machine.png"}
+# {data-notes="Essas escalas de tempo são difíceis de imaginar. Como podemos estudar isso então? Precisamos de uma máquina do tempo" data-background="img/time_machine.png"}
 
 # {data-notes="Existem basicamente dois tipos de dados que podemos usar como máquinas do tempo. Uma das formas é através do registro fóssil" data-background="img/canid_fossil.jpg"}
 
@@ -81,31 +81,27 @@ knitr::include_graphics('./img/silvestro_et_al_2015.png')
 
 # {data-notes="Usamos esses dados de sequências de DNA e aplicamos modelos de evolução molecular para estimar quanto tempo levou para duas sequências (ou duas espécies) se separarem no tempo" data-background="img/molclock.jpg" data-background-size=80%}
 
-# {data-notes="Com isso, foi por exemplo possível construir a árvore da vida, que contém quase toda a informação molecular disponível hoje e ajudou a elucidar um pouco melhor a relação entre os grandes grupos" data-background="img/treeoflife.jpg" data-background-size=50%}
+# {data-notes="Com isso, foi por exemplo possível construir a árvore da vida, que estabelece não só relações de parentesco, mas também estimativas de tempo de divergência" data-background="img/treeoflife.jpg" data-background-size=50%}
 
-# {data-notes="Para dar um exemplo, no trabalho da Laura eles construíram uma filogenia para Viperidae, e observaram uma mudança nos padrões de diversificação para o grupo neotropical. Uma exigência em estudos de macroevolução (bem como todo estudo decente) é a quantidade de dados" data-background="img/alencar_et_al_2016.png" data-background-size=80%}
+# {data-notes="Diferentemente da Laura por exemplo, não tenho um grupo preferido. Por que escolhi aves então?" data-background="img/alencar_et_al_2016.png" data-background-size=80%}
 
-# {data-notes="Uma das razões é que é muito legal falar que vc trabalha com os únicos dinossauros vivos" data-background="img/dinosaur_blood.jpg" data-background-size=45% .center}
+# Por que aves? {data-notes="Uma das razões é que é muito legal poder falar que vc trabalha com os únicos dinossauros vivos" .center}
 
-<h1 style="background:rgba(0,0,0,0.75);"> Por que aves?</h1>
+<img class="fragment" src="img/dinosaur_blood.jpg" width=45%/>
 
-# {data-notes="Aves são parentes próximos dos grupos de dinossauros extintos" data-background="img/theropoda_phylo.png" data-background-size=45%}
+# {data-notes="Brincadeiras (ou não) a parte, é um grupo com uma quantidade imensa de dados, que vão desde registros históricos de avistamentos" data-background="img/historical_data.png" data-background-size=50%}
 
-# {data-notes="É um grupo com uma quantidade imensa de dados" data-background="img/historical_data.png" data-background-size=50%}
-
-# {data-notes="É um grupo com uma quantidade imensa de dados" data-background="img/markmybird.png" data-background-size=100% .center}
+# {data-notes="Até scans 3d de quase 3k espécies" data-background="img/markmybird.png" data-background-size=100% .center}
 
 # {data-notes="A imensa quantidade de dados permite com que a ecologia desse grupo seja intensamente estudada." data-background="img/migrating_birds.gif" data-background-size=60%}
 
-# {data-notes="É possível ver por exemplo que as migrações estão mudando tanto no tempo quanto no espaço. Hurlbert & Liang 2012 PLoS ONE" data-background="img/citizen_science_change_phenology.png" data-background-size=55%}
-
-# {data-notes="Ocupam todos os continentes. Estamos acostumados com o estudo da evolução de uma ou poucas linhagens ao longo de algumas gerações. É portanto um grupo de grande interesse para a macroevolução" data-background="img/kissling_et_al_2012.png" data-background-size=100%}
+# {data-notes="Ocupam todos os continentes. O sucesso do grupo é bastante interessante, especialmente do ponto de vista da macroevolução." data-background="img/kissling_et_al_2012.png" data-background-size=100%}
 
 # {data-notes="Infelizmente aves não possuem um registro fóssil muito rico, devido a características como os ossos pneumáticos que resistem menos aos processos de fossilização" data-background="img/archaeopteryx.jpg" data-background-size=50%}
 
-# {data-notes="No entanto, é um grupo para o qual dados moleculares são abundantes e permitiram estabelecer razoavelmente bem suas relações de parentesco" data-background="img/jetz2012.png" data-background-size=70%}
+# {data-notes="No entanto, é um grupo para o qual dados moleculares são abundantes e permitiram estabelecer razoavelmente bem suas relações de parentesco. As aves se originaram a cerca de 120MY." data-background="img/jetz2012.png" data-background-size=70%}
 
-# {data-notes="As aves se originaram a cerca de 120MY, então não é de se estranhar que sejam um grupo extremamente rico em morfologias" data-background="img/Bird_Diversity2.png" data-background-size=90%}
+# {data-notes="Sendo assim não é de se estranhar que sejam um grupo extremamente rico em morfologias" data-background="img/Bird_Diversity2.png" data-background-size=90%}
 
 # {data-notes="Essas diferentes morfologias podem representar diferentes ecologias, como por exemplo os bicos que são mais adaptados a diferentes dietas"}
 
@@ -113,7 +109,9 @@ knitr::include_graphics('./img/silvestro_et_al_2015.png')
 knitr::include_graphics('./img/BirdBeaks.gif')
 ```
 
-# {data-notes="As diferenças nas ecologias também se refletem nos diferentes serviços ecoloógicos que as aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização. Nesses serviços (que muitas vezes tem relação com a ecologia trófica das espécies) as espécies de ave interagem com diversas outras espécies de diferentes grupos, podendo essas interações serem antagonísticas ou mutualistas" data-background="img/bird_services.png" data-background-size=77%}
+# {data-notes="As diferenças nas ecologias também se refletem nas diferentes interações ecológicas aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização." data-background="img/bird_services.png" data-background-size=77%}
+
+# SEED DISPERSAL {data-notes="Grupo mais importante pra dispersão de sementes, interagindo com muitas espécies de plantas ao mesmo tempo, formando redes de interação. Mas essas redes são formadas ao acaso ou existe um padrão evolutivo por trás?"}
 
 # Objetivos {#items .center .emphasized}
 
@@ -133,11 +131,13 @@ knitr::include_graphics('./img/natcomms.png')
 
 # {data-notes="Cientistas compilam dados também" data-background="img/kissling_data.png" data-background-size=80%}
 
-# Como? {data-notes="Usando um pacote que contém modelos que estimam as taxas de diversificação associadas a diferentes estados de um caráter" data-background="img/r_diversitree.png" data-background-size=70%}
+# {data-notes="R+diversitree. Taxas de especiação, extinção e transição pra cada estado. Transições são mudanças anagenéticas, ou seja, sem especiação" data-background="img/r_diversitree.png" data-background-size=70%}
 
-<img class="fragment" src="img/bisse_example.png" width="600px"/>
+<h2>Como?</h2>
 
-# Como? {data-notes="Taxas de especiação, extinção e transição pra cada estado. Transições são mudanças anagenéticas, ou seja, sem especiação"}
+<img class="fragment" src="img/bisse_example.png" width=70%/>
+
+# Como? {data-notes="Estimamos as taxas pra cada guilda de dieta"}
 
 - Incorporar incerteza filogenética (200 árvores)
 - Especiação, extinção e transições para 9 dietas (93 parâmetros)
@@ -150,11 +150,11 @@ knitr::include_graphics('./img/waiting.png')
 
 # {data-notes="Resultados para net diversification" data-background="img/cap1fig1_black.png" data-background-size=90%}
 
-# {data-notes="Resultados para net diversification" data-background="img/result1_omniv.png" data-background-size=90%}
+# {data-notes="Menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black.png" data-background-size=90%}
 
-# {data-notes="Essa net diversification menor para onívoros vem vem de terem menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black.png" data-background-size=90%}
+# {data-notes="Menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black_highlight.png" data-background-size=90% data-transition="none"}
 
-# {data-notes="Essa net diversification menor para onívoros vem vem de terem menor especiação e/ou maior extinção que as demais guildas." data-background="img/cap1fig2_black_highlight.png" data-background-size=90% data-transition="none"}
+# {data-notes="Além da netdiv ser menor, ela é inclusive negativa" data-background="img/cap1fig1_black.png" data-background-size=90%}
 
 # {data-notes="Como então que a riqueza tão alta - 1150 espécies - pode ser mantida se em teoria essa guilda está em declínio?" data-background="img/omniv_phylo.png" data-background-size=60% .center}
 
@@ -173,7 +173,7 @@ knitr::include_graphics('./img/waiting.png')
 
 <h2>Recursos abundantes/previsíveis</h2>
 
-<img class="fragment" style="background:black; border:0px;" src="img/competition.png" width=65%/>
+<img style="background:black; border:0px;" src="img/competition.png" width=65%/>
 
 # {data-notes="Recursos abundantes e/ou previsíveis" .center}
 
@@ -185,7 +185,7 @@ knitr::include_graphics('./img/waiting.png')
 
 <h2>Recursos escassos/imprevisíveis</h2>
 
-<img class="fragment" style="background:black; border:0px;" src="img/competition.png" width=65%/>
+<img style="background:black; border:0px;" src="img/competition.png" width=65%/>
 
 # {data-notes="Recursos escassos/imprevisíveis" .center}
 
@@ -212,19 +212,19 @@ Gustavo **BURIN**; Laura **ALENCAR**; Jonathan **CHANG**; Michael **ALFARO**; Ti
 
 <p style="font-size:0.7em;"> Segunda revisão na revista <b><i>Systematic Biology</i></b></p>
 
-# {data-notes="Estima-se que 99% de todas as espécies que já passaram pelo planeta foram extintas" data-background="img/diversity_color.png" data-background-size=100%}
+# {data-notes="Como vimos no capítulo anterior, é possível usar molphylo para estimar lambda/mu" data-background="img/tree_bamm.png" data-background-size=60%}
 
-# {data-notes="Como comentei anteriormente, existem duas formas de estimar as taxas, e diferentes grupos ocupam diferentes posições no espectro da disponibilidade de dados fósseis e moleculares" data-background="img/data_types.png" data-background-size=60%}
-
-#
+# {data-notes="Porém nem tudo são flores. Existe um debate rolando sobre até que ponto podemos estimar as taxas de extinção em molphylo."}
 
 <img style="width:650px;" src="img/rabosky2010.png"/>
 <img style="width:650px;" src="img/beaulieu2016.png"/>
 <img style="width:650px;" src="img/rabosky2016.png"/>
 
-# {data-notes="Porém, existe o problema de se detectar extinção através de filogenias moleculares" data-background="img/phylo_ltt.png" data-background-size=60%}
+# {data-notes="Isso porque filogenias moleculares não possuem informação direta sobre extinção." data-background="img/phylo_ltt.png" data-background-size=60%}
 
-# {data-notes="Grupos viventes podem estar em expansão, saturação ou declínio, e normalmente o último caso imagina-se ser comum e é pouco estudado" data-background="img/growth_scenarios.png" data-background-size=100%}
+# {data-notes="Olhando para toda a diversidade que existe e já existiu, sabemos que extinção é um fator extremamente importante." data-background="img/diversity_color.png" data-background-size=100%}
+
+# {data-notes="Podemos então esperar que os grupos viventes podem estar em expansão, saturação ou declínio, no entanto o último caso imagina-se ser comum e é pouco estudado, e um dos motivos são limitações metodológicas" data-background="img/growth_scenarios.png" data-background-size=100%}
 
 # {data-notes="Recentemente dois métodos foram desenvolvidos e são amplamente utilizados. RPANDA: seleção de modelos; BAMM: rjMCMC. Em ambos em teoria seria capaz de detectarmos declínio de diversidade" .center}
 
@@ -242,9 +242,7 @@ knitr::include_graphics('./img/bamm.png')
 
 # {data-notes="O desenho geral do experimento é esse" data-background="img/workflow.png" data-background-size=80% .center}
 
-```{r echo = FALSE, out.width = 2000}
-knitr::include_graphics('./img/sim_scenarios.png')
-```
+<img class="fragment" src="img/sim_scenarios.png" width=200%/>
 
 # {data-notes="Um passo importante é o processo de pruning, onde removemos as espécies extintas para termos as filogenias moleculares" data-background="img/workflow.png" data-background-size=80% .center}
 
@@ -275,7 +273,7 @@ knitr::include_graphics('./img/sim_scenarios.png')
 # Árvores empíricas {.center}
 
 > - 214 filogenias
-> - 4 grandes grupos de vertebrados
+> - 5 grandes grupos de vertebrados
 > - Representam cenários mais complexos
 > - Um modelo a mais: BOTHexp
 
@@ -285,7 +283,6 @@ knitr::include_graphics('./img/sim_scenarios.png')
 
 > - Expandimos o espaço de parâmetros estudado
 > - Ambos os modelos estimam as taxas bem no presente
-> - Baixas taxas de falso positivo
 > - Momento do declínio tem pouca influência
 
 # Implicações práticas {.center}
@@ -311,13 +308,13 @@ knitr::include_graphics('./img/sim_scenarios.png')
 
 Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
-# {data-notes="As diferenças nas ecologias também se refletem nos diferentes serviços ecoloógicos que as aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização. Nesses serviços (que muitas vezes tem relação com a ecologia trófica das espécies) as espécies de ave interagem com diversas outras espécies de diferentes grupos, podendo essas interações serem antagonísticas ou mutualistas" data-background="img/bird_services.png" data-background-size=77%}
+# {data-notes="Na introdução falamos sobre as interações que as aves fazem parte. Falamos também que são um dos principais grupos de dispersores" data-background="img/bird_services.png" data-background-size=77%}
 
 # {data-notes="As aves são o principal grupo que atua na dispersão de sementes" data-background="img/donatti_et_al.png" data-background-size=80%}
 
 # {data-notes="Para representar o papel dessas espécies em uma rede, usamos diferentes métricas. Nesse exemplo de uma rede de relacionamentos, vemos que dependendo da métrica o nó mais central muda" data-background="img/network_metrics.png" data-background-size=50%}
 
-# {data-notes="No terceiro capítulo testamos a relação entre taxas de diversificação e o papel ecológico desempenhado pelas espécies de aves em redes de frugivoria" data-background="img/cap3fig1.png" data-background-size=80% .center}
+# {data-notes="Mas as espécies centrais tem uma história evolutiva similar? No terceiro capítulo testamos a relação entre taxas de diversificação e o papel ecológico desempenhado pelas espécies de aves em redes de frugivoria" data-background="img/cap3fig1.png" data-background-size=80% .center}
 
 <h1 class="fragment" style="background:rgba(0,0,0,0.75);">Espécies mais centrais pertencem a linhagens mais estáveis/confiáveis</h1>
 
@@ -344,20 +341,24 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 # {data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size=90% .center}
 
-<h2 style="background:rgba(0,0,0,0.75);">Espécies mais centrais pertencem a linhagens mais estáveis/confiáveis</h2>
+<h2 style="background:rgba(0,0,0,0.75);">Espécies mais menos estáveis não são centrais</h2>
 
-<h2 style="background:rgba(0,0,0,0.75);">Interação positiva com prec: "tropicalização"</h2>
+<h2 style="background:rgba(0,0,0,0.75);">Interação positiva com precipitação total e negativa com sazonalidade de precipitação</h2>
 
-# {data-notes="Disponibilidade de água pode estar relacionado com a fenologia. Diferentes espécies tem relações diferentes com o clima, mas essa relação é geralmente mantida ano após ano." data-background="img/tree_phenology.png" data-background-size=22%}
+# Resultados {data-notes="Tradeoff: redes quantitativas mostraram mais relações do que redes binárias" .center}
 
-<img class="fragment" src="img/tree_phenology_climate.png"/>
-
-# Discussão {data-notes="Tradeoff: redes quantitativas mostraram mais relações do que redes binárias" .center}
-
-> - Relação negativa: espécies mais centrais vem de linhagens mais estáveis/"confiáveis" (*species sorting*)
-> - Disponibilidade de água (total e sazonal): Fenologia
+> - Relação negativa: espécies menos estáveis/"confiáveis" não são centrais (*species sorting*)
+> - Relação modulada por disponibilidade hídrica (total e sazonal)
 > - Pool global vs. pool local
+> - Redes quantitativas vs. redes binárias
+
+# Discussão {data-notes="Pool global: pace absoluto importa; Trópicos: maior riqueza pode suprir intimidade" .center}
+
+> - Disponibilidade hídrica: fenologia
+> - *Species sorting*: filtro global ("tempo absoluto")
 > - Trópicos: *Tradeoff* entre número de interações e número de espécies (maior riqueza)
+
+# FENOLOGIA {data-notes="Disponibilidade de água pode estar relacionado com a fenologia. Diferentes espécies tem relações diferentes com o clima, mas essa relação é geralmente mantida ano após ano."}
 
 # {.center}
 <h2>Mensagens finais - cap 1</h2>
@@ -378,7 +379,7 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 <h2>Mensagens finais - cap 3</h2>
 
 > - Espécies centrais vem de linhagens mais estáveis em regiões temperadas
-> - Montagem influenciada pela disponibilidade de água ("tropicalização")
+> - Montagem influenciada pela disponibilidade de água (fenologia)
 > - Trópicos: compensação de intimidade por quantidade
 
 # Obrigado! {.center}
