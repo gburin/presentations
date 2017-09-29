@@ -135,12 +135,13 @@ knitr::include_graphics('./img/natcomms.png')
 
 <img class="fragment" src="img/bisse_example.png" width=70%/>
 
-# Como? {data-notes="Estimamos as taxas pra cada guilda de dieta"}
+#  {data-notes="Estimamos as taxas pra cada guilda de dieta"}
 
-- Incorporar incerteza filogenética (200 árvores - 9871 espécies)
-- Especiação, extinção e transições para 9 dietas - Carnívoros, Frugívoros, Granívoros, Herbívoros, Insetívoros, Nectarívoros, Onívoros, Piscívoros e Carniceiros (93 parâmetros)
-- Abordagem Bayesiana: 1500000 iterações
-- 2 meses de processamento
+<h2>Como?</h2>
+
+- Incerteza filogenética (200 árvores - 9871 spp.)
+- Especiação, extinção e transições para 9 dietas - Carnívoros, Frugívoros, Granívoros, Herbívoros, Insetívoros, Nectarívoros, Onívoros, Piscívoros e Carniceiros
+- Abordagem Bayesiana - 2 meses
 
 ```{r echo = FALSE, out.width = 300}
 knitr::include_graphics('./img/waiting.png')
