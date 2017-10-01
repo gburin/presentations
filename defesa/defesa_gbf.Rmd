@@ -209,7 +209,7 @@ Gustavo **BURIN**; Laura **ALENCAR**; Jonathan **CHANG**; Michael **ALFARO**; Ti
 
 <br></br>
 
-<p style="font-size:0.7em;"> Segunda revisão na revista <b><i>Systematic Biology</i></b></p>
+<p style="font-size:0.7em;"> Aceito com <i>major</i> na revista <b><i>Systematic Biology</i></b></p>
 
 # {data-notes="Como vimos no capítulo anterior, é possível usar molphylo para estimar lambda/mu" data-background="img/tree_bamm.png" data-background-size=60%}
 
@@ -373,7 +373,7 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 <h2>Mensagens finais - cap 3</h2>
 
-> - Espécies centrais vem de linhagens mais estáveis em regiões temperadas
+> - Espécies de linhagens menos estáveis não são centrais em regiões temperadas
 > - Montagem influenciada pela disponibilidade de água (fenologia)
 > - Trópicos: compensação de intimidade por quantidade
 
