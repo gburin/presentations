@@ -54,10 +54,6 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 # {data-notes="No entanto, o que obtemos na imensa maioria das vezes são filogenias contendo somente as espécies atuais. Sendo assim, não temos informação direta sobre espécies extintas, o que dificulta as estimativas das taxas. Como diabos a gente usa as filogenias pra estimar essas taxas então?" data-background="img/simtree_mol.png" data-background-size=60% .center}
   
-# Processo de Poisson {data-notes="Vamos então conversar sobre os dois modelos básicos usados para estimar as taxas de diversificação. O primeiro deles é chamado de Processo de Poisson. O jeito mais simples de descrever um PP é pensando em uma tarde ensolarada numa rodoviária."}
-
-# {data-background="img/rodoviaria.jpg" data-background-size=90%}
-
 # Interlúdio Matemático {.subtitle data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson"}
 
 # Distribuição Poisson
@@ -74,6 +70,8 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 ![](img/exponential_dist.png)
 
+# Processo de Poisson {.subtitle data-notes="Vamos então conversar sobre os dois modelos básicos usados para estimar as taxas de diversificação. O primeiro deles é chamado de Processo de Poisson. O jeito mais simples de descrever um PP é pensando em uma tarde ensolarada numa rodoviária."}
+
 # {data-background="img/rodoviaria.jpg" data-background-size=90% data-notes="Voltando então ao nosso Processo de Poisson. Quem nunca passou uma tarde agradável numa rodoviária contando quantos ônibus chegavam (e/ou saíam) e o tempo entre as chegadas/saídas, não é mesmo?"}
 
 # {data-notes="Podemos então medir duas variáveis: o número de chegadas (ou saídas, mas vamos focar nas chegadas primeiro) em cada intervalo de tempo (por hora, por exemplo), e o tempo entre duas chegadas consecutivas. Para isso, precisamos pensar num mundo mágico onde a rodoviária é infinita, ou seja, não há limitações para chegada dos ônibus como número finito de plataformas, e limitações para a entrada dos ônibus. Lembrando do que acabamos de vir, como a gente descreveria a variável número de chegadas? E o intervalo entre chegadas?"}
@@ -84,12 +82,6 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 ![](img/poisson_process_scheme.png){width="1000px"}
 
 # Processo de Poisson {data-background="img/poisson_process_equivalency.png" data-background-size=75% data-notes="Lembram que essas duas distribuições usam um único parâmetro cada, e que esse parâmetro é chamado de lambda nos dois casos? Pois bem, existem processos muito particulares nos quais ambos os lambda são a mesma coisa, ou seja, o número médio de chegadas por intervalo de tempo e o intervalo entre chegadas consecutivas são descritos pelo mesmo parâmetro. Para esses processos damos o nome de Processos de Poisson."}
-
-# Cadeias de Markov {data-notes="Um segundo conceito importante para entendermos os métodos é o conceito de Cadeias de Markov. Provavelmente vocês já ouviram falar esse nome quando pensam em métodos filogenéticos bayesianos - MCMC significa Monte Carlo Markov Chain - mas em termos simples, uma cadeia de Markov é um processo onde os estados ao longo do tempo só dependem de duas coisas: do estado no instante logo anterior e das taxas de transição para diferentes estados. Esse conceito será importante tanto para os métodos de diversificação quanto de evolução morfológica."}
-
-![](img/markov_chain.png){height="550px" bg="white"}
-
-# Cadeias de Markov {data-background="img/markov_chain_example.png" data-background-size=50% data-notes="Para ilustrar uma cadeia de Markov, vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior."}
 
 # Diversificação {.subtitle data-notes="Vamos começar então pelos modelos de diversificação"}
 
@@ -214,13 +206,15 @@ plot.bammdata(e2, lwd = 2)
 addBAMMshifts(e2, cex = 2)
 ```
 
-# {.center}
+# {.center data-notes="Não sei se vocês repararam, mas vários dos shifts caíram na mesma região, indicando que a probabilidade de ele de fato existir é mais alta do que de outros. Como as cadeias de MCMC do BAMM são bastante longas (da ordem de 50M de iterações), seria impossível olhar para todas as configurações possíveis. Por isso, olhamos para as com maior probabilidade posterior associada."}
+
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 css <- credibleShiftSet(edata_whales, expectedNumberOfShifts = 1, threshold = 5, set.limit = 0.95)
 b <- capture.output(plot.credibleshiftset(css))
 ```
 
-# {.center}
+# {.center data-notes="Olhando a filogenia a gente consegue ter uma noção do que está acontecendo, porém existem outras formas de analisar os dados. Uma das formas mais comuns é o Rate Through Time Plot. As análises possíveis com o BAMM são muitas, então não dá tempo de falar sobr tudo. Vamos agora mostrar um exemplo prático da aplicação desse modelo."}
+
 ```{r echo = FALSE, warning = FALSE}
 plotRateThroughTime(edata_whales, ratetype = "speciation")
 ```  
@@ -252,7 +246,7 @@ plotRateThroughTime(edata_whales, ratetype = "speciation")
 
 ---
 
-## Outros modelos do diversitree
+# Outros modelos do diversitree
 
 > - MuSSE
 > - QuaSSE
@@ -268,24 +262,28 @@ plotRateThroughTime(edata_whales, ratetype = "speciation")
 <br />
 ![](img/musse_vipers.png){width="900px"}
 
-# Aplicações {data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?"}
+# Aplicações {data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras? Através das taxas do MuSSE, não foi possível observar diferenças nas taxas dependendo do microhabitat, ao contrário do que imaginávamos. Existem diferentes razões (biológicas ou metodológicas) que podem justificar esses resultados, mas não entraremos em detalhes. Para isso, leiam o artigo :D"}
 
 ![](img/musse_vipers_trans.png){width="900px"}
 
 # Evolução fenotípica {.subtitle data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação."}
 
-# Cadeias de Markov {data-notes="Para os métodos de evolução fenotípica, precisamos relembrar o conceito que vimos no começo da aula que são as Cadeias de Markov. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades)."}
+# Cadeias de Markov {data-notes="Um segundo conceito importante para entendermos os métodos é o conceito de Cadeias de Markov. Provavelmente vocês já ouviram falar esse nome quando pensam em métodos filogenéticos bayesianos - MCMC significa Monte Carlo Markov Chain - mas em termos simples, uma cadeia de Markov é um processo onde os estados ao longo do tempo só dependem de duas coisas: do estado no instante logo anterior e das taxas de transição para diferentes estados. Esse conceito será importante tanto para os métodos de diversificação quanto de evolução morfológica."}
+
+![](img/markov_chain.png){height="550px" bg="white"}
+
+# Cadeias de Markov {data-notes="Mas o que são cadeias de Markov? Vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades)."}
 
 <br />
 ![](img/markov_chain_example.png){width="1200px"}
 
-# {data-background="img/cubo_2x2.jpg" data-background-size=70% data-notes="Podemos encarar a estimativa dessas taxas como um cubo mágico. Para chegar na melhor configuração você precisa ir alterando as cores em cada célula em diferentes combinações. Essa é uma aproximação do processo de otimização para estimativa dos parâmetros."}
+# {data-background="img/cubo_2x2.jpg" data-background-size=70% data-notes="Nosso objetivo com esses métodos é estimar essas taxas de transição. Podemos encarar a estimativa dessas taxas como um cubo mágico. Para chegar na melhor configuração você precisa ir alterando as cores em cada célula em diferentes combinações. Essa é uma aproximação do processo de otimização para estimativa dos parâmetros."}
 
 # {data-background="img/cubo_20x20.jpg" data-background-size=65% data-notes="Porém, quando começamos a acrescentar estados, as coisas podem facilmente se tornar um pesadelo."}
 
-# Stochastic Mapping {.center data-notes="Existem muitos métodos para evolução fenotípica, então hoje vamos conversar somente sobre os dois métodos usados no nosso artigo. Estes dois métodos são utilizados em conjunto (o segundo depende do primeiro), e consistem basicamente em reconstruir a história evolutiva do caráter, gerando diferentes cenários que geram a configuração de estados observada hoje. À esse método damos o nome de stochastic mapping."}
+# Stochastic Mapping {.center data-notes="Existem muitos métodos para evolução fenotípica, então hoje vamos conversar somente sobre os dois métodos usados no nosso artigo. Estes dois métodos são utilizados em conjunto (o segundo depende do primeiro). O primeiro que vamos er consiste basicamente em reconstruir a história evolutiva do caráter, gerando diferentes cenários que podem ter levado à configuração de estados observada hoje. À esse método damos o nome de stochastic mapping."}
 
-#
+# {data-notes="Vamos então usar o exemplo dos viperídeos. Essa aqui é a árvore completa que a Laura gerou, com o caráter Microhabitat de cada espécie plotado nos terminais. O Stochastic Mapping consiste em estimar os valores das taxas de transição entre os microhabitats (através de um modelo Mk) e reconstruir histórias evolutivas possíveis que geraram a configuração que a gente vê hoje em dia. Como já vimos no exemplo do diversitree, não temos nenhuma certeza sobre a história evolutiva do grupo (filogenias são hipóteses afinal), então o ideal é incorporar as incertezas nas análises gerando inúmeros mapeamentos."}
 
 ```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
 #pdf("./img/phylo_trait.pdf", width = 9, height = 9)
@@ -296,7 +294,7 @@ legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"),
 #dev.off()
 ```
 
-#
+# {data-notes="Vou mostrar 10 mapeamentos que fiz, e podemos notar que apesar de sutis existem importantes diferenças entre cada um deles"}
 
 ```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
 par(mar=c(1,0,0,1), bg = "black")
@@ -386,10 +384,10 @@ for(i in 1:10){
 ```
 
 
-#
+# {data-notes="De posse de um número grande de mapeamentos para uma mesma topologia, podemos calcular estatísticas de resumo para facilitar a compreensão dos dados. Um exemplo é esse onde calculamos as probabilidades de cada nó possuir cada um dos estados"}
 
 ```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
-pdf("./img/phylo_trait.pdf", width = 9, height = 9)
+#pdf("./img/phylo_trait.pdf", width = 9, height = 9)
 par(mar=c(1,0,0,1), bg = "black")
 plot(res[[1]][[1]], type = "fan", label.offset = 1.5, cex = 0.4, show.tip.label = FALSE, edge.color = "white")
 tiplabels(pch = 21, col = "black", adj = 1, bg = brewer.pal(4, "Set3")[traits[match(res[[1]][[1]]$tip.label, traits[,1]), 2]], cex = 1.3)
@@ -397,9 +395,7 @@ nodelabels(node = 1:res[[1]][[1]]$Nnode + Ntip(res[[1]][[1]]), pie = sm.sum$ace,
 legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
 ```
 
----
-
-# Modelos de Evolução de Caracteres Contínuos {.subtitle data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos."}
+# Modelos de Evolução de Caracteres Contínuos {.subtitle data-notes="O Stochastic Mapping é comumente usado para reconstrução de caracteres discretos. No entanto, caracteres de interesse (como body size por exemplo) são contínuos. Como pensar em taxas de transição entre caracteres contínuos é meoi estranho, existe outra forma de lidar com eles. Esse outro método está associado ao simmap (pois depende dele) e consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos."}
 
 ---
 
