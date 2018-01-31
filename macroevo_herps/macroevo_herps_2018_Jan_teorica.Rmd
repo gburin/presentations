@@ -58,7 +58,7 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 # {data-background="img/rodoviaria.jpg" data-background-size=90%}
 
-# Interlúdio Matemático {#subtitle data-background="img/pois_dist.jpg" data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson"}
+# Interlúdio Matemático {#subtitle data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson"}
 
 ---
 
