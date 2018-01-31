@@ -456,9 +456,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <section id="section" class="slide level1 center">
 <h1></h1>
-<h2>
+<h1>
 Introdução aos métodos em macroevolução
-</h2>
+</h1>
 <p><br></br></p>
 <div align="right">
 <p>
@@ -497,7 +497,9 @@ Gustavo <strong>Burin</strong>
 </section>
 <section id="interludio-matematico" class="slide level1" data-background="img/pois_dist.jpg" data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson">
 <h1>Interlúdio Matemático</h1>
-<h2 id="distribuicao-poisson">Distribuição Poisson</h2>
+</section>
+<section id="distribuicao-poisson" class="slide level1">
+<h1>Distribuição Poisson</h1>
 <ul>
 <li class="fragment">Variáveis discretas (geralmente associadas a contagens)</li>
 <li class="fragment">Um parâmetro <span class="math inline">\(\lambda\)</span></li>
@@ -506,9 +508,8 @@ Gustavo <strong>Burin</strong>
 <p><img src="img/poisson_dist.png" /></p>
 </blockquote>
 </section>
-<section id="interludio-matematico-1" class="slide level1" data-background="img/exp_dist.jpg" data-notes="A outra distribuição importante é a distribuição exponencial. Ela é comumente usada para descrever tempos de espera em processos sem memória. Isso porque seu parâmetro descreve algo como a meia vida de um processo, que independe do que acontece no momento anterior.">
-<h1>Interlúdio Matemático</h1>
-<h2 id="distribuicao-exponencial">Distribuição Exponencial</h2>
+<section id="distribuicao-exponencial" class="slide level1" data-background="img/exp_dist.jpg" data-notes="A outra distribuição importante é a distribuição exponencial. Ela é comumente usada para descrever tempos de espera em processos sem memória. Isso porque seu parâmetro descreve algo como a meia vida de um processo, que independe do que acontece no momento anterior.">
+<h1>Distribuição Exponencial</h1>
 <ul>
 <li class="fragment">Variáveis contínuas (tempo de espera nesse caso)</li>
 <li class="fragment">Um parâmetro <span class="math inline">\(\lambda\)</span></li>
@@ -536,7 +537,7 @@ Gustavo <strong>Burin</strong>
 <section id="cadeias-de-markov-1" class="slide level1" data-background="img/markov_chain_example.png" data-background-size="50%" data-notes="Para ilustrar uma cadeia de Markov, vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior.">
 <h1>Cadeias de Markov</h1>
 </section>
-<section id="diversificacao" class="slide level1">
+<section id="subtitle" class="slide level1">
 <h1>Diversificação</h1>
 </section>
 <section class="slide level1">
@@ -556,7 +557,7 @@ Gustavo <strong>Burin</strong>
 <h1>E a extinção?</h1>
 <p><br /> <br /> <img src="img/toomuch.gif" width="800" /></p>
 </section>
-<section id="principais-metodos" class="slide level1" data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica.">
+<section id="subtitle" class="slide level1" data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica.">
 <h1>Principais métodos</h1>
 </section>
 <section id="section-8" class="slide level1" data-background="img/phylo_ltt.png" data-background-size="60%">
@@ -624,82 +625,6 @@ Gustavo <strong>Burin</strong>
 <h1></h1>
 <p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-11-1.png" width="768" /></p>
 </section>
-<section id="bayes-factors" class="slide level1 center">
-<h1>Bayes Factors</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">0</th>
-<th style="text-align: right;">1</th>
-<th style="text-align: right;">2</th>
-<th style="text-align: right;">3</th>
-<th style="text-align: right;">4</th>
-<th style="text-align: right;">5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: right;">0.0582278</td>
-<td style="text-align: right;">0.0917553</td>
-<td style="text-align: right;">0.2211538</td>
-<td style="text-align: right;">0.43125</td>
-<td style="text-align: right;">1.078125</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">17.1739130</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: right;">1.5757979</td>
-<td style="text-align: right;">3.7980769</td>
-<td style="text-align: right;">7.40625</td>
-<td style="text-align: right;">18.515625</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">10.8985507</td>
-<td style="text-align: right;">0.6345992</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: right;">2.4102564</td>
-<td style="text-align: right;">4.70000</td>
-<td style="text-align: right;">11.750000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">3</td>
-<td style="text-align: right;">4.5217391</td>
-<td style="text-align: right;">0.2632911</td>
-<td style="text-align: right;">0.4148936</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: right;">1.95000</td>
-<td style="text-align: right;">4.875000</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">2.3188406</td>
-<td style="text-align: right;">0.1350211</td>
-<td style="text-align: right;">0.2127660</td>
-<td style="text-align: right;">0.5128205</td>
-<td style="text-align: right;">1.00000</td>
-<td style="text-align: right;">2.500000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">5</td>
-<td style="text-align: right;">0.9275362</td>
-<td style="text-align: right;">0.0540084</td>
-<td style="text-align: right;">0.0851064</td>
-<td style="text-align: right;">0.2051282</td>
-<td style="text-align: right;">0.40000</td>
-<td style="text-align: right;">1.000000</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="efeito-das-priors" class="slide level1 center">
-<h1>Efeito das <em>priors</em></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-13-1.png" width="768" /></p>
-</section>
 <section id="section-23" class="slide level1" data-background="img/alencar_et_al_2016.png" data-background-size="80%" data-notes="Ok, conseguimos identificar e pensar em hipóteses sobre qual(is) fatores podem estar relacionados a mudanças nas taxas, mas existe uma classe de modelos específica para avaliarmos a influência de traits nas taxas de diversificação. Essa classe de modelos é conhecida como xxSSE, e estão implementados no famoso pacote diversitree">
 <h1></h1>
 </section>
@@ -732,18 +657,18 @@ Gustavo <strong>Burin</strong>
 <li class="fragment">FiSSE</li>
 </ul>
 </section>
-<section id="aplicacoes" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
+<section id="subtitle" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
 <h1>Aplicações</h1>
 </section>
-<section id="aplicacoes-1" class="slide level1">
+<section id="aplicacoes" class="slide level1">
 <h1>Aplicações</h1>
 <p><br /> <img src="img/musse_vipers.png" width="900" /></p>
 </section>
-<section id="aplicacoes-2" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
+<section id="aplicacoes-1" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
 <h1>Aplicações</h1>
 <p><img src="img/musse_vipers_trans.png" width="900" /></p>
 </section>
-<section id="evolucao-fenotipica" class="slide level1 center" data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação.">
+<section id="subtitle" class="slide level1" data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação.">
 <h1>Evolução fenotípica</h1>
 </section>
 <section id="cadeias-de-markov-2" class="slide level1" data-notes="Para os métodos de evolução fenotípica, precisamos relembrar o conceito que vimos no começo da aula que são as Cadeias de Markov. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades).">
@@ -761,59 +686,57 @@ Gustavo <strong>Burin</strong>
 </section>
 <section id="section-27" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-14-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-12-1.png" width="1080" /></p>
 </section>
 <section id="section-28" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-15-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-13-1.png" width="1080" /></p>
 </section>
 <section id="section-29" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-16-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-14-1.png" width="1080" /></p>
 </section>
 <section id="section-30" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-17-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-15-1.png" width="1080" /></p>
 </section>
 <section id="section-31" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-18-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-16-1.png" width="1080" /></p>
 </section>
 <section id="section-32" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-19-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-17-1.png" width="1080" /></p>
 </section>
 <section id="section-33" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-20-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-18-1.png" width="1080" /></p>
 </section>
 <section id="section-34" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-21-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-19-1.png" width="1080" /></p>
 </section>
 <section id="section-35" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-22-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-20-1.png" width="1080" /></p>
 </section>
 <section id="section-36" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-23-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-21-1.png" width="1080" /></p>
 </section>
 <section id="section-37" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-24-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-22-1.png" width="1080" /></p>
 </section>
 <section id="section-38" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-25-1.png" width="1080" /></p>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-23-1.png" width="1080" /></p>
 </section>
 <section id="section-39" class="slide level1">
 <h1></h1>
-<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-26-1.png" width="1080" /></p>
 </section>
-<section class="slide level1">
-
-<h2 id="modelos-de-evolucao-de-caracteres-continuos" data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos.">Modelos de Evolução de Caracteres Contínuos</h2>
+<section id="subtitle" class="slide level1" data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos.">
+<h1>Modelos de Evolução de Caracteres Contínuos</h1>
 </section>
 <section class="slide level1">
 
@@ -827,10 +750,10 @@ Gustavo <strong>Burin</strong>
 <p><span class="math inline">\(dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)\)</span></p>
 <p><img src="img/ou.png" height="600" /></p>
 </section>
-<section id="ouwie" class="slide level1" data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size).">
+<section id="subtitle" class="slide level1" data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size).">
 <h1>OUwie</h1>
 </section>
-<section id="ouwie-1" class="slide level1">
+<section id="ouwie" class="slide level1">
 <h1>OUwie</h1>
 <p><br /> <br /> <br /></p>
 <h2 id="brownian-motion">Brownian Motion:</h2>
@@ -841,9 +764,11 @@ Gustavo <strong>Burin</strong>
 <section id="section-40" class="slide level1" data-background="img/results_ouwie.png" data-background-size="85%">
 <h1></h1>
 </section>
-<section id="recapitulacao" class="slide level1 center">
+<section id="subtitle" class="slide level1">
 <h1>Recapitulação</h1>
-<h2 id="diversificacao-1">Diversificação</h2>
+</section>
+<section id="diversificacao" class="slide level1">
+<h1>Diversificação</h1>
 <ul>
 <li class="fragment">Processo de Poisson + Cadeias de Markov</li>
 <li class="fragment">LTT</li>
@@ -851,9 +776,8 @@ Gustavo <strong>Burin</strong>
 <li class="fragment">diversitree</li>
 </ul>
 </section>
-<section id="recapitulacao-1" class="slide level1 center">
-<h1>Recapitulação</h1>
-<h2 id="evolucao-fenotipica-1">Evolução Fenotípica</h2>
+<section id="evolucao-fenotipica" class="slide level1">
+<h1>Evolução Fenotípica</h1>
 <ul>
 <li class="fragment">Cadeias de Markov + BM + OU</li>
 <li class="fragment">SIMMAP</li>

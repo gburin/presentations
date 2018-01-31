@@ -28,7 +28,7 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 # {.center}
 
-<h2>Introdução aos métodos em macroevolução</h2>
+<h1>Introdução aos métodos em macroevolução</h1>
 
 <br></br>
 
@@ -60,16 +60,16 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 # Interlúdio Matemático {data-background="img/pois_dist.jpg" data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson"}
 
-## Distribuição Poisson
+---
+
+# Distribuição Poisson
 
 > - Variáveis discretas (geralmente associadas a contagens)
 > - Um parâmetro $\lambda$
 
 > ![](img/poisson_dist.png)
  
-# Interlúdio Matemático {data-background="img/exp_dist.jpg" data-notes="A outra distribuição importante é a distribuição exponencial. Ela é comumente usada para descrever tempos de espera em processos sem memória. Isso porque seu parâmetro descreve algo como a meia vida de um processo, que independe do que acontece no momento anterior."}
-
-## Distribuição Exponencial
+# Distribuição Exponencial {data-background="img/exp_dist.jpg" data-notes="A outra distribuição importante é a distribuição exponencial. Ela é comumente usada para descrever tempos de espera em processos sem memória. Isso porque seu parâmetro descreve algo como a meia vida de um processo, que independe do que acontece no momento anterior."}
 
 > - Variáveis contínuas (tempo de espera nesse caso)
 > - Um parâmetro $\lambda$
@@ -93,7 +93,7 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 # Cadeias de Markov {data-background="img/markov_chain_example.png" data-background-size=50% data-notes="Para ilustrar uma cadeia de Markov, vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior."}
 
-# Diversificação
+# Diversificação {#subtitle}
 
 ---
 
@@ -121,7 +121,7 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 <br />
 ![](img/toomuch.gif){width="800px"}
 
-# Principais métodos {data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica."}
+# Principais métodos {#subtitle data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica."}
 
 # {data-background="img/phylo_ltt.png" data-background-size=60%}
 
@@ -229,17 +229,6 @@ b <- capture.output(plot.credibleshiftset(css))
 plotRateThroughTime(edata_whales, ratetype = "speciation")
 ```  
 
-# Bayes Factors {.center}
-```{r echo = FALSE, warning = FALSE}
-data(mcmc.whales)
-knitr::kable(computeBayesFactors(mcmc.whales, expectedNumberOfShifts = 1, burnin = 0.1))
-```
-
-# Efeito das *priors* {.center}
-```{r echo = FALSE}
-plotPrior(mcmc.whales, expectedNumberOfShifts=1)
-``` 
-
 # {data-background="img/alencar_et_al_2016.png" data-background-size=80% data-notes="Ok, conseguimos identificar e pensar em hipóteses sobre qual(is) fatores podem estar relacionados a mudanças nas taxas, mas existe uma classe de modelos específica para avaliarmos a influência de traits nas taxas de diversificação. Essa classe de modelos é conhecida como xxSSE, e estão implementados no famoso pacote diversitree"}
 
 # 
@@ -276,7 +265,7 @@ plotPrior(mcmc.whales, expectedNumberOfShifts=1)
 > - HiSSE
 > - FiSSE
 
-# Aplicações {data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?"}
+# Aplicações {#subtitle data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?"}
 
 # Aplicações
 
@@ -287,7 +276,7 @@ plotPrior(mcmc.whales, expectedNumberOfShifts=1)
 
 ![](img/musse_vipers_trans.png){width="900px"}
 
-# Evolução fenotípica {.center data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação."}
+# Evolução fenotípica {#subtitle data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação."}
 
 # Cadeias de Markov {data-notes="Para os métodos de evolução fenotípica, precisamos relembrar o conceito que vimos no começo da aula que são as Cadeias de Markov. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades)."}
 
@@ -404,6 +393,7 @@ for(i in 1:10){
 #
 
 ```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+pdf("./img/phylo_trait.pdf", width = 9, height = 9)
 par(mar=c(1,0,0,1), bg = "black")
 plot(res[[1]][[1]], type = "fan", label.offset = 1.5, cex = 0.4, show.tip.label = FALSE, edge.color = "white")
 tiplabels(pch = 21, col = "black", adj = 1, bg = brewer.pal(4, "Set3")[traits[match(res[[1]][[1]]$tip.label, traits[,1]), 2]], cex = 1.3)
@@ -413,7 +403,7 @@ legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"),
 
 ---
 
-## Modelos de Evolução de Caracteres Contínuos {data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos."}
+# Modelos de Evolução de Caracteres Contínuos {#subtitle data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos."}
 
 ---
 
@@ -431,7 +421,7 @@ $dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)$
 
 ![](img/ou.png){height="600px"}
 
-# OUwie {data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size)."}
+# OUwie {#subtitle data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size)."}
 
 # OUwie
 
@@ -449,18 +439,16 @@ $dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)$
 
 # {data-background="img/results_ouwie.png" data-background-size=85%}
 
-# Recapitulação {.center}
+# Recapitulação {#subtitle}
 
-## Diversificação
+# Diversificação
 
 > - Processo de Poisson + Cadeias de Markov
 > - LTT
 > - BAMM
 > - diversitree
 
-# Recapitulação {.center}
-
-## Evolução Fenotípica
+# Evolução Fenotípica
 
 > - Cadeias de Markov + BM + OU
 > - SIMMAP
