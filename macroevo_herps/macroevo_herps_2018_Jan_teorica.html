@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="macroevo_herps_2018_Jan_teorica_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="macroevo_herps_2018_Jan_teorica_files/reveal.js-3.3.0.1/css/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="custom_css.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level1 center">
+<h1></h1>
+<h2>
+Introdução aos métodos em macroevolução
+</h2>
+<p><br></br></p>
+<div align="right">
+<p>
+Gustavo <strong>Burin</strong>
+</p>
+<p><br></br></p>
+</div>
+<p>01 de Fevereiro de 2018</p>
+</section>
+<section id="estrutura" class="slide level1 center" data-notes="Inicialmente, não entrem em pânico. Falaremos sobre um pouco de matemática aqui, mas a gente vai com calma pra todos entenderem o princípio">
+<h1>Estrutura</h1>
+<ul>
+<li>Teoria</li>
+<li>Métodos para diversificação</li>
+<li>Métodos para evolução fenotípica</li>
+<li>Recapitulação</li>
+</ul>
+</section>
+<section id="section-1" class="slide level1" data-background="img/dont_panic.jpg" data-background-size="50%" data-notes="Achei que ficaria um pouco sem substância caso começasse a falar dos modelos sem antes explicar um pouco o que acontece por trás dos panos. Então eu vou falar um pouquinho sobre dois tópicos que vão são essenciais para quem quer entender COMO esses modelos funcionam e o que eles representam.">
+<h1></h1>
+</section>
+<section id="section-2" class="slide level1 center" data-notes="Como a Laura comentou, em estudos de macroevolução buscamos de maneira geral estimar o ritmo (taxa) no qual as espécies são formadas (especiação) ou desaparecem (extinção). No registro fóssil, isso é de certa forma mais direto de se pensar." data-background="img/fossil_record_silvestro.jpg" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-3" class="slide level1 center" data-notes="Num mundo ideal, teríamos filogenias moleculares associadas ao registro fóssil, então conseguiríamos estimar as taxas de maneira direta." data-background="img/simtree_full.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-4" class="slide level1 center" data-notes="No entanto, o que obtemos na imensa maioria das vezes são filogenias contendo somente as espécies atuais. Sendo assim, não temos informação direta sobre espécies extintas, o que dificulta as estimativas das taxas. Como diabos a gente usa as filogenias pra estimar essas taxas então?" data-background="img/simtree_mol.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="processo-de-poisson" class="slide level1" data-notes="Vamos então conversar sobre os dois modelos básicos usados para estimar as taxas de diversificação. O primeiro deles é chamado de Processo de Poisson. O jeito mais simples de descrever um PP é pensando em uma tarde ensolarada numa rodoviária.">
+<h1>Processo de Poisson</h1>
+</section>
+<section id="section-5" class="slide level1" data-background="img/rodoviaria.jpg" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="interludio-matematico" class="slide level1" data-background="img/pois_dist.jpg" data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson">
+<h1>Interlúdio Matemático</h1>
+<h2 id="distribuicao-poisson">Distribuição Poisson</h2>
+<ul>
+<li class="fragment">Variáveis discretas (geralmente associadas a contagens)</li>
+<li class="fragment">Um parâmetro <span class="math inline">\(\lambda\)</span></li>
+</ul>
+<blockquote>
+<p><img src="img/poisson_dist.png" /></p>
+</blockquote>
+</section>
+<section id="interludio-matematico-1" class="slide level1" data-background="img/exp_dist.jpg" data-notes="A outra distribuição importante é a distribuição exponencial. Ela é comumente usada para descrever tempos de espera em processos sem memória. Isso porque seu parâmetro descreve algo como a meia vida de um processo, que independe do que acontece no momento anterior.">
+<h1>Interlúdio Matemático</h1>
+<h2 id="distribuicao-exponencial">Distribuição Exponencial</h2>
+<ul>
+<li class="fragment">Variáveis contínuas (tempo de espera nesse caso)</li>
+<li class="fragment">Um parâmetro <span class="math inline">\(\lambda\)</span></li>
+</ul>
+<p><img src="img/exponential_dist.png" /></p>
+</section>
+<section id="section-6" class="slide level1" data-background="img/rodoviaria.jpg" data-background-size="90%" data-notes="Voltando então ao nosso Processo de Poisson. Quem nunca passou uma tarde agradável numa rodoviária contando quantos ônibus chegavam (e/ou saíam) e o tempo entre as chegadas/saídas, não é mesmo?">
+<h1></h1>
+</section>
+<section id="section-7" class="slide level1" data-notes="Podemos então medir duas variáveis: o número de chegadas (ou saídas, mas vamos focar nas chegadas primeiro) em cada intervalo de tempo (por hora, por exemplo), e o tempo entre duas chegadas consecutivas. Para isso, precisamos pensar num mundo mágico onde a rodoviária é infinita, ou seja, não há limitações para chegada dos ônibus como número finito de plataformas, e limitações para a entrada dos ônibus. Lembrando do que acabamos de vir, como a gente descreveria a variável número de chegadas? E o intervalo entre chegadas?">
+<h1></h1>
+<ul>
+<li class="fragment">Número de chegadas: distribuição Poisson</li>
+<li class="fragment">Intervalo entre chegadas: distribuição Exponencial (sem memória)</li>
+</ul>
+<p><img src="img/poisson_process_scheme.png" width="1000" /></p>
+</section>
+<section id="processo-de-poisson-1" class="slide level1" data-background="img/poisson_process_equivalency.png" data-background-size="75%" data-notes="Lembram que essas duas distribuições usam um único parâmetro cada, e que esse parâmetro é chamado de lambda nos dois casos? Pois bem, existem processos muito particulares nos quais ambos os lambda são a mesma coisa, ou seja, o número médio de chegadas por intervalo de tempo e o intervalo entre chegadas consecutivas são descritos pelo mesmo parâmetro. Para esses processos damos o nome de Processos de Poisson.">
+<h1>Processo de Poisson</h1>
+</section>
+<section id="cadeias-de-markov" class="slide level1" data-notes="Um segundo conceito importante para entendermos os métodos é o conceito de Cadeias de Markov. Provavelmente vocês já ouviram falar esse nome quando pensam em métodos filogenéticos bayesianos - MCMC significa Monte Carlo Markov Chain - mas em termos simples, uma cadeia de Markov é um processo onde os estados ao longo do tempo só dependem de duas coisas: do estado no instante logo anterior e das taxas de transição para diferentes estados. Esse conceito será importante tanto para os métodos de diversificação quanto de evolução morfológica.">
+<h1>Cadeias de Markov</h1>
+<p><img src="img/markov_chain.png" bg="white" height="550" /></p>
+</section>
+<section id="cadeias-de-markov-1" class="slide level1" data-background="img/markov_chain_example.png" data-background-size="50%" data-notes="Para ilustrar uma cadeia de Markov, vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior.">
+<h1>Cadeias de Markov</h1>
+</section>
+<section id="diversificacao" class="slide level1">
+<h1>Diversificação</h1>
+</section>
+<section class="slide level1">
+
+<h2 id="modelos-pure-birthbirth-death" class="center" data-notes="Juntando esses dois conceitos que acabamos de aprender então (Processo de Poisson e Cadeias de Markov) chegamos então nos famigerados modelos pure-birth ou birth-death. Eles são um caso particular de uma cadeia de Markov, onde as transições de estados são somente nascimentos (ou nascimentos e mortes). Além disso, quando as taxas são constantes ao longo do tempo, ele também pode ser chamado de um processo de Poisson homogêneo.">Modelos Pure-birth/Birth-death</h2>
+<p><br /> <br /> <br /> <img src="img/birthdeath.png" bg="white" width="1500" /></p>
+</section>
+<section id="voltando-ao-que-interessa" class="slide level1" data-notes="Agora que passamos então pelos dois principais conceitos, como usamos essas ferramentas para estudar macroevolução? Podemos enxergar as filogenias como um conjunto de eventos de especiação (e extinção) e também de tempos de espera entre eventos consecutivos">
+<h1>Voltando ao que interessa</h1>
+<p><img src="img/phylo_scheme_simple.png" bg="white" /></p>
+</section>
+<section id="como-achar-lambda" class="slide level1" data-notes="Os modelos usados em macroevolução são pensados para serem usados em abordagens de máxima verossimilhança ou bayesianas. Sendo assim, a parte central da utilização desses modelos é encontrar qual parâmetro (ou combinação de parâmetros) que maximiza a probabilidade de enxergarmos aqueles dados (no nosso caso, a filogenia com seus nós e internós), usando ou não conhecimentos a priori para isso.">
+<h1>Como achar lambda?</h1>
+<p><br /> <br /> <br /> <img src="img/exponential_dist.png" width="1200" /></p>
+</section>
+<section id="e-a-extincao" class="slide level1" data-notes="Mas como estimamos extinção se na filogenia só temos acesso aos eventos de especiação? Uma das maneiras é analisando o pull of the present. As espécies atuais, diferentemente das mais antigas, ainda não tiveram tempo suficiente para serem extintas. Dessa forma, segundo um modelo pure-birth normal, espera-se um aumento artificial na acumulação de espécies próximo ao presente. A diferença entre esse aumento num modelo pure-birth e a trajetória em um cenário de birth-death possui informações sobre o quanto de espécies a mais existem em relação a um cenário onde há perda de espécies. Porém, muito debate ainda existe sobre até que ponto é possível estimar extinção a partir de fologenias moleculares, então não vou entrar em muitos detalhes.">
+<h1>E a extinção?</h1>
+<p><br /> <br /> <img src="img/toomuch.gif" width="800" /></p>
+</section>
+<section id="principais-metodos" class="slide level1" data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica.">
+<h1>Principais métodos</h1>
+</section>
+<section id="section-8" class="slide level1" data-background="img/phylo_ltt.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-9" class="slide level1" data-background="img/pull_of_present_phylo.png" data-background-size="80%" data-notes="Em um cenário de pure birth, esperamos que esse gráfico seja aproximadamente uma linha em escala logarítmica (isso pois a acumulação de espécies é constante). Além disso, é possível notar que próximo ao presente, existe um aumento na inclinação dessa curva. A esse aumento damos o nome de pull of the present. Esse aumento é causado pelo acúmulo de linhagens que ainda não tiveram tempo de serem extintas, e que conta com espécies que não estariam presentes em uma filogenia futura. Isso poderia inicialmente indicar uma aceleração nas taxas próximo ao presente, mas não é o caso. A diferença entre esse pull of the present (de um modelo pure birth) com o ltt observado em um cenário birth-death é um dos modos de se estimar as taxas de extinção de uma filogenia">
+<h1></h1>
+</section>
+<section id="section-10" class="slide level1" data-background="img/pull_of_present_phylo.png" data-background-size="80%" data-notes="Esse é um jeito bastante simples de estimar a extinção, porém só faz sentido em cenários muito simples, como taxas constantes por exemplo.">
+<h1></h1>
+<p><br /> <br /> <br /> <img src="img/works_every_time.gif" width="800" /></p>
+</section>
+<section id="gamma" class="slide level1" data-background="img/gamma_equation.png" data-background-size="60%" data-notes="Uma outra forma bastante simples de descrever a diversificação em um clado é usando estatísticas que resumem a distribuição dos nós em relação a um referencial. Uma dessas estatísticas que foi muito utilizada (e também criticada) é a estatística Gamma. Ela indica se há uma concentração de nós (eventos de especiação) em direção à raiz ou aos terminais de uma filogenia maior do que esperado por um modelo pure-birth. Isso então significa que valores de gamma inferiores a um valor crítico de -1.645 indicariam uma concentração maior de nós mais próximos à base da árvore. Isso por muitos anos foi encarado como uma evidência de declínio de diversidade, mas hoje sabe-se que não é possível distinguir cenários de declínio e saturação usando somente essa estatística.">
+<h1>Gamma</h1>
+</section>
+<section id="limitacoes" class="slide level1" data-notes="Porém, essas avaliações de filogenias são bastante limitadas. O máximo que podemos falar é se elas desviam de um modelo pure-birth, ou se estão em um cenário de saturação ou declínio. Sendo assim, novos métodos surgiram para possibilitar análises mais refinadas, com taxas variáveis, identificação de mudanças de regime, influência de traits na diversificação, dentre outras. Vamos falar basicamente de 2 destes métodos recentes.">
+<h1>Limitações</h1>
+<p><br /> <br /> <br /> <img src="img/wait_a_minute.gif" width="800" /></p>
+</section>
+<section id="section-11" class="slide level1 center" data-notes="O primeiro método que vamos mostrar é o BAMM. Esse método vem sendo amplamente utilizado desde sua publicação, e consiste em estimar taxas de especiação e extinção usando modelos birth-death variando no tempo, ao mesmo tempo em que testa para diferentes configurações de regimes de diversificação">
+<h1></h1>
+<p><br /> <br /> <img src="img/bamm_logo.png" bg="#5c6565" width="1200" /></p>
+</section>
+<section id="section-12" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" /></p>
+</section>
+<section id="section-13" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-2-1.png" width="768" /></p>
+</section>
+<section id="section-14" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-3-1.png" width="768" /></p>
+</section>
+<section id="section-15" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-4-1.png" width="768" /></p>
+</section>
+<section id="section-16" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-5-1.png" width="768" /></p>
+</section>
+<section id="section-17" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-6-1.png" width="768" /></p>
+</section>
+<section id="section-18" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-7-1.png" width="768" /></p>
+</section>
+<section id="section-19" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-8-1.png" width="768" /></p>
+</section>
+<section id="section-20" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-9-1.png" width="768" /></p>
+</section>
+<section id="section-21" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-10-1.png" width="768" /></p>
+</section>
+<section id="section-22" class="slide level1 center">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-11-1.png" width="768" /></p>
+</section>
+<section id="bayes-factors" class="slide level1 center">
+<h1>Bayes Factors</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">0.0582278</td>
+<td style="text-align: right;">0.0917553</td>
+<td style="text-align: right;">0.2211538</td>
+<td style="text-align: right;">0.43125</td>
+<td style="text-align: right;">1.078125</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">17.1739130</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.5757979</td>
+<td style="text-align: right;">3.7980769</td>
+<td style="text-align: right;">7.40625</td>
+<td style="text-align: right;">18.515625</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">10.8985507</td>
+<td style="text-align: right;">0.6345992</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">2.4102564</td>
+<td style="text-align: right;">4.70000</td>
+<td style="text-align: right;">11.750000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">4.5217391</td>
+<td style="text-align: right;">0.2632911</td>
+<td style="text-align: right;">0.4148936</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.95000</td>
+<td style="text-align: right;">4.875000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">2.3188406</td>
+<td style="text-align: right;">0.1350211</td>
+<td style="text-align: right;">0.2127660</td>
+<td style="text-align: right;">0.5128205</td>
+<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">2.500000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">0.9275362</td>
+<td style="text-align: right;">0.0540084</td>
+<td style="text-align: right;">0.0851064</td>
+<td style="text-align: right;">0.2051282</td>
+<td style="text-align: right;">0.40000</td>
+<td style="text-align: right;">1.000000</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="efeito-das-priors" class="slide level1 center">
+<h1>Efeito das <em>priors</em></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-13-1.png" width="768" /></p>
+</section>
+<section id="section-23" class="slide level1" data-background="img/alencar_et_al_2016.png" data-background-size="80%" data-notes="Ok, conseguimos identificar e pensar em hipóteses sobre qual(is) fatores podem estar relacionados a mudanças nas taxas, mas existe uma classe de modelos específica para avaliarmos a influência de traits nas taxas de diversificação. Essa classe de modelos é conhecida como xxSSE, e estão implementados no famoso pacote diversitree">
+<h1></h1>
+</section>
+<section id="section-24" class="slide level1">
+<h1></h1>
+<p><br /> <img src="img/diversitree_logo.png" bg="#5c6565" width="800" /></p>
+</section>
+<section id="bisse" class="slide level1">
+<h1>BiSSE</h1>
+<p><strong>Bi</strong>nary <strong>S</strong>tate <strong>S</strong>peciation and <strong>E</strong>xtinction</p>
+<p><img src="img/bisse_scheme.png" width="1400" /></p>
+</section>
+<section id="bisse-1" class="slide level1" data-notes="Assim, podemos escrever equações que descrevem tudo o que pode acontecer em relação à especiação. Cada um dos casos que vimos está contemplato em uma dessas equações aqui, então a soma de todas elas deve inteirar 1.">
+<h1>BiSSE</h1>
+<p><br /> <br /> <img src="img/bisse_eq_sp.png" width="1200" /></p>
+</section>
+<section id="bisse-2" class="slide level1" data-notes="Além disso, precisamos levar em consideração os dois estados possíveis. Um raciocínio idêntico pode ser aplicado à extinção, então terminamos com um conjunto de 2 ">
+<h1>BiSSE</h1>
+<p><br /> <br /> <img src="img/bisse_eq_diff.png" width="1200" /></p>
+</section>
+<section class="slide level1">
+
+<h2 id="outros-modelos-do-diversitree">Outros modelos do diversitree</h2>
+<ul>
+<li class="fragment">MuSSE</li>
+<li class="fragment">QuaSSE</li>
+<li class="fragment">GeoSSE</li>
+<li class="fragment">ClaSSE</li>
+<li class="fragment">HiSSE</li>
+<li class="fragment">FiSSE</li>
+</ul>
+</section>
+<section id="aplicacoes" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
+<h1>Aplicações</h1>
+</section>
+<section id="aplicacoes-1" class="slide level1">
+<h1>Aplicações</h1>
+<p><br /> <img src="img/musse_vipers.png" width="900" /></p>
+</section>
+<section id="aplicacoes-2" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
+<h1>Aplicações</h1>
+<p><img src="img/musse_vipers_trans.png" width="900" /></p>
+</section>
+<section id="evolucao-fenotipica" class="slide level1 center" data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação.">
+<h1>Evolução fenotípica</h1>
+</section>
+<section id="cadeias-de-markov-2" class="slide level1" data-notes="Para os métodos de evolução fenotípica, precisamos relembrar o conceito que vimos no começo da aula que são as Cadeias de Markov. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades).">
+<h1>Cadeias de Markov</h1>
+<p><br /> <img src="img/markov_chain_example.png" width="1200" /></p>
+</section>
+<section id="section-25" class="slide level1" data-background="img/cubo_2x2.jpg" data-background-size="70%" data-notes="Podemos encarar a estimativa dessas taxas como um cubo mágico. Para chegar na melhor configuração você precisa ir alterando as cores em cada célula em diferentes combinações. Essa é uma aproximação do processo de otimização para estimativa dos parâmetros.">
+<h1></h1>
+</section>
+<section id="section-26" class="slide level1" data-background="img/cubo_20x20.jpg" data-background-size="65%" data-notes="Porém, quando começamos a acrescentar estados, as coisas podem facilmente se tornar um pesadelo.">
+<h1></h1>
+</section>
+<section id="stochastic-mapping" class="slide level1 center" data-notes="Existem muitos métodos para evolução fenotípica, então hoje vamos conversar somente sobre os dois métodos usados no nosso artigo. Estes dois métodos são utilizados em conjunto (o segundo depende do primeiro), e consistem basicamente em reconstruir a história evolutiva do caráter, gerando diferentes cenários que geram a configuração de estados observada hoje. À esse método damos o nome de stochastic mapping.">
+<h1>Stochastic Mapping</h1>
+</section>
+<section id="section-27" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-14-1.png" width="1080" /></p>
+</section>
+<section id="section-28" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-15-1.png" width="1080" /></p>
+</section>
+<section id="section-29" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-16-1.png" width="1080" /></p>
+</section>
+<section id="section-30" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-17-1.png" width="1080" /></p>
+</section>
+<section id="section-31" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-18-1.png" width="1080" /></p>
+</section>
+<section id="section-32" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-19-1.png" width="1080" /></p>
+</section>
+<section id="section-33" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-20-1.png" width="1080" /></p>
+</section>
+<section id="section-34" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-21-1.png" width="1080" /></p>
+</section>
+<section id="section-35" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-22-1.png" width="1080" /></p>
+</section>
+<section id="section-36" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-23-1.png" width="1080" /></p>
+</section>
+<section id="section-37" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-24-1.png" width="1080" /></p>
+</section>
+<section id="section-38" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-25-1.png" width="1080" /></p>
+</section>
+<section id="section-39" class="slide level1">
+<h1></h1>
+<p><img src="macroevo_herps_2018_Jan_teorica_files/figure-revealjs/unnamed-chunk-26-1.png" width="1080" /></p>
+</section>
+<section class="slide level1">
+
+<h2 id="modelos-de-evolucao-de-caracteres-continuos" data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos.">Modelos de Evolução de Caracteres Contínuos</h2>
+</section>
+<section class="slide level1">
+
+<h2 id="movimento-browniano" class="center" data-notes="Movimento Browniano consiste em uma cadeia de Markov em tempo contínuo, onde um caráter sofre mudanças (de aumento ou diminuição no seu valor) segundo um parâmetro sigma (que corresponde ao desvio padrão de uma distribuição normal com média 0, ou seja, representa desvios em relação ao valor médio do caráter). Lembrando que cadeias de Markov só dependem do estado atual e do desvio.">Movimento Browniano</h2>
+<p><span class="math inline">\(dX_{t} = \sigma dB(t)\)</span></p>
+<p><img src="img/bm.png" height="550" /></p>
+</section>
+<section class="slide level1">
+
+<h2 id="ornstein-uhlenbeck-ou" class="center" data-notes="Os modelos OU consistem em uma variação do Movimento Browniano com a adição de um termo que determina um valor ótimo do caráter em questão, que atua como atrator da evolução desse caráter. Este ótimo não necessariamente é um valor biologicamente plausível, é bom ter isso em mente.">Ornstein-Uhlenbeck (OU)</h2>
+<p><span class="math inline">\(dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)\)</span></p>
+<p><img src="img/ou.png" height="600" /></p>
+</section>
+<section id="ouwie" class="slide level1" data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size).">
+<h1>OUwie</h1>
+</section>
+<section id="ouwie-1" class="slide level1">
+<h1>OUwie</h1>
+<p><br /> <br /> <br /></p>
+<h2 id="brownian-motion">Brownian Motion:</h2>
+<h3 id="dx_t-sigma-dbt"><span class="math inline">\(dX_{t} = \sigma dB(t)\)</span></h3>
+<h2 id="ornstein-uhlenbeck">Ornstein-Uhlenbeck</h2>
+<h3 id="dx_t-alpha-mu---xtdt-sigma-dbt"><span class="math inline">\(dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)\)</span></h3>
+</section>
+<section id="section-40" class="slide level1" data-background="img/results_ouwie.png" data-background-size="85%">
+<h1></h1>
+</section>
+<section id="recapitulacao" class="slide level1 center">
+<h1>Recapitulação</h1>
+<h2 id="diversificacao-1">Diversificação</h2>
+<ul>
+<li class="fragment">Processo de Poisson + Cadeias de Markov</li>
+<li class="fragment">LTT</li>
+<li class="fragment">BAMM</li>
+<li class="fragment">diversitree</li>
+</ul>
+</section>
+<section id="recapitulacao-1" class="slide level1 center">
+<h1>Recapitulação</h1>
+<h2 id="evolucao-fenotipica-1">Evolução Fenotípica</h2>
+<ul>
+<li class="fragment">Cadeias de Markov + BM + OU</li>
+<li class="fragment">SIMMAP</li>
+<li class="fragment">OUwie</li>
+</ul>
+</section>
+<section id="section-41" class="slide level1 center">
+<h1></h1>
+<h2 id="periodo-da-tarde---tutorial"><a href="http://resources.gburin.com/aula-pr%C3%A1tica---macroevolu%C3%A7%C3%A3o-bie5795/" target="_blank">Período da Tarde - TUTORIAL</a></h2>
+</section>
+    </div>
+  </div>
+
+  <script src="macroevo_herps_2018_Jan_teorica_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="macroevo_herps_2018_Jan_teorica_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'macroevo_herps_2018_Jan_teorica_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

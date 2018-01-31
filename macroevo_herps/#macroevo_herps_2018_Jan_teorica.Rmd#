@@ -1,0 +1,472 @@
+---
+output:
+  revealjs::revealjs_presentation:
+    css: custom_css.css
+    theme: night
+    widescreen: true
+    transition: fade
+    center: false
+    self_contained: false
+    backgroundTransition: fade
+    reveal_plugins: ["notes"]
+    slide_level: 1
+    reveal_options:
+      slideNumber: true
+---
+
+```{r setup, echo = FALSE, warning = FALSE, message = FALSE}
+library("BAMMtools", quietly = TRUE)
+library("rmarkdown")
+library("phytools")
+library("RColorBrewer")
+data(whales, events.whales)
+a <- capture.output(edata_whales <- getEventData(whales, events.whales, burnin=0.1))
+load("./data/simmap_result.RData")
+traits <- read.csv("./data/habitat_vipers_all.csv", sep = ";", header = FALSE)
+sm.sum <- describe.simmap(res[[1]], plot = FALSE)
+```
+
+# {.center}
+
+<h2>Introdução aos métodos em macroevolução</h2>
+
+<br></br>
+
+<div align="right">
+<p>Gustavo **Burin**</p>
+<br></br>
+</div>
+
+01 de Fevereiro de 2018
+
+# Estrutura {.center data-notes="Inicialmente, não entrem em pânico. Falaremos sobre um pouco de matemática aqui, mas a gente vai com calma pra todos entenderem o princípio"}
+
+- Teoria
+- Métodos para diversificação
+- Métodos para evolução fenotípica
+- Recapitulação
+
+# {data-background="img/dont_panic.jpg" data-background-size=50% data-notes="Achei que ficaria um pouco sem substância caso começasse a falar dos modelos sem antes explicar um pouco o que acontece por trás dos panos. Então eu vou falar um pouquinho sobre dois tópicos que vão são essenciais para quem quer entender COMO esses modelos funcionam e o que eles representam."}
+
+# {data-notes="Como a Laura comentou, em estudos de macroevolução buscamos de maneira geral estimar o ritmo (taxa) no qual as espécies são formadas (especiação) ou desaparecem (extinção). No registro fóssil, isso é de certa forma mais direto de se pensar." data-background="img/fossil_record_silvestro.jpg" data-background-size=60% .center}
+
+# {data-notes="Num mundo ideal, teríamos filogenias moleculares associadas ao registro fóssil, então conseguiríamos estimar as taxas de maneira direta." data-background="img/simtree_full.png" data-background-size=60% .center}
+
+# {data-notes="No entanto, o que obtemos na imensa maioria das vezes são filogenias contendo somente as espécies atuais. Sendo assim, não temos informação direta sobre espécies extintas, o que dificulta as estimativas das taxas. Como diabos a gente usa as filogenias pra estimar essas taxas então?" data-background="img/simtree_mol.png" data-background-size=60% .center}
+  
+# Processo de Poisson {data-notes="Vamos então conversar sobre os dois modelos básicos usados para estimar as taxas de diversificação. O primeiro deles é chamado de Processo de Poisson. O jeito mais simples de descrever um PP é pensando em uma tarde ensolarada numa rodoviária."}
+
+# {data-background="img/rodoviaria.jpg" data-background-size=90%}
+
+# Interlúdio Matemático {data-background="img/pois_dist.jpg" data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson"}
+
+## Distribuição Poisson
+
+> - Variáveis discretas (geralmente associadas a contagens)
+> - Um parâmetro $\lambda$
+
+> ![](img/poisson_dist.png)
+ 
+# Interlúdio Matemático {data-background="img/exp_dist.jpg" data-notes="A outra distribuição importante é a distribuição exponencial. Ela é comumente usada para descrever tempos de espera em processos sem memória. Isso porque seu parâmetro descreve algo como a meia vida de um processo, que independe do que acontece no momento anterior."}
+
+## Distribuição Exponencial
+
+> - Variáveis contínuas (tempo de espera nesse caso)
+> - Um parâmetro $\lambda$
+
+![](img/exponential_dist.png)
+
+# {data-background="img/rodoviaria.jpg" data-background-size=90% data-notes="Voltando então ao nosso Processo de Poisson. Quem nunca passou uma tarde agradável numa rodoviária contando quantos ônibus chegavam (e/ou saíam) e o tempo entre as chegadas/saídas, não é mesmo?"}
+
+# {data-notes="Podemos então medir duas variáveis: o número de chegadas (ou saídas, mas vamos focar nas chegadas primeiro) em cada intervalo de tempo (por hora, por exemplo), e o tempo entre duas chegadas consecutivas. Para isso, precisamos pensar num mundo mágico onde a rodoviária é infinita, ou seja, não há limitações para chegada dos ônibus como número finito de plataformas, e limitações para a entrada dos ônibus. Lembrando do que acabamos de vir, como a gente descreveria a variável número de chegadas? E o intervalo entre chegadas?"}
+
+> - Número de chegadas: distribuição Poisson
+> - Intervalo entre chegadas: distribuição Exponencial (sem memória)
+
+![](img/poisson_process_scheme.png){width="1000px"}
+
+# Processo de Poisson {data-background="img/poisson_process_equivalency.png" data-background-size=75% data-notes="Lembram que essas duas distribuições usam um único parâmetro cada, e que esse parâmetro é chamado de lambda nos dois casos? Pois bem, existem processos muito particulares nos quais ambos os lambda são a mesma coisa, ou seja, o número médio de chegadas por intervalo de tempo e o intervalo entre chegadas consecutivas são descritos pelo mesmo parâmetro. Para esses processos damos o nome de Processos de Poisson."}
+
+# Cadeias de Markov {data-notes="Um segundo conceito importante para entendermos os métodos é o conceito de Cadeias de Markov. Provavelmente vocês já ouviram falar esse nome quando pensam em métodos filogenéticos bayesianos - MCMC significa Monte Carlo Markov Chain - mas em termos simples, uma cadeia de Markov é um processo onde os estados ao longo do tempo só dependem de duas coisas: do estado no instante logo anterior e das taxas de transição para diferentes estados. Esse conceito será importante tanto para os métodos de diversificação quanto de evolução morfológica."}
+
+![](img/markov_chain.png){height="550px" bg="white"}
+
+# Cadeias de Markov {data-background="img/markov_chain_example.png" data-background-size=50% data-notes="Para ilustrar uma cadeia de Markov, vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior."}
+
+# Diversificação
+
+---
+
+## Modelos Pure-birth/Birth-death {data-notes="Juntando esses dois conceitos que acabamos de aprender então (Processo de Poisson e Cadeias de Markov) chegamos então nos famigerados modelos pure-birth ou birth-death. Eles são um caso particular de uma cadeia de Markov, onde as transições de estados são somente nascimentos (ou nascimentos e mortes). Além disso, quando as taxas são constantes ao longo do tempo, ele também pode ser chamado de um processo de Poisson homogêneo." .center}
+
+<br />
+<br />
+<br />
+![](img/birthdeath.png){width="1500px" bg="white"}
+
+# Voltando ao que interessa {data-notes="Agora que passamos então pelos dois principais conceitos, como usamos essas ferramentas para estudar macroevolução? Podemos enxergar as filogenias como um conjunto de eventos de especiação (e extinção) e também de tempos de espera entre eventos consecutivos"}
+
+![](img/phylo_scheme_simple.png){bg="white"}
+
+# Como achar lambda? {data-notes="Os modelos usados em macroevolução são pensados para serem usados em abordagens de máxima verossimilhança ou bayesianas. Sendo assim, a parte central da utilização desses modelos é encontrar qual parâmetro (ou combinação de parâmetros) que maximiza a probabilidade de enxergarmos aqueles dados (no nosso caso, a filogenia com seus nós e internós), usando ou não conhecimentos a priori para isso."}
+
+<br />
+<br />
+<br />
+![](img/exponential_dist.png){width="1200px"}
+
+# E a extinção? {data-notes="Mas como estimamos extinção se na filogenia só temos acesso aos eventos de especiação? Uma das maneiras é analisando o pull of the present. As espécies atuais, diferentemente das mais antigas, ainda não tiveram tempo suficiente para serem extintas. Dessa forma, segundo um modelo pure-birth normal, espera-se um aumento artificial na acumulação de espécies próximo ao presente. A diferença entre esse aumento num modelo pure-birth e a trajetória em um cenário de birth-death possui informações sobre o quanto de espécies a mais existem em relação a um cenário onde há perda de espécies. Porém, muito debate ainda existe sobre até que ponto é possível estimar extinção a partir de fologenias moleculares, então não vou entrar em muitos detalhes."}  
+
+<br />
+<br />
+![](img/toomuch.gif){width="800px"}
+
+# Principais métodos {data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica."}
+
+# {data-background="img/phylo_ltt.png" data-background-size=60%}
+
+# {data-background="img/pull_of_present_phylo.png" data-background-size=80% data-notes="Em um cenário de pure birth, esperamos que esse gráfico seja aproximadamente uma linha em escala logarítmica (isso pois a acumulação de espécies é constante). Além disso, é possível notar que próximo ao presente, existe um aumento na inclinação dessa curva. A esse aumento damos o nome de pull of the present. Esse aumento é causado pelo acúmulo de linhagens que ainda não tiveram tempo de serem extintas, e que conta com espécies que não estariam presentes em uma filogenia futura. Isso poderia inicialmente indicar uma aceleração nas taxas próximo ao presente, mas não é o caso. A diferença entre esse pull of the present (de um modelo pure birth) com o ltt observado em um cenário birth-death é um dos modos de se estimar as taxas de extinção de uma filogenia"}
+
+# {data-background="img/pull_of_present_phylo.png" data-background-size=80% data-notes="Esse é um jeito bastante simples de estimar a extinção, porém só faz sentido em cenários muito simples, como taxas constantes por exemplo."}
+
+<br />
+<br />
+<br />
+![](img/works_every_time.gif){width="800px"}
+
+# Gamma {data-background="img/gamma_equation.png" data-background-size=60% data-notes="Uma outra forma bastante simples de descrever a diversificação em um clado é usando estatísticas que resumem a distribuição dos nós em relação a um referencial. Uma dessas estatísticas que foi muito utilizada (e também criticada) é a estatística Gamma. Ela indica se há uma concentração de nós (eventos de especiação) em direção à raiz ou aos terminais de uma filogenia maior do que esperado por um modelo pure-birth. Isso então significa que valores de gamma inferiores a um valor crítico de -1.645 indicariam uma concentração maior de nós mais próximos à base da árvore. Isso por muitos anos foi encarado como uma evidência de declínio de diversidade, mas hoje sabe-se que não é possível distinguir cenários de declínio e saturação usando somente essa estatística."}
+
+# Limitações {data-notes="Porém, essas avaliações de filogenias são bastante limitadas. O máximo que podemos falar é se elas desviam de um modelo pure-birth, ou se estão em um cenário de saturação ou declínio. Sendo assim, novos métodos surgiram para possibilitar análises mais refinadas, com taxas variáveis, identificação de mudanças de regime, influência de traits na diversificação, dentre outras. Vamos falar basicamente de 2 destes métodos recentes."}
+
+<br />
+<br />
+<br />
+![](img/wait_a_minute.gif){width="800px"}
+
+# {data-notes="O primeiro método que vamos mostrar é o BAMM. Esse método vem sendo amplamente utilizado desde sua publicação, e consiste em estimar taxas de especiação e extinção usando modelos birth-death variando no tempo, ao mesmo tempo em que testa para diferentes configurações de regimes de diversificação" .center}
+
+<br />
+<br />
+![](img/bamm_logo.png){width="1200px" bg="#5c6565"}
+
+# {.center}
+
+```{r echo = FALSE, warning = FALSE}
+plot(whales, show.tip.label = FALSE)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 140
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 14
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+addBAMMshifts(e2, cex = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 141
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+addBAMMshifts(e2, cex = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 1800
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+addBAMMshifts(e2, cex = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 1799
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+addBAMMshifts(e2, cex = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 25
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+addBAMMshifts(e2, cex = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 24
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+addBAMMshifts(e2, cex = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+index <- 23
+e2 <- subsetEventData(edata_whales, index = index)
+plot.bammdata(e2, lwd = 2)
+addBAMMshifts(e2, cex = 2)
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+css <- credibleShiftSet(edata_whales, expectedNumberOfShifts = 1, threshold = 5, set.limit = 0.95)
+b <- capture.output(plot.credibleshiftset(css))
+```
+
+# {.center}
+```{r echo = FALSE, warning = FALSE}
+plotRateThroughTime(edata_whales, ratetype = "speciation")
+```  
+
+# Bayes Factors {.center}
+```{r echo = FALSE, warning = FALSE}
+data(mcmc.whales)
+knitr::kable(computeBayesFactors(mcmc.whales, expectedNumberOfShifts = 1, burnin = 0.1))
+```
+
+# Efeito das *priors* {.center}
+```{r echo = FALSE}
+plotPrior(mcmc.whales, expectedNumberOfShifts=1)
+``` 
+
+# {data-background="img/alencar_et_al_2016.png" data-background-size=80% data-notes="Ok, conseguimos identificar e pensar em hipóteses sobre qual(is) fatores podem estar relacionados a mudanças nas taxas, mas existe uma classe de modelos específica para avaliarmos a influência de traits nas taxas de diversificação. Essa classe de modelos é conhecida como xxSSE, e estão implementados no famoso pacote diversitree"}
+
+# 
+
+<br />
+![](img/diversitree_logo.png){width="800px" bg="#5c6565"}
+
+# BiSSE
+
+**Bi**nary **S**tate **S**peciation and **E**xtinction
+
+![](img/bisse_scheme.png){width="1400px"}
+
+# BiSSE {data-notes="Assim, podemos escrever equações que descrevem tudo o que pode acontecer em relação à especiação. Cada um dos casos que vimos está contemplato em uma dessas equações aqui, então a soma de todas elas deve inteirar 1."}
+
+<br />
+<br />
+![](img/bisse_eq_sp.png){width="1200px"}
+
+# BiSSE {data-notes="Além disso, precisamos levar em consideração os dois estados possíveis. Um raciocínio idêntico pode ser aplicado à extinção, então terminamos com um conjunto de 2 "}
+
+<br />
+<br />
+![](img/bisse_eq_diff.png){width="1200px"}
+
+---
+
+## Outros modelos do diversitree
+
+> - MuSSE
+> - QuaSSE
+> - GeoSSE
+> - ClaSSE
+> - HiSSE
+> - FiSSE
+
+# Aplicações {data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?"}
+
+# Aplicações
+
+<br />
+![](img/musse_vipers.png){width="900px"}
+
+# Aplicações {data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?"}
+
+![](img/musse_vipers_trans.png){width="900px"}
+
+# Evolução fenotípica {.center data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação."}
+
+# Cadeias de Markov {data-notes="Para os métodos de evolução fenotípica, precisamos relembrar o conceito que vimos no começo da aula que são as Cadeias de Markov. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades)."}
+
+<br />
+![](img/markov_chain_example.png){width="1200px"}
+
+# {data-background="img/cubo_2x2.jpg" data-background-size=70% data-notes="Podemos encarar a estimativa dessas taxas como um cubo mágico. Para chegar na melhor configuração você precisa ir alterando as cores em cada célula em diferentes combinações. Essa é uma aproximação do processo de otimização para estimativa dos parâmetros."}
+
+# {data-background="img/cubo_20x20.jpg" data-background-size=65% data-notes="Porém, quando começamos a acrescentar estados, as coisas podem facilmente se tornar um pesadelo."}
+
+# Stochastic Mapping {.center data-notes="Existem muitos métodos para evolução fenotípica, então hoje vamos conversar somente sobre os dois métodos usados no nosso artigo. Estes dois métodos são utilizados em conjunto (o segundo depende do primeiro), e consistem basicamente em reconstruir a história evolutiva do caráter, gerando diferentes cenários que geram a configuração de estados observada hoje. À esse método damos o nome de stochastic mapping."}
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+#pdf("./img/phylo_trait.pdf", width = 9, height = 9)
+par(mar=c(1,0,0,1), bg = "black")
+plot(res[[1]][[1]], type = "fan", label.offset = 1.5, cex = 0.4, tip.color = "white", edge.color = "white")
+tiplabels(pch = 21, col = "black", adj = 1, bg = brewer.pal(4, "Set3")[traits[match(res[[1]][[1]]$tip.label, traits[,1]), 2]], cex = 1.3)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+#dev.off()
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[1]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[2]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[3]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[4]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[5]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[6]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[7]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[8]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[9]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mar=c(1,0,0,1), bg = "black")
+plotSimmap(res[[1]][[10]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 5)
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+par(mfrow = c(3, 4), mar=c(1,0,0,1), bg = "black")
+for(i in 1:10){
+    plotSimmap(res[[1]][[i]], colors = setNames(brewer.pal(4, "Set3"), 1:4), type = "fan", fsize = 0, lwd = 2)
+    }
+```
+
+
+#
+
+```{r echo = FALSE, warning = FALSE, verbose = FALSE, out.width = 1080}
+pdf("./img/phylo_trait.pdf", width = 9, height = 9)
+par(mar=c(1,0,0,1), bg = "black")
+plot(res[[1]][[1]], type = "fan", label.offset = 1.5, cex = 0.4, show.tip.label = FALSE, edge.color = "white")
+tiplabels(pch = 21, col = "black", adj = 1, bg = brewer.pal(4, "Set3")[traits[match(res[[1]][[1]]$tip.label, traits[,1]), 2]], cex = 1.3)
+nodelabels(node = 1:res[[1]][[1]]$Nnode + Ntip(res[[1]][[1]]), pie = sm.sum$ace, cex = 0.6, piecol = brewer.pal(4, "Set3"))
+legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"), pch = 19, col = brewer.pal(4, "Set3"), text.col = "white")
+```
+
+---
+
+## Modelos de Evolução de Caracteres Contínuos {data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos."}
+
+---
+
+## Movimento Browniano {data-notes="Movimento Browniano consiste em uma cadeia de Markov em tempo contínuo, onde um caráter sofre mudanças (de aumento ou diminuição no seu valor) segundo um parâmetro sigma (que corresponde ao desvio padrão de uma distribuição normal com média 0, ou seja, representa desvios em relação ao valor médio do caráter). Lembrando que cadeias de Markov só dependem do estado atual e do desvio." .center}
+
+$dX_{t} = \sigma dB(t)$
+
+![](img/bm.png){height="550px"}
+
+---
+
+## Ornstein-Uhlenbeck (OU) {data-notes="Os modelos OU consistem em uma variação do Movimento Browniano com a adição de um termo que determina um valor ótimo do caráter em questão, que atua como atrator da evolução desse caráter. Este ótimo não necessariamente é um valor biologicamente plausível, é bom ter isso em mente." .center}
+
+$dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)$
+
+![](img/ou.png){height="600px"}
+
+# OUwie {data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size)."}
+
+# OUwie
+
+<br />
+<br />
+<br />
+
+## Brownian Motion:
+
+### $dX_{t} = \sigma dB(t)$
+
+## Ornstein-Uhlenbeck
+
+### $dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)$
+
+# {data-background="img/results_ouwie.png" data-background-size=85%}
+
+# Recapitulação {.center}
+
+## Diversificação
+
+> - Processo de Poisson + Cadeias de Markov
+> - LTT
+> - BAMM
+> - diversitree
+
+# Recapitulação {.center}
+
+## Evolução Fenotípica
+
+> - Cadeias de Markov + BM + OU
+> - SIMMAP
+> - OUwie
+
+# {.center}
+
+## <a href="http://resources.gburin.com/aula-pr%C3%A1tica---macroevolu%C3%A7%C3%A3o-bie5795/" target="_blank">Período da Tarde - TUTORIAL</a>
