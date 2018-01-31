@@ -495,7 +495,7 @@ Gustavo <strong>Burin</strong>
 <section id="section-5" class="slide level1" data-background="img/rodoviaria.jpg" data-background-size="90%">
 <h1></h1>
 </section>
-<section id="subtitle" class="slide level1" data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson">
+<section id="interludio-matematico" class="slide level1 subtitle" data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson">
 <h1>Interlúdio Matemático</h1>
 </section>
 <section id="distribuicao-poisson" class="slide level1">
@@ -537,12 +537,11 @@ Gustavo <strong>Burin</strong>
 <section id="cadeias-de-markov-1" class="slide level1" data-background="img/markov_chain_example.png" data-background-size="50%" data-notes="Para ilustrar uma cadeia de Markov, vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior.">
 <h1>Cadeias de Markov</h1>
 </section>
-<section id="subtitle" class="slide level1">
+<section id="diversificacao" class="slide level1 subtitle" data-notes="Vamos começar então pelos modelos de diversificação">
 <h1>Diversificação</h1>
 </section>
-<section class="slide level1">
-
-<h2 id="modelos-pure-birthbirth-death" class="center" data-notes="Juntando esses dois conceitos que acabamos de aprender então (Processo de Poisson e Cadeias de Markov) chegamos então nos famigerados modelos pure-birth ou birth-death. Eles são um caso particular de uma cadeia de Markov, onde as transições de estados são somente nascimentos (ou nascimentos e mortes). Além disso, quando as taxas são constantes ao longo do tempo, ele também pode ser chamado de um processo de Poisson homogêneo.">Modelos Pure-birth/Birth-death</h2>
+<section id="modelos-pure-birthbirth-death" class="slide level1 center" data-notes="Juntando esses dois conceitos que acabamos de aprender então (Processo de Poisson e Cadeias de Markov) chegamos então nos famigerados modelos pure-birth ou birth-death. Eles são um caso particular de uma cadeia de Markov, onde as transições de estados são somente nascimentos (ou nascimentos e mortes). Além disso, quando as taxas são constantes ao longo do tempo, ele também pode ser chamado de um processo de Poisson homogêneo.">
+<h1>Modelos Pure-birth/Birth-death</h1>
 <p><br /> <br /> <br /> <img src="img/birthdeath.png" bg="white" width="1500" /></p>
 </section>
 <section id="voltando-ao-que-interessa" class="slide level1" data-notes="Agora que passamos então pelos dois principais conceitos, como usamos essas ferramentas para estudar macroevolução? Podemos enxergar as filogenias como um conjunto de eventos de especiação (e extinção) e também de tempos de espera entre eventos consecutivos">
@@ -557,7 +556,7 @@ Gustavo <strong>Burin</strong>
 <h1>E a extinção?</h1>
 <p><br /> <br /> <img src="img/toomuch.gif" width="800" /></p>
 </section>
-<section id="subtitle" class="slide level1" data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica.">
+<section id="principais-metodos" class="slide level1 subtitle" data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica.">
 <h1>Principais métodos</h1>
 </section>
 <section id="section-8" class="slide level1" data-background="img/phylo_ltt.png" data-background-size="60%">
@@ -657,18 +656,18 @@ Gustavo <strong>Burin</strong>
 <li class="fragment">FiSSE</li>
 </ul>
 </section>
-<section id="subtitle" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
+<section id="aplicacoes" class="slide level1 subtitle" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
 <h1>Aplicações</h1>
 </section>
-<section id="aplicacoes" class="slide level1">
+<section id="aplicacoes-1" class="slide level1">
 <h1>Aplicações</h1>
 <p><br /> <img src="img/musse_vipers.png" width="900" /></p>
 </section>
-<section id="aplicacoes-1" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
+<section id="aplicacoes-2" class="slide level1" data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?">
 <h1>Aplicações</h1>
 <p><img src="img/musse_vipers_trans.png" width="900" /></p>
 </section>
-<section id="subtitle" class="slide level1" data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação.">
+<section id="evolucao-fenotipica" class="slide level1 subtitle" data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação.">
 <h1>Evolução fenotípica</h1>
 </section>
 <section id="cadeias-de-markov-2" class="slide level1" data-notes="Para os métodos de evolução fenotípica, precisamos relembrar o conceito que vimos no começo da aula que são as Cadeias de Markov. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades).">
@@ -735,7 +734,7 @@ Gustavo <strong>Burin</strong>
 <section id="section-39" class="slide level1">
 <h1></h1>
 </section>
-<section id="subtitle" class="slide level1" data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos.">
+<section id="modelos-de-evolucao-de-caracteres-continuos" class="slide level1 subtitle" data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos.">
 <h1>Modelos de Evolução de Caracteres Contínuos</h1>
 </section>
 <section class="slide level1">
@@ -750,10 +749,10 @@ Gustavo <strong>Burin</strong>
 <p><span class="math inline">\(dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)\)</span></p>
 <p><img src="img/ou.png" height="600" /></p>
 </section>
-<section id="subtitle" class="slide level1" data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size).">
+<section id="ouwie" class="slide level1 subtitle" data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size).">
 <h1>OUwie</h1>
 </section>
-<section id="ouwie" class="slide level1">
+<section id="ouwie-1" class="slide level1">
 <h1>OUwie</h1>
 <p><br /> <br /> <br /></p>
 <h2 id="brownian-motion">Brownian Motion:</h2>
@@ -764,10 +763,10 @@ Gustavo <strong>Burin</strong>
 <section id="section-40" class="slide level1" data-background="img/results_ouwie.png" data-background-size="85%">
 <h1></h1>
 </section>
-<section id="subtitle" class="slide level1">
+<section id="recapitulacao" class="slide level1 subtitle">
 <h1>Recapitulação</h1>
 </section>
-<section id="diversificacao" class="slide level1">
+<section id="diversificacao-1" class="slide level1">
 <h1>Diversificação</h1>
 <ul>
 <li class="fragment">Processo de Poisson + Cadeias de Markov</li>
@@ -776,7 +775,7 @@ Gustavo <strong>Burin</strong>
 <li class="fragment">diversitree</li>
 </ul>
 </section>
-<section id="evolucao-fenotipica" class="slide level1">
+<section id="evolucao-fenotipica-1" class="slide level1">
 <h1>Evolução Fenotípica</h1>
 <ul>
 <li class="fragment">Cadeias de Markov + BM + OU</li>

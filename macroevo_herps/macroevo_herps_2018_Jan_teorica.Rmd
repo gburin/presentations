@@ -58,9 +58,7 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 # {data-background="img/rodoviaria.jpg" data-background-size=90%}
 
-# Interlúdio Matemático {#subtitle data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson"}
-
----
+# Interlúdio Matemático {.subtitle data-notes="Para entender processos de Poisson, a gente precisa ter em mente duas distribuições estatísticas em mente. Cada uma delas tem propriedades importantes que vamos passar rapidamente. A primeira é a distribuição Poisson"}
 
 # Distribuição Poisson
 
@@ -93,11 +91,9 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 
 # Cadeias de Markov {data-background="img/markov_chain_example.png" data-background-size=50% data-notes="Para ilustrar uma cadeia de Markov, vamos pensar nume exemplo simples como a condição do tempo em um determinado lugar. Podemos pensar em dois estados diferentes: dia bonito e dia feio. Lembrando da propriedade de ser sem memória, uma cadeia de Markov para estimar as probabilidades de cada tipo de dia nesse caso vai levar em consideração apenas as condições do dia anterior."}
 
-# Diversificação {#subtitle}
+# Diversificação {.subtitle data-notes="Vamos começar então pelos modelos de diversificação"}
 
----
-
-## Modelos Pure-birth/Birth-death {data-notes="Juntando esses dois conceitos que acabamos de aprender então (Processo de Poisson e Cadeias de Markov) chegamos então nos famigerados modelos pure-birth ou birth-death. Eles são um caso particular de uma cadeia de Markov, onde as transições de estados são somente nascimentos (ou nascimentos e mortes). Além disso, quando as taxas são constantes ao longo do tempo, ele também pode ser chamado de um processo de Poisson homogêneo." .center}
+# Modelos Pure-birth/Birth-death {data-notes="Juntando esses dois conceitos que acabamos de aprender então (Processo de Poisson e Cadeias de Markov) chegamos então nos famigerados modelos pure-birth ou birth-death. Eles são um caso particular de uma cadeia de Markov, onde as transições de estados são somente nascimentos (ou nascimentos e mortes). Além disso, quando as taxas são constantes ao longo do tempo, ele também pode ser chamado de um processo de Poisson homogêneo." .center}
 
 <br />
 <br />
@@ -121,7 +117,7 @@ sm.sum <- describe.simmap(res[[1]], plot = FALSE)
 <br />
 ![](img/toomuch.gif){width="800px"}
 
-# Principais métodos {#subtitle data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica."}
+# Principais métodos {.subtitle data-notes="Vamos dar uma pausa na parte chata e vamos mostrar então um pouco desses métodos em ação. Classicamente, uma das primeiras formas de avaliarmos a diversificação de um grupo é contando o número de linhagens existentes em um determinado momento no tempo. Para isso, usamos o que chamamos de LTT - lineage through time - plots. Esses plots nada mais são do que representações de como o número de linhagens de uma filogenia se acumulou com o tempo, geralmente representado em escala logarítmica."}
 
 # {data-background="img/phylo_ltt.png" data-background-size=60%}
 
@@ -265,7 +261,7 @@ plotRateThroughTime(edata_whales, ratetype = "speciation")
 > - HiSSE
 > - FiSSE
 
-# Aplicações {#subtitle data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?"}
+# Aplicações {.subtitle data-notes="Vou então agora ver se vocês fizeram a lição de casa. No artigo que acabamos de publicar na ProcB, qual foi o modelo que usamos para avaliar se havia diferenças entre as taxas de acordo com cada um dos diferentes habitats das víboras?"}
 
 # Aplicações
 
@@ -276,7 +272,7 @@ plotRateThroughTime(edata_whales, ratetype = "speciation")
 
 ![](img/musse_vipers_trans.png){width="900px"}
 
-# Evolução fenotípica {#subtitle data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação."}
+# Evolução fenotípica {.subtitle data-notes="Apesar de métodos como os xxSSE nos permitirem estimar as taxas associadas a cada estado de um caráter, a integração sobre todas as possibilidades de história e estados ancestrais desse caráter envolvidos nas estimativas nos impede de estimar a história de transição/evolução do caráter em questão. Para isso, precisamos lançar mão de métodos que analisam explicitamente a evolução dos caracteres independentemente dos processos de diversificação."}
 
 # Cadeias de Markov {data-notes="Para os métodos de evolução fenotípica, precisamos relembrar o conceito que vimos no começo da aula que são as Cadeias de Markov. São processos sem memória, onde precisamos somente de duas informações para tentar estimar o estado de um caráter no instante t+1: o estado no instante t e as probabilidades de transição entre estes estados. Pensando num caráter binário facilita as coisas, já que são somente 2 possibilidades para cada estado que devem somar 1 (já que se tratam de probabilidades)."}
 
@@ -403,7 +399,7 @@ legend("bottomright", legend = c("Open + Closed", "Open", "Closed", "Arboreal"),
 
 ---
 
-# Modelos de Evolução de Caracteres Contínuos {#subtitle data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos."}
+# Modelos de Evolução de Caracteres Contínuos {.subtitle data-notes="Como eu disse, existe um outro método que está associado ao simmap (pois depende dele). Esse método consiste em ajustar diferentes modelos de evolução de caracteres contínuos baseados na história evolutiva de um caráter discreto. Esses métodos são chamados de OUwie. Para explicar como eles funcionam, primeiro vamos conhecer dois populares modelos de evolução de caracteres contínuos."}
 
 ---
 
@@ -421,7 +417,7 @@ $dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)$
 
 ![](img/ou.png){height="600px"}
 
-# OUwie {#subtitle data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size)."}
+# OUwie {.subtitle data-notes="A ideia por trás dos métodos do pacote OUwie é ajustar e estimar qual o melhor modelo de evolução de um caráter contínuo (tamanho corporal por exemplo) dados cenários prováveis de evolução de um caráter discreto (microhabitat). Então, o método vai recuperar qual é o tipo de modelo de evolução do caráter contínuo melhor se adapta a uma determinada reconstrução. O modelo vai retornar ou BM pra todo mundo (com sigmas iguais ou não) ou OU para todos (com picos e sigmas iguais ou não), mas como vimos pelas equações, é fácil chegar em um BM a partir de um OU (por exemplo as vipers terrestres possuem alpha quase 0 para body size)."}
 
 # OUwie
 
@@ -439,7 +435,7 @@ $dX_{t} = \alpha[ \mu - X(t)]dt + \sigma dB(t)$
 
 # {data-background="img/results_ouwie.png" data-background-size=85%}
 
-# Recapitulação {#subtitle}
+# Recapitulação {.subtitle}
 
 # Diversificação
 
