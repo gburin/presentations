@@ -229,19 +229,19 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 # {data-notes="No meio pro final do 2 ano, o artigo foi aceito." .center}
 
-<img src="img/denied.gif" width=250%/>
+<img src="img/doctor_no.gif" width=250%/>
 
 # 1º capítulo aceito {.subtitle}
 
-# {data-background="img/doctor_no.gif" .center}
+# {data-background="img/yeah_no.gif" .center}
 
 <img class="fragment" src="img/suspect_nothing.png" height=800px/>
 
 # 1º capítulo publicado {data-notes="Algo bizarro aconteceu. A fapesp entrou em contato e reconheceu o erro." data-background="img/natcomms.png" data-background-size=80%}
 
-<img class="fragment" src="img/yeah_no.gif" width=200%/>
+<img class="fragment" src="img/achou_errado.gif" width=200%/>
 
-# Ligação da FAPESP {data-notes="Mudanças: terapia + remédio. Fim de 2015 (metade do 3o ano) eu pesava 201kg, e resolvi que a melhor coisa a fazer seria a cirurgia bariátrica." .center}
+# Contato da FAPESP {data-notes="Mudanças: terapia + remédio. Fim de 2015 (metade do 3o ano) eu pesava 201kg, e resolvi que a melhor coisa a fazer seria a cirurgia bariátrica." .center}
 
 <img class="fragment" src="img/spongebob_happy.gif" width=200%/>
 
