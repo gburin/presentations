@@ -197,26 +197,11 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 > - Relação modulada por disponibilidade hídrica (total e sazonal)
 
 # {.center}
-<h2>Mensagens finais - cap 1</h2>
+<h2>Mensagens finais</h2>
 
-> - Onívoros parecem ser um ralo macroevolutivo
-> - Diversidade de onívoros mantida por transições
-> - Diversidade regulada por mosaico espaço-temporal de seleção
-
-# {.center}
-<h2>Mensagens finais - cap 2</h2>
-
-> - Métodos filogenéticos estimam bem no presente
-> - Falha em detectar variação na extinção: reconstrução errada
-> - Questiona prevalência de queda na especiação
-
-# {.center}
-
-<h2>Mensagens finais - cap 3</h2>
-
-> - Espécies de linhagens menos estáveis não são centrais em regiões temperadas
-> - Montagem influenciada pela disponibilidade de água (fenologia)
-> - Trópicos: compensação de intimidade por quantidade
+> - Cap1: Onívoros parecem ser um ralo macroevolutivo
+> - Cap2: Métodos filogenéticos estimam bem no presente + reconstrução errada
+> - Cap3: Espécies de linhagens menos estáveis não são centrais em regiões temperadas
 
 # {data-background="img/capa.png" data-background-size=42%}
 
@@ -256,7 +241,7 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 <img class="fragment" src="img/yeah_no.gif" width=200%/>
 
-# 1º capítulo publicado {data-notes="Mudanças: terapia + remédio. Fim de 2015 (metade do 3o ano) eu pesava 201kg, e resolvi que a melhor coisa a fazer seria a cirurgia bariátrica." .center}
+# Ligação da FAPESP {data-notes="Mudanças: terapia + remédio. Fim de 2015 (metade do 3o ano) eu pesava 201kg, e resolvi que a melhor coisa a fazer seria a cirurgia bariátrica." .center}
 
 <img class="fragment" src="img/spongebob_happy.gif" width=200%/>
 
@@ -296,7 +281,7 @@ peso.dist
 > - Não deixe as adversidades te paralisarem, e não tenha medo de tentar coisas diferentes do recomendado.
 > - Sua saúde (física e mental) e sua vida fora da academia importam tanto quanto seu esforço no laboratório.
 
-# A pós-graduação é mais que seu projeto! {data-notes="Ao mesmo tempo, tentar aproveitar e criar um ambiente bom de trabalho, com uma equipe legal." .subtitle}
+# A pós-graduação é mais que seu projeto (e sua tese)! {data-notes="Ao mesmo tempo, tentar aproveitar e criar um ambiente bom de trabalho, com uma equipe legal." .subtitle}
 
 # {data-background="img/labmeme.png" data-background-size=100%}
 
