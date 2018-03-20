@@ -210,7 +210,7 @@ Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
 
 
   
-# Minha trajetória {data-notes="Na iniciação e no mestrado eu trabalhei com dendrocronologia. Ao fim do mestrado, percebi que continuar não era a melhor escolha. O que fazer então?" .subtitle}
+# Minha trajetória {data-notes="Vou passar pelos mesmo pontos que o pinguim falou de maneira diferente. Na iniciação e no mestrado eu trabalhei com dendrocronologia. Ao fim do mestrado, percebi que continuar não era a melhor escolha. O que fazer então?" .subtitle}
 
 # {data-notes="Sempre achei que queria ficar na academia, então fui testar o mercado de trabalho para ter certeza de que academia era o meu lugar mesmo. E era." data-background="img/dendro.png" data-background-size=50%}
 
