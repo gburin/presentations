@@ -1,0 +1,33 @@
+.reveal li{
+    color: white;
+    font-size: 1.5em;
+}
+
+.reveal h1{
+    color: #bf6e13;
+    font-size: 3em;
+}
+
+.reveal h2{
+    color: #B3DE69;
+    font-size: 2em;
+}
+
+
+.subtitle {
+    color: #bf6e13;
+    font-size:24pt;
+    position: absolute;
+    bottom:10%;
+    right:0;
+    text-align:right;
+    width:100%;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}

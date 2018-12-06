@@ -1,0 +1,203 @@
+Trocar a ordem:
+- começar com macroevolução (pq eu quero estudar macroevolução e como a gente estuda)
+- depois passar pra tipos de dados
+- chegar em aves e falar da ecologia
+
+Slide ebird
+- tem muito dado (mensagem principal + detalhes)
+
+Objetivos ESPECÍFICOS
+
+Capítulo 1
+- Testar o quão amplo é esse padrão (por isso testamos em aves)
+
+Métodos:
+- Introduzir incerteza filogenética (filogenias são hipóteses)
+- Estimativas de parâmetros de especiação, extinção, dentre outros (93 parâmetros - um para cada dieta)
+- Abordagem bayesiana: 1500000 iterações
+
+- explicar o que são as transições
+- Apanhado de resultados antes dos nichos
+- Mensagens: mais discussão, biologia
+- acrescentar setas na transição nos nichos
+- incluir textos pequenos
+
+- slide 43 mover pra introdução
+
+- acrescentar descrição do BAMM e RPANDA
+- ltt: acrescentar filogenia
+- acrescentar slide antes dos objetivos que existem desafios enormes em estimar taxas em filogenias pois não temos registro direto dos eventos
+- acrescentar slide que fale que declínio é pouco explorado (Quental & Marshall 2011, Morlon et al. 2011) -> ambos tem limitações e estamos tentando entender melhor
+- slide com mesma filogenia fóssil + molecular
+- miniatura de legenda dos cenários + indicar modelo correto
+- slide com estimativas na raiz
+- justificativa das empíricas (simulações são simples, empíricas são complexas)
+
+Capítulo 3
+- slide com hipótese clara
+
+
+
+Sugestões Tiago
+
+Slide 1 : advisor co advisor
+
+2:
+
+3: rede ecológicas
+
+4:
+
+5:
+
+f=small filo
+
+
+
+6: a lot of data! E.g. ebirds, UCN. It is not only about “citizen sience”.
+
+
+
+7: make it explicit that this is an example. 
+
+
+
+8: No need to say citizen science all the time. Emphasis should be on a lot of data.
+
+
+
+9: EARLIER SLIDE TO SHOW WHAT ARE THE DIFFERENT ASPECTS HAT MAKE BIRDS A GOOD STUDY SYSTEM
+
+SHOW / SAY THAT WE HAVE DATA IN THE FORM OF DNA TO TELL ITS TEMPORAL HISTORY
+
+
+
+
+
+Before why birds explain your interest in easy worsnand situate macroevolution. 
+
+DURING THE MACRO SPEECH, EARLY ON SAY ABOUT SPECIATION AND EXTINCTION.
+
+
+
+CAP1: TEST HOW GENERAL THIS PATTERN WOULD BE. AND EXPAND IT TO BIRDS.
+
+
+
+COLOCAR “incerteza filogenética” no slide
+
+
+
+colocar o número de espesis omnívora no slide
+
+
+
+Explicar o que é uma “transição”. Seria a mudança anagenética de uma dieta na outra.
+
+
+
+Antes do mechanism ecológico, resumir o padrão para omnívoro 
+
+
+
+Colocar indicação de variação do recurso no tempo nos slides.
+
+
+
+Inlcuir setas no slide para mostrar transição no slide de “bolas”
+
+ 
+
+
+
+CAP 2:
+
+
+
+Slide workshop Berkeley poderia vir na introdução. 
+
+
+
+Slide LTT trocar por filogenisa mesmo, ou ter os dois
+
+
+
+Antes do slide RPANDA e BAM dizer que é um desafio estimar isso a partir de dados moleculares.
+
+
+
+Citar as diferentes trajetórias da diversidade (talvez citar Quental & Marshall 2010) para mostrar que declínio é comum e que esse cenário é pouco explorado (talvez citar Quental  & Marshall 2011; Morlon et al 2011).
+
+
+
+Dizer porque remove especies extintas. Para emular uma filogenia.
+
+
+
+Resultados: colocar painel pequeno em cima a direita para informar o s=cenário e momento da estimativa. Também o modelo correto (cor)
+
+Mostrar os resukltados de Exvar na raiz.
+
+Slide com cartoon para mostrar os reultados da simulação
+
+Antes das empíricas eu falaria dos resultados do “exvar” no início. 
+
+
+
+Slide de transição para resultados empíricos. Colocar número de árvores e de que grupos e justificar essa análise dizendo que existem dinâmicas mais complexas que as nossas simulações e queremos ver se os métodos chegam no mesmo “lugar”.
+
+
+
+CAP 3:
+
+
+
+Ao invés de “mais importante” falar de como definimos os diferentes papéis das espécies na rede.
+
+
+
+Colocar slide de hipótese clara
+
+
+
+Colocar slides com os números de redes com dados de frequências e de 0 ou 1. Pode até colocar um cartoon para mostrar essa diferença. Para explicitar que elas medem coisas diferentes.
+
+
+
+Colocar escrito especiação e extinção  no slide das filogenias.
+
+
+
+Colocar a formula do epsilon no slide
+
+
+
+Slide para falar do z-score
+
+
+
+Slide com os co-fatores
+
+
+
+Slide mensagens: relação negativa com quem, escrever no slide
+
+
+
+disponibilidaded de água (colocar em parênteses quais variáveis).
+
+
+
+Na mensagem dizer mais claramente o que significa a relação: que a dinˆcamica evolutiva apresentam algum papel na montagem das redes, onde espécies mais centrais tendem a ser aquelas que vem de linhagens evolutivamente mais estáveis.
+
+
+
+Tradeoff satmente precisa dizer explicitamente TROPICAL no texto.
+
+
+
+CONCLUSOES: mensagem mais elaborada ao invés de dizer os resultados específicos.
+
+
+
+e.g Omnivoros parecem ser um ralo marcoeovlutivo e só podem sobreviver etc…..

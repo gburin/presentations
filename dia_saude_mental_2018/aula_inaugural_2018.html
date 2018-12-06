@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
+  <title>aula_inaugural_2018.utf8.md</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="aula_inaugural_2018_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="aula_inaugural_2018_files/reveal.js-3.3.0.1/css/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="custom_css.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level1" data-background="img/title_background.png" data-background-size="100%">
+<h1></h1>
+<h2>
+Os papéis da dieta, especiação e extinção na diversificação de aves e na montagem de redes de frugivoria
+</h2>
+<p><br></br></p>
+<div data-align="right">
+<p>
+Gustavo Burin <strong>FERREIRA</strong>
+</p>
+<p>
+Orientador: Tiago Bosisio <strong>QUENTAL</strong>
+</p>
+<p>
+Co-orientador: Paulo R. <strong>GUIMARÃES</strong> Jr
+</p>
+<p><br></br></p>
+</div>
+<p>20 de Março de 2018</p>
+</section>
+<section id="section-1" class="slide level1" data-background="img/agradecimentos.png" data-background-size="70%">
+<h1></h1>
+</section>
+<section id="estrutura" class="slide level1 center" data-notes="Estima-se que 99% de todas as espécies que já passaram pelo planeta foram extintas.">
+<h1>Estrutura</h1>
+<ul>
+<li>Capítulo 1: Dieta + Diversificação</li>
+<li>Capítulo 2: Performance de Métodos</li>
+<li>Capítulo 3: Diversificação + Redes</li>
+<li>Trajetória pessoal</li>
+</ul>
+</section>
+<section id="section-2" class="slide level1" data-background="img/diversity_color.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="macroevolucao" class="slide level1 center" data-notes="Essas escalas de tempo são difíceis de imaginar. Como podemos estudar isso então? Precisamos de uma máquina do tempo">
+<h1>Macroevolução</h1>
+</section>
+<section id="section-3" class="slide level1" data-notes="Um dos tipos de máquina do tempo é o registro fóssil." data-background="img/time_machine.png">
+<h1></h1>
+</section>
+<section id="section-4" class="slide level1" data-notes="Para os grupos dos quais não dispomos de dados fósseis, a forma que temos de viajar no tempo é usando filogenias moleculares." data-background="img/archaeopteryx.jpg" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-5" class="slide level1" data-notes="Um grupo que se encaixa nesse cenário são as Aves. Uma das razões é que é muito legal poder falar que vc trabalha com os únicos dinossauros vivos" data-background="img/tree_bamm.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="por-que-aves" class="slide level1 center" data-notes="Ocupam todos os continentes. O sucesso do grupo é bastante interessante, especialmente do ponto de vista da macroevolução.">
+<h1>Por que aves?</h1>
+<p><img src="img/dinosaur_blood.jpg" width=45%/></p>
+</section>
+<section id="section-6" class="slide level1" data-notes="No entanto, é um grupo para o qual dados moleculares são abundantes e permitiram estabelecer razoavelmente bem suas relações de parentesco. As aves se originaram a cerca de 120MY." data-background="img/kissling_et_al_2012.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="section-7" class="slide level1" data-notes="Sendo assim não é de se estranhar que sejam um grupo extremamente rico em morfologias" data-background="img/jetz2012.png" data-background-size="70%">
+<h1></h1>
+</section>
+<section id="section-8" class="slide level1" data-notes="Essas diferentes morfologias podem representar diferentes ecologias, como por exemplo os bicos que são mais adaptados a diferentes dietas" data-background="img/Bird_Diversity2.png" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="section-9" class="slide level1" data-notes="As diferenças nas ecologias também se refletem nas diferentes interações ecológicas aves desempenham, como dispersão de sementes, predação, consumo de carcaças, e polinização.">
+<h1></h1>
+<p><img data-src="./img/BirdBeaks.gif" /></p>
+</section>
+<section id="section-10" class="slide level1" data-background="img/bird_services.png" data-background-size="77%">
+<h1></h1>
+</section>
+<section id="items" class="slide level1 center emphasized">
+<h1>Objetivos</h1>
+<ul>
+<li class="fragment">Entender os efeitos de diferentes dietas na diversificação do grupo</li>
+<li class="fragment">Testar a performance de métodos amplamente utilizados</li>
+<li class="fragment">Analisar a relação entre a diversificação e o papel ecológico</li>
+</ul>
+</section>
+<section id="capitulo-1" class="slide level1" data-notes="Price et al. 2012, curiosos sobre o quão amplo é esse padrão, então testamos em aves." data-background="img/natcomms.png" data-background-size="75%">
+<h1>Capítulo 1</h1>
+</section>
+<section id="section-11" class="slide level1" data-notes="Resultados para net diversification" data-background="img/price_results.png" data-background-size="70%">
+<h1></h1>
+</section>
+<section id="section-12" class="slide level1" data-notes="Como então que a riqueza tão alta - 1150 espécies - pode ser mantida se em teoria essa guilda está em declínio?" data-background="img/cap1fig1_black.png" data-background-size="90%">
+<h1></h1>
+</section>
+<section id="section-13" class="slide level1 center" data-notes="O que mantém a diversidade são as transições preferenciais para onivoria" data-background="img/omniv_phylo.png" data-background-size="60%">
+<h1></h1>
+<h1 class="fragment" style="background:rgba(0,0,0,0.5);">
+1150 espécies de onívoros
+</h1>
+</section>
+<section id="section-14" class="slide level1" data-background="img/transitions_white.png" data-background-size="60%">
+<h1></h1>
+</section>
+<section id="section-15" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
+<h1></h1>
+<h2>
+Recursos abundantes/previsíveis
+</h2>
+<p><img style="background:black; border:0px;" src="img/competition.png" width=65%/></p>
+</section>
+<section id="section-16" class="slide level1 center" data-notes="Recursos abundantes e/ou previsíveis">
+<h1></h1>
+<h2>
+Recursos abundantes/previsíveis
+</h2>
+<p><img style="background:black; border:0px;" src="img/specialized.png" width=65%/></p>
+</section>
+<section id="section-17" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
+<h1></h1>
+<h2>
+Recursos escassos/imprevisíveis
+</h2>
+<p><img style="background:black; border:0px;" src="img/competition.png" width=65%/></p>
+</section>
+<section id="section-18" class="slide level1 center" data-notes="Recursos escassos/imprevisíveis">
+<h1></h1>
+<h2>
+Recursos escassos/imprevisíveis
+</h2>
+<p><img style="background:black; border:0px;" src="img/comp_trans_arrows.png" width=65%/></p>
+</section>
+<section id="capitulo-2" class="slide level1 center" data-notes="Recentemente dois métodos foram desenvolvidos e são amplamente utilizados. RPANDA: seleção de modelos; BAMM: rjMCMC. Em ambos em teoria seria capaz de detectarmos declínio de diversidade">
+<h1>Capítulo 2</h1>
+<p style="font-size:2em;color:white;">
+How well can we estimate diversity dynamics for clades in diversity decline?
+</p>
+<p><br></br></p>
+<p>Gustavo <strong>BURIN</strong>; Laura <strong>ALENCAR</strong>; Jonathan <strong>CHANG</strong>; Michael <strong>ALFARO</strong>; Tiago <strong>QUENTAL</strong></p>
+<p><br></br></p>
+<p style="font-size:0.7em;">
+Em revisão (aceito com <i>major</i>) na <b><i>Systematic Biology</i></b>
+</p>
+</section>
+<section id="section-19" class="slide level1 center" data-notes="O objetivo desse capítulo é avaliar a capacidade desses dois métodos de detectar declínio de diversidade a partir de filogenias em cenários onde especiação ou extinção variam, usando simulações e árvores empíricas. Além disso avaliar intensidade do declínio.">
+<h1></h1>
+<p><img src="img/morlon.png" width="1400" /></p>
+<p><img src="img/bamm.png" width="1400" /></p>
+</section>
+<section id="section-20" class="slide level1" data-notes="Não vou entrar em detalhes desse capítulo pois é muito metodológico, pouco interessante pra ecólogos, então vamos pular para as mensagens" data-background="img/diversity_timetravel.png" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-21" class="slide level1" data-background="img/toomuch.gif" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="mensagens" class="slide level1 center">
+<h1>Mensagens</h1>
+<ul>
+<li class="fragment">Primeiro teste mais abrangente (espaço de parâmetros e <em>time-travel</em>)</li>
+<li class="fragment">Ambos os modelos estimam as taxas bem no presente</li>
+<li class="fragment">Atribui variação na diversificação à especiação (força queda)</li>
+</ul>
+</section>
+<section id="implicacoes-praticas" class="slide level1 center">
+<h1>Implicações práticas</h1>
+<ul>
+<li class="fragment">Dificuldade em detectar variação na extinção</li>
+<li class="fragment">Estimativas ruins na raiz: reconstrução da história é falha</li>
+<li class="fragment">Discordam nas empíricas</li>
+<li class="fragment">Queda na especiação não parece ser tão comum</li>
+</ul>
+</section>
+<section id="capitulo-3" class="slide level1 center" data-notes="Na introdução falamos sobre as interações que as aves fazem parte. Falamos também que são um dos principais grupos de dispersores">
+<h1>Capítulo 3</h1>
+<p><br></br></p>
+<p style="font-size:2em;color:white;">
+The role of diversification rates on the assembly of frugivory networks
+</p>
+<p><br></br></p>
+<p>Gustavo <strong>BURIN</strong>; Paulo <strong>GUIMARÃES</strong>; Tiago <strong>QUENTAL</strong></p>
+</section>
+<section id="section-22" class="slide level1" data-notes="As aves são o principal grupo que atua na dispersão de sementes" data-background="img/bird_services.png" data-background-size="77%">
+<h1></h1>
+</section>
+<section id="section-23" class="slide level1" data-notes="Mas as espécies centrais tem uma história evolutiva similar? No terceiro capítulo testamos a relação entre taxas de diversificação e o papel ecológico desempenhado pelas espécies de aves em redes de frugivoria" data-background="img/donatti_et_al.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-24" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig1.png" data-background-size="80%">
+<h1></h1>
+<h1 class="fragment" style="background:rgba(0,0,0,0.75);">
+Espécies mais centrais pertencem a linhagens mais estáveis/confiáveis
+</h1>
+</section>
+<section id="section-25" class="slide level1 center" data-background="img/cap3fig11.png" data-background-size="90%">
+<h1></h1>
+<h3 class="fragment" style="background:rgba(0,0,0,0.75);">
+Closeness ~ Epsilon * Prec.An./Saz.Prec.
+</h3>
+</section>
+<section id="section-26" class="slide level1 center" data-notes="Dentre todas as relações analisadas (clos/betw + epsilon + clima) encontramos uma relação negativa entre epsilon e closeness centrality e sua interação com precipitação anual" data-background="img/cap3fig11.png" data-background-size="90%">
+<h1></h1>
+<h2 style="background:rgba(0,0,0,0.75);">
+Espécies de linhagens menos estáveis não são centrais em regiões temperadas
+</h2>
+<h2 style="background:rgba(0,0,0,0.75);">
+Interação positiva com precipitação total e negativa com sazonalidade de precipitação
+</h2>
+</section>
+<section id="resultados" class="slide level1 center" data-notes="Tradeoff: redes quantitativas mostraram mais relações do que redes binárias">
+<h1>Resultados</h1>
+<ul>
+<li class="fragment">Relação negativa: espécies menos estáveis/“confiáveis” não são centrais em redes temperadas (<em>species sorting</em>)</li>
+<li class="fragment">Relação modulada por disponibilidade hídrica (total e sazonal)</li>
+</ul>
+</section>
+<section id="section-27" class="slide level1 center">
+<h1></h1>
+<h2>
+Mensagens finais
+</h2>
+<ul>
+<li class="fragment">Cap1: Onívoros parecem ser um ralo macroevolutivo</li>
+<li class="fragment">Cap2: Métodos filogenéticos estimam bem no presente + reconstrução errada</li>
+<li class="fragment">Cap3: Espécies de linhagens menos estáveis não são centrais em regiões temperadas</li>
+</ul>
+</section>
+<section id="section-28" class="slide level1" data-background="img/capa.png" data-background-size="42%">
+<h1></h1>
+</section>
+<section id="minha-trajetoria" class="slide level1 subtitle" data-notes="Vou passar pelos mesmo pontos que o pinguim falou de maneira diferente. Na iniciação e no mestrado eu trabalhei com dendrocronologia. Ao fim do mestrado, percebi que continuar não era a melhor escolha. O que fazer então?">
+<h1>Minha trajetória</h1>
+</section>
+<section id="section-29" class="slide level1" data-notes="Sempre achei que queria ficar na academia, então fui testar o mercado de trabalho para ter certeza de que academia era o meu lugar mesmo. E era." data-background="img/dendro.png" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-30" class="slide level1 center">
+<h1></h1>
+<ul>
+<li class="fragment">Consultoria</li>
+<li class="fragment">Cosméticos: estratégia internacional</li>
+<li class="fragment">Análise de redes de co-autoria</li>
+<li class="fragment">Limitado/pragmático</li>
+</ul>
+</section>
+<section id="de-volta-a-academia" class="slide level1 subtitle" data-notes="O primeiro ano foi um misto de empolgação e bastante tensão. Mais ambientado, potencial do meu trabalho + ansiedade prejudicava.">
+<h1>De volta à academia</h1>
+</section>
+<section id="section-31" class="slide level1" data-notes="Terceira vez fapesp negada. Também fui RD na CCP, possibilidade de ajudar aluno(a)s com dificuldades e plantar sementes como EcoEscola e Café existencial." data-background-video="img/math_class.mp4" data-background-video-loop="true">
+<h1></h1>
+</section>
+<section id="section-32" class="slide level1 center" data-background="img/self_five.gif">
+<h1></h1>
+</section>
+<section id="section-33" class="slide level1 center" data-notes="No meio pro final do 2 ano, o artigo foi aceito.">
+<h1></h1>
+<p><img src="img/doctor_no.gif" width=250%/></p>
+</section>
+<section id="-capitulo-aceito" class="slide level1 subtitle">
+<h1>1º capítulo aceito</h1>
+</section>
+<section id="section-34" class="slide level1 center" data-background="img/yeah_no.gif">
+<h1></h1>
+<p><img class="fragment" src="img/suspect_nothing.png" height=800px/></p>
+</section>
+<section id="-capitulo-publicado" class="slide level1" data-notes="Algo bizarro aconteceu. A fapesp entrou em contato e reconheceu o erro." data-background="img/natcomms.png" data-background-size="80%">
+<h1>1º capítulo publicado</h1>
+<p><img class="fragment" src="img/achou_errado.gif" width=200%/></p>
+</section>
+<section id="contato-da-fapesp" class="slide level1 center" data-notes="Mudanças: terapia + remédio. Fim de 2015 (metade do 3o ano) eu pesava 201kg, e resolvi que a melhor coisa a fazer seria a cirurgia bariátrica.">
+<h1>Contato da FAPESP</h1>
+<p><img class="fragment" src="img/spongebob_happy.gif" width=200%/></p>
+</section>
+<section id="section-35" class="slide level1" data-notes="Entrando no último ano resolvi fazer a cirurgia. Você é louco?! Foi a melhor decisão que tomei." data-background="img/psycotherapist.jpg" data-background-size="50%">
+<h1></h1>
+</section>
+<section id="section-36" class="slide level1" data-notes="Como sou nerd e gosto de estatísticas, registrei dados sempre que possível e fiz um gráfico da mudança das minhas atividades e peso antes e depois da cirurgia." data-background="img/bypass_gastrico.png" data-background-size="80%">
+<h1></h1>
+</section>
+<section id="section-37" class="slide level1 center" data-notes="Mesmo com a correria dos últimos meses, não me arrependo de ter feito a cirurgia. Minha disposição mudou, e tenho certeza que eu não renderia tão bem no último ano caso não tivesse feito.">
+<h1></h1>
+<p><img src="aula_inaugural_2018_files/figure-revealjs/unnamed-chunk-4-1.png" width="672" /></p>
+</section>
+<section id="ultimos-4-meses-3-capitulo-um-pouco-mais-de-biologia" class="slide level1 subtitle" data-notes="Depois desse momento &#39;Arquivo Confidencial&#39;, as mensagens que eu tentei passar com meu relato são:">
+<h1>Últimos 4 meses = 3º capítulo (um pouco mais de biologia)</h1>
+</section>
+<section id="mensagens-das-minhas-experiencias" class="slide level1 subtitle">
+<h1>Mensagens das minhas experiências</h1>
+</section>
+<section id="section-38" class="slide level1 center">
+<h1></h1>
+<ul>
+<li class="fragment">Não tenha medo de mudar. O novo assusta, mas também empolga.</li>
+<li class="fragment">Os problemas vão surgir (ansiedade, depressão, estresse), estejam preparados para lidar com eles.</li>
+<li class="fragment">Não deixe as adversidades te paralisarem, e não tenha medo de tentar coisas diferentes do recomendado.</li>
+<li class="fragment">Sua saúde (física e mental) e sua vida fora da academia importam tanto quanto seu esforço no laboratório.</li>
+</ul>
+</section>
+<section id="a-pos-graduacao-e-mais-que-seu-projeto-e-sua-tese" class="slide level1 subtitle" data-notes="Ao mesmo tempo, tentar aproveitar e criar um ambiente bom de trabalho, com uma equipe legal.">
+<h1>A pós-graduação é mais que seu projeto (e sua tese)!</h1>
+</section>
+<section id="section-39" class="slide level1" data-background="img/labmeme.png" data-background-size="100%">
+<h1></h1>
+</section>
+<section id="balanco-entre-se-levar-a-serio-e-nao-se-levar-muito-a-serio--" class="slide level1 subtitle">
+<h1>Balanço entre se levar a sério e não se levar muito a sério ;-)</h1>
+</section>
+<section id="obrigado" class="slide level1 subtitle">
+<h1>Obrigado!</h1>
+<h3 id="arietebio-gmail.com">arietebio @ gmail.com</h3>
+<h3 id="gustavoburin"><span class="citation" data-cites="gustavoburin">@gustavoburin</span></h3>
+<h3 id="httpswww.gburin.com"><a href="https://www.gburin.com" class="uri">https://www.gburin.com</a></h3>
+</section>
+    </div>
+  </div>
+
+  <script src="aula_inaugural_2018_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="aula_inaugural_2018_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'aula_inaugural_2018_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

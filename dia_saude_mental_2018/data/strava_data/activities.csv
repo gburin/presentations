@@ -1,0 +1,123 @@
+id,date,name,type,description,elapsed_time,distance,commute,gear,filename
+1036837849,2016-09-19 23:11:01,Corrida ao entardecer,Run,"",3209,4676.7,false,,activities/1139987223.tcx.gz
+1036837852,2017-06-08 10:29:11,Corrida matinal,Run,"",2308,4638.8,false,,activities/1139987228.tcx.gz
+1036837861,2016-09-12 22:43:41,Corrida ao entardecer,Run,"",2966,4593.6,false,,activities/1139987214.tcx.gz
+1036837868,2017-06-12 10:36:40,Corrida matinal,Run,"",1789,3393.1,false,,activities/1139987231.tcx.gz
+1044016581,2017-06-19 10:32:15,Morning Run,Run,,2036,4246.5,false,,activities/1147397204.tcx.gz
+1045485458,2017-06-20 10:22:24,Morning Run,Run,,947,2104.0,false,,activities/1148905076.tcx.gz
+1050907862,2017-06-23 23:10:14,Afternoon Run,Run,,1666,3605.7,false,,activities/1154441254.fit.gz
+1053469345,2017-06-25 13:39:25,Morning Run @ Evolution #evol2017,Run,"",1625,3701.5,false,,activities/1157094667.fit.gz
+1066350219,2017-07-03 23:06:50,Afternoon Run,Run,,49,0.0,false,,activities/1170183649.fit.gz
+1066860148,2017-07-04 10:03:27,Morning Run @ USP,Run,"",1793,3760.9,false,"",activities/1170700165.fit.gz
+1089378769,2017-07-18 10:20:50,Morning Run - Getting back after 2 weeks,Run,SO FREAKING COLD,964,2108.8,false,"",activities/1193591072.tcx.gz
+1092663050,2017-07-20 10:20:44,Slowly back to action,Run,"",1911,4107.9,false,"",activities/1196915668.tcx.gz
+1107905659,2017-07-26 19:22:02,Forgot to start the timer at the beginning of the run ¬¬,Run,"",1265,2718.6,false,"",activities/1212373508.tcx.gz
+1123161094,2017-08-08 10:18:52,Running in the concrete desert with Tássia coming back from vacations,Run,"",1917,4066.7,false,"",activities/1227889996.fit.gz
+1126505036,2017-08-10 10:10:02,"Lousy pace, but at least I could get out of bed early to finish my dissertation",Run,"",1892,4084.2,false,"",activities/1231283899.fit.gz
+1157923925,2017-08-29 10:19:23,"Slow ride, take it easy... Dusting off after finishing the dissertation",Run,"But hell, it was dry",1928,4181.6,false,"",activities/1263221301.fit.gz
+1161240613,2017-08-31 10:21:01,Happy that I could make a better pace,Run,"",1792,4093.4,false,"",activities/1266557268.fit.gz
+1167054239,2017-09-03 20:52:27,Afternoon Run,Run,,760,1865.9,false,"",activities/1272447026.fit.gz
+1167067831,2017-09-03 21:07:28,Evening Run,Run,,620,1403.8,false,"",activities/1272460021.fit.gz
+1180279799,2017-09-12 10:07:48,Morning Run,Run,,1820,4061.1,false,"",activities/1285859280.fit.gz
+1183411640,2017-09-14 10:01:24,First 5K ever!,Run,"",2418,5174.6,false,"",activities/1289022941.fit.gz
+1191185575,2017-09-19 10:13:00,Morning Run,Run,,2397,5036.7,false,"",activities/1296915296.fit.gz
+1194368560,2017-09-21 10:07:03,Morning Run,Run,,2388,5087.6,false,"",activities/1300144195.fit.gz
+1199332234,2017-09-24 12:10:30,"Starting the Sunday, now on to preparing my defense presentation",Run,"",1936,4245.6,false,"",activities/1305196013.fit.gz
+1205631171,2017-09-28 10:14:31,Morning Run,Run,,2283,5037.4,false,"",activities/1311563321.fit.gz
+1223731507,2017-10-10 10:05:54,Morning Run,Run,,2251,5072.5,false,"",activities/1329901223.fit.gz
+1234420444,2017-10-17 09:21:59,Morning Run,Run,,2295,5083.2,false,"",activities/1340727305.fit.gz
+1237466997,2017-10-19 09:08:42,Long run,Run,"",2774,6069.8,false,"",activities/1343795506.fit.gz
+1240988209,2017-10-21 21:04:10,54a volta da USP,Run,"",2214,5061.2,false,"",activities/1347358444.fit.gz
+1244485430,2017-10-24 09:13:46,Trying to improve the pace,Run,"",1696,4088.6,false,"",activities/1350913461.fit.gz
+1264967195,2017-11-07 09:08:02,Morning Run,Run,,2292,5138.5,false,"",activities/1371607747.fit.gz
+1274896305,2017-11-14 09:22:00,Morning Run,Run,,1528,3370.5,false,"",activities/1381569010.fit.gz
+1274896457,2017-11-14 09:49:07,Morning Walk,Walk,,597,829.3,false,"",activities/1381569179.fit.gz
+1287016206,2017-11-23 09:10:40,Morning Run,Run,,2018,4009.3,false,"",activities/1393746145.fit.gz
+1293867985,2017-11-28 09:09:43,Morning Run,Run,,1402,3103.7,false,"",activities/1400655129.fit.gz
+1302930283,2017-12-05 09:09:45,Alternating paces,Run,"",1533,3401.5,false,"",activities/1409961848.fit.gz
+1304164988,2017-12-06 09:06:50,"""I-swear-I-saw-Jesus-at-the-end-of-the-hill"" Run",Run,"",2880,6006.0,false,"",activities/1411225287.fit.gz
+1307189172,2017-12-08 21:30:32,Evening Run,Run,"",1358,3008.3,false,"",activities/1414306803.fit.gz
+1310207801,2017-12-11 09:16:28,Morning Run,Run,,1425,3007.2,false,"",activities/1417419452.fit.gz
+1312599194,2017-12-13 09:11:08,Morning Run,Run,,1693,3707.8,false,"",activities/1419878922.fit.gz
+1326147112,2017-12-24 20:13:38,"Christmas run, hohoho",Run,"",2791,5524.0,false,"",activities/1433788609.fit.gz
+1353686674,2018-01-12 19:32:36,Not bad for a first run after 3 weeks,Run,"",1446,3301.0,false,"",activities/1462442081.fit.gz
+1369442587,2018-01-22 09:16:41,"1/36 for 10k, trying to forget the Vikings game",Run,4km leve,1860,4005.6,false,"",activities/1478823139.fit.gz
+1372793093,2018-01-24 09:20:16,2/36 for 10k,Run,2km leve + 1km moderado + 2km leve,2628,5167.8,false,"",activities/1482264325.fit.gz
+1376505538,2018-01-26 19:04:30,3/36 for 10k,Run,4km leve/moderado,1652,4011.3,false,"",activities/1486037154.fit.gz
+1381120923,2018-01-29 09:19:03,4/36 for 10k,Run,4km leve,1961,4095.1,false,"",activities/1490848342.fit.gz
+1385220448,2018-01-31 18:46:07,5/36 for 10k,Run,"1km leve +
+3x(500m forte + 500m leve) ",1938,4005.9,false,"",activities/1495082459.fit.gz
+1387602781,2018-02-02 09:06:46,6/36 for 10k,Run,4km leve,1863,4138.4,false,"",activities/1497558778.fit.gz
+1392735632,2018-02-05 09:19:34,7/10 for 10k,Run,5km leve (com recorde pessoal pra 5k),2112,5011.3,false,"",activities/1502881806.fit.gz
+1395674441,2018-02-07 09:04:31,8/36 for 10k,Run,1km leve + 6x(250m forte + 250m leve) ,1852,4029.6,false,"",activities/1505900541.fit.gz
+1398793344,2018-02-09 09:13:44,9/36 for 10k,Run,1km leve + 3km moderado,1692,4012.8,false,"",activities/1509247295.fit.gz
+1409902581,2018-02-16 09:13:52,Morning Run getting back from a carnaval pause,Run,"",1732,4025.5,false,"",activities/1521797004.fit.gz
+1415308777,2018-02-19 10:07:21,13-ish/36 for 10k,Run,"",2087,5009.8,false,"",activities/1527633913.fit.gz
+1418537710,2018-02-21 10:10:18,14/36 for 10k,Run,1km leve + 2x(1km moderado + 1km leve) ,2156,5056.0,false,"",activities/1531007974.fit.gz
+1421672332,2018-02-23 10:12:15,15/36 for 10k + PR 5k,Run,5km leve/moderado ,2082,5006.5,false,"",activities/1534248721.fit.gz
+1426764763,2018-02-26 10:16:06,16/36 for 10k + PR 5k,Run,5km leve,2046,5012.5,false,"",activities/1539556271.fit.gz
+1429713550,2018-02-28 10:10:32,17/36 for 10k,Run,"2km leve + 2km moderado + 0.6km forte (devia ser 1km, mas quebrei) ",1904,4592.9,false,"",activities/1542613060.fit.gz
+1437293378,2018-03-05 10:15:03,18/36 for 10k,Run,6km leve com 2 subidas moderadas. Muito calor,2654,6018.3,false,"",activities/1550425952.fit.gz
+1442093677,2018-03-08 10:12:16,19/36 for 10k,Run,1km leve + 4x(400m forte) + 250m moderado,1564,3008.1,false,"",activities/1555355501.fit.gz
+1452388082,2018-03-14 10:13:07,22-ish/36 for 10k,Run,"Era pra ser 6km leve com 4 subidas intensas, mas não aguentei. Fiz 4km leve só. Muito quente.",1981,4009.4,false,"",activities/1566015133.fit.gz
+1463846341,2018-03-21 10:14:43,X/36 for 10k (I lost track of the days),Run,1km leve + 2x(1km forte + 1km leve) + 1km leve,2804,6174.9,false,"",activities/1577875109.fit.gz
+1467220804,2018-03-23 10:16:02,Morning Run,Run,,2746,6209.7,false,"",activities/1581373916.fit.gz
+1472716323,2018-03-26 10:15:52,X+1/36 for 10k,Run,7km leve,3234,7206.8,false,"",activities/1587136479.fit.gz
+1476111050,2018-03-28 10:14:09,"The fast km were exhausting, but I made it to the 7k",Run,"",3294,7303.5,false,"",activities/1590645116.fit.gz
+1485119102,2018-04-02 10:21:53,Morning Run,Run,,2057,5048.2,false,"",activities/1600057934.fit.gz
+1488776920,2018-04-04 10:14:27,Morning Run,Run,,3571,8024.7,false,"",activities/1603844524.fit.gz
+1492351348,2018-04-06 10:10:09,Morning Run,Run,,2438,6005.4,false,"",activities/1607523358.fit.gz
+1498364956,2018-04-09 10:13:18,Morning Run,Run,,2470,6008.0,false,"",activities/1613864519.fit.gz
+1502131188,2018-04-11 10:05:37,Morning Run,Run,,1658,4005.9,false,"",activities/1617734347.fit.gz
+1508975441,2018-04-14 23:33:11,"Night Run - Etapa Nitro, a.k.a. My first 10k",Run,"",4547,10170.0,false,"",activities/1624832810.fit.gz
+1526598601,2018-04-23 10:12:21,Morning Run,Run,,1186,3006.4,false,"",activities/1643198948.fit.gz
+1544812909,2018-05-02 10:35:34,Morning Run,Run,,1228,3147.6,false,"",activities/1662030576.fit.gz
+1548842845,2018-05-04 10:14:02,Morning Run,Run,,3045,6647.9,false,"",activities/1666144374.fit.gz
+1556421270,2018-05-07 18:51:15,Afternoon Run,Run,,3301,7701.3,false,"",activities/1673944853.fit.gz
+1560817230,2018-05-09 19:21:37,Afternoon Run,Run,,2602,6006.4,false,"",activities/1678449657.fit.gz
+1565851557,2018-05-11 19:22:52,Afternoon Run,Run,,4275,9002.4,false,"",activities/1684039574.fit.gz
+1586202281,2018-05-21 10:08:39,Morning Run,Run,,2404,5769.0,false,"",activities/1705140624.fit.gz
+1590542500,2018-05-23 10:05:36,Morning Run,Run,,2537,6007.2,false,"",activities/1709627640.fit.gz
+1590977547,2018-05-23 15:04:56,Lunch Walk,Walk,,768,866.6,false,"",activities/1710071070.fit.gz
+1594754539,2018-05-25 10:10:50,Morning Run,Run,,2712,6604.0,false,"",activities/1714006710.fit.gz
+1601246021,2018-05-28 10:05:23,Morning Run,Run,,2687,6192.9,false,"",activities/1720933825.fit.gz
+1605479264,2018-05-30 10:12:09,PB for 5k \o/,Run,"",1957,5007.6,false,"",activities/1725447306.fit.gz
+1605501459,2018-05-30 10:45:29,Morning Run,Run,,747,1804.8,false,"",activities/1725470922.fit.gz
+1616419470,2018-06-04 10:09:26,Morning Run,Run,,3030,6007.9,false,"",activities/1737103675.fit.gz
+1620592319,2018-06-06 10:03:48,Morning Run,Run,,2785,6218.0,false,"",activities/1741671331.fit.gz
+1624792233,2018-06-08 09:58:24,Morning Run,Run,,3303,8051.2,false,"",activities/1746210816.fit.gz
+1631439173,2018-06-11 10:05:05,Morning Run,Run,,3005,7376.7,false,"",activities/1753222910.fit.gz
+1639860712,2018-06-15 10:00:16,Morning Run,Run,,2662,6192.1,false,"",activities/1762040308.fit.gz
+1665216084,2018-06-27 10:01:14,Testing how my right foot would feel after the injury. All cleared for the 10k this sunday,Run,"",844,2011.2,false,"",activities/1788548717.fit.gz
+1673635800,2018-07-01 09:44:36,Circuito das estações - Etapa inverno - PB 10K,Run,"",4389,10084.3,false,"",activities/1797280037.fit.gz
+1679969097,2018-07-04 10:01:32,Morning Run,Run,,1802,4176.9,false,"",activities/1803832387.fit.gz
+1706057250,2018-07-16 10:05:03,Morning Run,Run,,2291,5345.9,false,"",activities/1830956384.fit.gz
+1710474384,2018-07-18 10:12:04,Morning Run,Run,,2312,5316.3,false,"",activities/1835523671.fit.gz
+1714961593,2018-07-20 10:04:28,Morning Run,Run,,2666,5906.3,false,"",activities/1840159269.fit.gz
+1726552013,2018-07-25 10:02:01,Morning Run,Run,,2505,6006.8,false,"",activities/1852910111.fit.gz
+1731051521,2018-07-27 10:03:26,Morning Run,Run,,2413,5634.1,false,"",activities/1857585487.fit.gz
+1737499095,2018-07-30 10:02:10,Morning Run,Run,,2859,7010.6,false,"",activities/1864290869.fit.gz
+1756110995,2018-08-07 14:07:04,Lunch Run,Run,,2565,6059.5,false,"",activities/1885338482.fit.gz
+1760656976,2018-08-09 13:56:48,Morning Run,Run,,2603,6006.3,false,"",activities/1890483022.fit.gz
+1773524306,2018-08-15 10:03:57,Morning Run,Run,,2502,6011.8,false,"",activities/1903831017.fit.gz
+1831892390,2018-09-10 10:03:08,"After 3 weeks w/o training, that's the best there is for now",Run,"",1894,4306.1,false,"",activities/1963898482.fit.gz
+1836316611,2018-09-12 10:06:35,Morning Run,Run,,2768,6502.5,false,"",activities/1968445270.fit.gz
+1849919829,2018-09-18 13:52:38,Morning Run,Run,,3625,7761.9,false,"",activities/1982462689.fit.gz
+1851754665,2018-09-19 10:00:07,Morning Run,Run,,2806,5914.1,false,"",activities/1984385835.fit.gz
+1862457969,2018-09-24 09:59:59,Morning Run,Run,,2643,6041.6,false,"",activities/1995536085.fit.gz
+1866547453,2018-09-26 10:00:25,Morning Run,Run,,2450,5404.4,false,"",activities/1999724740.fit.gz
+1877252469,2018-10-01 10:01:41,Morning Run,Run,,2402,5658.4,false,"",activities/2010837046.fit.gz
+1894008476,2018-10-09 13:56:44,Morning Run,Run,,1883,4243.5,false,"",activities/2028200716.fit.gz
+1907915729,2018-10-16 10:00:49,Morning Run,Run,,2541,5506.1,false,"",activities/2042625638.fit.gz
+1910063201,2018-10-17 10:07:52,Morning Run,Run,,2789,6516.0,false,"",activities/2044835062.fit.gz
+1914012992,2018-10-19 10:05:29,Morning Run,Run,,2643,5893.8,false,"",activities/2048900146.fit.gz
+1920413567,2018-10-22 09:58:42,Morning Run,Run,,2573,6004.6,false,"",activities/2055579319.fit.gz
+1931002348,2018-10-27 22:06:58,55a volta da usp,Run,"",4343,10027.1,false,"",activities/2066458350.fit.gz
+1937349552,2018-10-31 10:04:31,Tássia testing my watch,Run,"",2049,4111.2,false,"",activities/2073034634.fit.gz
+1950851769,2018-11-07 08:58:51,Morning Run,Run,,2588,6100.5,false,"",activities/2086975124.fit.gz
+1954460097,2018-11-09 09:09:41,Morning Run,Run,,3052,7053.4,false,"",activities/2090686351.fit.gz
+1960171996,2018-11-12 09:01:27,Morning Run,Run,,2702,6459.9,false,"",activities/2096576440.fit.gz
+1963862117,2018-11-14 08:53:14,Morning Run,Run,,3294,7255.1,false,"",activities/2100336745.fit.gz
+1967677583,2018-11-16 11:19:31,Morning Run,Run,,3353,8009.3,false,"",activities/2104244710.fit.gz
+1973581181,2018-11-19 12:43:30,Morning Run,Run,,2528,5569.0,false,"",activities/2110390050.fit.gz
+1978732615,2018-11-22 12:57:14,Morning Run,Run,,3482,8009.5,false,"",activities/2115736314.fit.gz

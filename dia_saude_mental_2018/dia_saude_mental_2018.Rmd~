@@ -1,0 +1,158 @@
+---
+title:
+author:
+date: <h4>20 de Dezembro, 2018</h4>
+output:
+  revealjs::revealjs_presentation:
+    css: custom_css.css
+    theme: night
+    widescreen: true
+    transition: fade
+    center: false
+    self_contained: false
+    backgroundTransition: fade
+    reveal_plugins: ["notes"]
+    slide_level: 1
+    reveal_options:
+      slideNumber: true
+---
+
+#
+
+<h2>5 dicas para sobreviver à pós-graduação</h2>
+
+<h3>(você não vai acreditar na número 4...)</h3>
+
+<br></br>
+
+<div align="right">
+<p>Gustavo Burin **FERREIRA**</p>
+<h5>arietebio@gmail.com</h5>
+<h5>@gustavoburin</h5>
+
+<br></br>
+</div>
+
+20 de Dezembro de 2018
+
+
+# {data-background="img/agradecimentos.png" data-background-size=70%}
+
+	
+#
+
+<div class="row">
+  <div class="column">
+  <img src="img/capa.png" alt="capa da tese">
+  </div>
+  <div class="column">
+  <br></br>
+  <br></br>
+  <h3>Orientador: Tiago Bosisio **QUENTAL**</h3>
+  <h3>Co-orientador: Paulo R. **GUIMARÃES** Jr</h3>
+</div>
+
+
+# Objetivos {#items .center .emphasized}
+
+> - Entender os efeitos de diferentes dietas na diversificação do grupo
+> - Testar a performance de métodos amplamente utilizados
+> - Analisar a relação entre a diversificação e o papel ecológico
+
+# {.center}
+<h2>Resultados gerais</h2>
+
+> - Cap1: Onívoros parecem ser um ralo macroevolutivo
+> - Cap2: Métodos filogenéticos estimam bem no presente + reconstrução errada
+> - Cap3: Espécies de linhagens menos estáveis não são centrais em regiões temperadas
+
+
+
+
+
+
+  
+# Minha trajetória {data-notes="Vou passar pelos mesmo pontos que o pinguim falou de maneira diferente. Na iniciação e no mestrado eu trabalhei com dendrocronologia. Ao fim do mestrado, percebi que continuar não era a melhor escolha. O que fazer então?" .subtitle}
+
+# {data-notes="Sempre achei que queria ficar na academia, então fui testar o mercado de trabalho para ter certeza de que academia era o meu lugar mesmo. E era." data-background="img/dendro.png" data-background-size=50%}
+
+# {.center}
+
+> - Consultoria
+> - Cosméticos: estratégia internacional
+> - Análise de redes de co-autoria
+> - Limitado/pragmático
+
+# De volta à academia {data-notes="O primeiro ano foi um misto de empolgação e bastante tensão. Mais ambientado, potencial do meu trabalho + ansiedade prejudicava." .subtitle}
+
+# {data-notes="Terceira vez fapesp negada. Também fui RD na CCP, possibilidade de ajudar aluno(a)s com dificuldades e plantar sementes como EcoEscola e Café existencial." data-background-video="img/math_class.mp4" data-background-video-loop=true}
+
+# {data-background="img/self_five.gif" .center}
+
+# {data-notes="No meio pro final do 2 ano, o artigo foi aceito." .center}
+
+<img src="img/doctor_no.gif" width=250%/>
+
+# 1º capítulo aceito {.subtitle}
+
+# {data-background="img/yeah_no.gif" .center}
+
+<img class="fragment" src="img/suspect_nothing.png" height=800px/>
+
+# 1º capítulo publicado {data-notes="Algo bizarro aconteceu. A fapesp entrou em contato e reconheceu o erro." data-background="img/natcomms.png" data-background-size=80%}
+
+<img class="fragment" src="img/achou_errado.gif" width=200%/>
+
+# Contato da FAPESP {data-notes="Mudanças: terapia + remédio. Fim de 2015 (metade do 3o ano) eu pesava 201kg, e resolvi que a melhor coisa a fazer seria a cirurgia bariátrica." .center}
+
+<img class="fragment" src="img/spongebob_happy.gif" width=200%/>
+
+# {data-notes="Entrando no último ano resolvi fazer a cirurgia. Você é louco?! Foi a melhor decisão que tomei." data-background="img/psycotherapist.jpg" data-background-size=50%}
+
+# {data-background="img/humble_brag.gif" data-notes="Como sou nerd e gosto de estatísticas, registrei dados sempre que possível e fiz um gráfico da mudança das minhas atividades e peso antes e depois da cirurgia." data-background="img/bypass_gastrico.png" data-background-size=80%}
+  
+# {data-notes="Mesmo com a correria dos últimos meses, não me arrependo de ter feito a cirurgia. Minha disposição mudou, e tenho certeza que eu não renderia tão bem no último ano caso não tivesse feito." .center}
+
+```{r echo = FALSE, warning = FALSE, fig.height = 7, fig.width = 7}
+fit.data <- read.csv("fit_summary.csv")
+fit.data$Date <- as.Date(fit.data$Date, format = "%Y-%m-%d")
+fit.data <- rbind(fit.data, NA)
+fit.data[dim(fit.data)[1], c(1, 15)] <- c("2018-03-20", 118)
+fit.data$Average.weight..kg. <- as.numeric(fit.data$Average.weight..kg.)
+
+library("ggplot2")
+library("cowplot")
+peso.dist <- ggplot(data = fit.data[127:1231,]) +
+    geom_line(aes(x = Date, y = Distance..m./1000)) +
+    geom_line(data = subset(fit.data[127:1231,], !is.na(fit.data$Average.weight..kg.[127:1231])), aes(x = Date, y = Average.weight..kg./10), colour = "darkcyan", na.rm = TRUE, size = 1) +
+    geom_vline(xintercept = as.Date("2016-06-09", format = "%Y-%m-%d"), colour = "red", linetype = "dashed", alpha = 0.75) +
+    scale_y_continuous(sec.axis = sec_axis(~.*10, name = "Peso (kg)")) +
+    labs(x = "Data", y = "Distância (km)")
+peso.dist
+
+```
+
+# Últimos 4 meses = 3º capítulo (um pouco mais de biologia) {data-notes="Depois desse momento 'Arquivo Confidencial', as mensagens que eu tentei passar com meu relato são:" .subtitle}
+
+# Mensagens das minhas experiências {.subtitle}
+ 
+# {.center}
+
+> - Não tenha medo de mudar. O novo assusta, mas também empolga.
+> - Os problemas vão surgir (ansiedade, depressão, estresse), estejam preparados para lidar com eles.
+> - Não deixe as adversidades te paralisarem, e não tenha medo de tentar coisas diferentes do recomendado.
+> - Sua saúde (física e mental) e sua vida fora da academia importam tanto quanto seu esforço no laboratório.
+
+# A pós-graduação é mais que seu projeto (e sua tese)! {data-notes="Ao mesmo tempo, tentar aproveitar e criar um ambiente bom de trabalho, com uma equipe legal." .subtitle}
+
+# {data-background="img/labmeme.png" data-background-size=100%}
+
+# Balanço entre se levar a sério e não se levar muito a sério ;-) {.subtitle}
+
+# Obrigado! {.subtitle}
+
+### arietebio @ gmail.com
+
+### @gustavoburin
+
+### https://www.gburin.com
