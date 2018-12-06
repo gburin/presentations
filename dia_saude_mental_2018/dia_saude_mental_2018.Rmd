@@ -245,6 +245,8 @@ ggplot(data = data.plot, aes(x = date)) +
 
 ## 3 - Coletivos
 
+<img src="img/monty_python.gif" height=500px/>
+
 ---
 
 ## 4 - NADA {.center}
