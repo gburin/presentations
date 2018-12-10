@@ -172,8 +172,8 @@ output:
 # {data-notes="Mesmo com a correria dos últimos meses, não me arrependo de ter feito a cirurgia. Minha disposição mudou, e tenho certeza que eu não renderia tão bem no último ano caso não tivesse feito." .center}
 
 ```{r echo = FALSE, warning = FALSE, fig.height = 7, fig.width = 7}
-library("strava")
-library("tidyverse")
+#library("strava")
+#library("tidyverse")
 strava.data <- read.csv("./data/strava_data/activities.csv")
 strava.data$date <- as.Date(strava.data$date)
 strava.data <- strava.data[-(1:3),]
