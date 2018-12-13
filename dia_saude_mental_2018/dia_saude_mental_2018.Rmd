@@ -217,6 +217,12 @@ ggplot(data = data.plot, aes(x = date)) +
   <h3>Co-orientador: Paulo R. **GUIMARÃES** Jr</h3>
 </div>
 
+# {.center}
+<h2>Resultados da Tese</h2>
+
+> - Cap1: Onívoros parecem ser um ralo macroevolutivo (Nat. Comms.)
+> - Cap2: Métodos filogenéticos estimam bem no presente + reconstrução errada (Syst. Biol.)
+> - Cap3: Espécies de linhagens menos estáveis não são centrais em regiões temperadas (*in prep.*)
 
 # Mensagens das minhas experiências {.subtitle}
  
