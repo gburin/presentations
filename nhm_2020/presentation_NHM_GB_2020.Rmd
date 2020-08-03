@@ -1,0 +1,271 @@
+---
+title: A brief story of (my) time
+author: Dr. Gustavo Burin
+date: <h4>August 04th, 2020</h4>
+output:
+  revealjs::revealjs_presentation:
+    css: custom_css.css
+    theme: night
+    widescreen: true
+    transition: slide
+    center: false
+    self_contained: false
+    background-transition: slide
+    slide_level: 1
+    reveal_options:
+      slideNumber: true
+  beamer_presentation:
+    toc: true
+    include:
+      in_header: dbt.tex
+---
+
+#
+
+<img style="background:black; border:0px;" src="img/dendro.png" width=80%/>
+
+#
+
+<img style="background:black; border:0px;" src="img/iiasa.jpg" width=100%/>
+
+#
+
+<img style="background:black; border:0px;" src="img/dinosaur_blood.jpg" width=65%/>
+
+# 
+
+<img style="background:black; border:0px;" src="img/Bird_Diversity2.png" width=60%/>
+
+#
+
+```{r echo = FALSE}
+knitr::include_graphics('./img/BirdBeaks.gif')
+```
+
+#
+
+<img style="background:black; border:0px;" src="img/bird_services.png" width=100%/>
+
+# Aims {#items .center .emphasized}
+
+> - Understand the effects of different diets on the diversification of the group
+> - Test the performance of widely used methods
+> - Assess the relationship between diversification dynamics and ecological role in frugivory networks
+
+# Methods
+
+- _diversitree_
+- 200 topologies (2 backbones)
+- Bayesian framework: 2 months of processing
+
+```{r echo = FALSE, out.width = 300}
+knitr::include_graphics('./img/waiting.png')
+```
+
+# {.center}
+
+<br>
+<br>
+<br>
+<br>
+
+<img style="background:black; border:0px;" src="img/natcomms.png" width=100%/>
+
+# 
+
+## Rabosky & Goldberg 2015
+
+<img style="background:black; border:0px;" src="img/explosion1.gif" width=60%/>
+
+
+# {.center}
+
+<br>
+<br>
+<br>
+<br>
+
+<img style="background:black; border:0px;" src="img/sysbio_2019.png" width=100%/>
+
+
+# {.center}
+
+<br>
+<br>
+
+<img style="background:black; border:0px;" src="img/workflow.png" width=100%/>
+
+# {.center}
+
+<br></br>
+
+<h2>Macroevolutionary imprints on the assembly of frugivory networks</h2>
+
+<br></br>
+
+Gustavo **BURIN**; Paulo **GUIMARÃES**; Tiago **QUENTAL**
+
+<br></br>
+
+_In preparation_
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/macroevonet_concep.png" width=80%/>
+
+# 
+
+## Louca & Pennell 2020
+
+<img style="background:black; border:0px;" src="img/explosion2.gif" width=100%/>
+
+# Current Projects
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/fig1_relatorio_2020.png" width=50%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/caviomorpha_netdiv.png" width=65%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/caviomorpha_transit.png" width=65%/>
+
+
+# Collaborations
+
+#
+
+<br>
+<br>
+<br>
+<br>
+
+<img style="background:black; border:0px;" src="img/procb_title.png" width=150%/>
+
+#
+
+<img style="background:black; border:0px;" src="img/cover_procb.jpeg" width=45%/> 
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/phylo_mycodiversif.png" width=65%/>
+
+
+
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/chomicki_phylo.png" width=65%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/chomicki_acc.png" width=50%/>
+
+
+# Thank you!
+
+### gustavoburin @ usp.br
+
+### @gustavoburin
+
+### https://www.gburin.com
+
+
+
+#
+
+<img style="background:black; border:0px;" src="img/cap1fig1_black.png" width=100%/>
+
+#
+
+<img style="background:black; border:0px;" src="img/omniv_phylo.png" width=60%/>
+
+<h3 class="fragment" style="background:rgba(0,0,0,0);">1150 omnivore species</h3>
+
+#
+
+<img style="background:black; border:0px;" src="img/transitions_white.png" width=65%/>
+
+# {data-notes="Recursos abundantes e/ou previsíveis" .center}
+
+<h2>Predictable/abundant resources</h2>
+
+<img style="background:black; border:0px;" src="img/competition.png" width=65%/>
+
+# {data-notes="Recursos abundantes e/ou previsíveis" .center}
+
+<h2>Predictable/abundant resources</h2>
+
+<img style="background:black; border:0px;" src="img/specialized.png" width=65%/>
+
+# {data-notes="Recursos escassos/imprevisíveis" .center}
+
+<h2>Unpredictable/scarce resources</h2>
+
+<img style="background:black; border:0px;" src="img/competition.png" width=65%/>
+
+# {data-notes="Recursos escassos/imprevisíveis" .center}
+
+<h2>Unpredictable/scarce resources</h2>
+
+<img style="background:black; border:0px;" src="img/comp_trans_arrows.png" width=65%/>
+
+#
+
+<img style="background:black; border:0px;" src="img/diversity_timetravel.png" width=65%/>
+
+<img style="background:black; border:0px;" src="img/spvar_lambda_full.png" width=65%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/spvar_mu_full.png" width=65%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/exvar_lambda_full.png" width=65%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/exvar_mu_full.png" width=65%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/cap2_empirical.png" width=65%/>
+
+# Take home messages {.center}
+
+- Both models behave well in the very recent past
+- Both attribute variation in diversification to speciation rates
+- Difficulty in estimating variation in extinction rates
+- Bad estimates at the root
+- Do not agree on empirical trees
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/fig2_lambdamu.png" width=65%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/fig2_final.png" width=100%/>
+
+
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/alencar_ouwie.png" width=60%/>
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/alencar_musse.png" width=60%/>
+
+
+
+# {.center}
+
+<img style="background:black; border:0px;" src="img/anova_mycodiversif.png" width=65%/>
+
+<img style="background:black; border:0px;" src="img/scatter_mycodiversif.png" width=65%/>
+
