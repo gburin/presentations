@@ -30,7 +30,9 @@ output:
 
 #
 
-<img style="background:black; border:0px;" src="img/dinosaur_blood.jpg" width=65%/>
+<br>
+
+<img style="background:black; border:0px;" src="img/dinosaur_blood.jpg" width=50%/>
 
 # 
 
@@ -62,6 +64,13 @@ knitr::include_graphics('./img/BirdBeaks.gif')
 knitr::include_graphics('./img/waiting.png')
 ```
 
+# 
+
+## Rabosky & Goldberg 2015
+
+<img style="background:black; border:0px;" src="img/explosion1.gif" width=60%/>
+
+
 # {.center}
 
 <br>
@@ -70,13 +79,6 @@ knitr::include_graphics('./img/waiting.png')
 <br>
 
 <img style="background:black; border:0px;" src="img/natcomms.png" width=100%/>
-
-# 
-
-## Rabosky & Goldberg 2015
-
-<img style="background:black; border:0px;" src="img/explosion1.gif" width=60%/>
-
 
 # {.center}
 
@@ -117,13 +119,9 @@ _In preparation_
 
 ## Louca & Pennell 2020
 
-<img style="background:black; border:0px;" src="img/explosion2.gif" width=100%/>
+<img style="background:black; border:0px;" src="img/explosion2.gif" width=90%/>
 
 # Current Projects
-
-# {.center}
-
-<img style="background:black; border:0px;" src="img/fig1_relatorio_2020.png" width=50%/>
 
 # {.center}
 
@@ -133,6 +131,9 @@ _In preparation_
 
 <img style="background:black; border:0px;" src="img/caviomorpha_transit.png" width=65%/>
 
+# {.center}
+
+<img style="background:black; border:0px;" src="img/fig1_relatorio_2020.png" width=50%/>
 
 # Collaborations
 
